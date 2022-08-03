@@ -718,6 +718,10 @@ align-content: center;
 
 
     /* ============= atributos GLOBALES ============ */
+        header > div{
+            padding-top:8px;
+            padding-bottom:8px;
+        }
         header > div, main, footer > div {
             width:52rem
         }
@@ -937,25 +941,31 @@ align-content: center;
     body{
         font-size:3vw;
     }
+
+
     header > div{
         width:100%;
     }
+    header img{
+        width:70vw !important;
+        margin:7px 0px;
+    }
+
     nav{
         width:90%;
     }
-    nav > ul > li{
-        margin: 4px 10px;
-    }
-    header img{
-        width:70vw !important;
-        margin:10px 0px;
-    }
+        nav > ul > li{
+            margin: 4px 10px;
+        }
+
     h2{
         font-size:150%;
     }
     h3{
         font-size:80%;
     }
+
+    
     footer > div{
         flex-wrap: wrap;
     }

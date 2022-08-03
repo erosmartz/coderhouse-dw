@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!-- TITULO -->
+    <title>NOR - HOME</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <!-- main logo -->
+            <a href="index.html">
+                <img src="img/header_logo.png" alt="Site Logo">
+            </a>
+
+            <!-- navigation bar -->
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color:rgb(255, 187, 105)">HOME</a></li>
+                    <li><a href="html/aboutme.html">ABOUT ME</a></li>
+                    <li><a href="html/releases.html">RELEASES</a></li>
+                    <li><a href="html/media.html">MEDIA</a></li>
+                    <li><a href="html/contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+
+
+    <!-- MAIN -->
+    <main>
+
+
+
+
+        <!-- SECCION 1 : NEWEST TRACK -->
+        <section class=" boxDesign1 flexDesign1" id="home_section1">
+
+            <!-- TEXTO -->
+            <div>
+                <h3>New release</h3>
+                <h2>"DOGMA"</h2>
+                
+                
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quae fugit quos, ea in, exercitationem totam velit harum mollitia 
+                    ad voluptatum.
+                </p>
+
+
+                <!-- links -->
+                <div>
+                    <span><a href="">youtube</a></span>
+                    <br>
+                    <span><a href="">soundcloud</a></span>
+                    <br>
+                    <span><a href="">spotify</a></span>
+                </div>
+
+            </div>
+
+            <!-- IMAGEN -->
+            <img src="img/id3_dogma.jpg" alt="Track Image" >
+
+        </section>
+
+
+
+
+
+        <!-- SECCION 2: ABOUT ME + YOUTUBE BOX ,,,,, FLEX - SPLIT -->
+        <section id="home_section2">
+        
+
+             <!-- Box1: Mini about me -->
+
+            <section class="boxDesign1 flexDesign1">
+                
+                <div>
+
+                    <!-- Titulo -->
+                    <h2>WELCOME, STRANGER.</h2>    
+
+                    <!-- Descripcion -->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Adipisci veritatis ipsam excepturi temporibus nesciunt.
+                    </p>
+
+                    <!-- link -->
+                    <div>
+                        <span>
+                            <a href="html/aboutme.html">more info</a>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Mini Avatar -->
+                <img src="img/avatar_mini.png" alt="Avatar">
+
+                
+            </section>
+
+
+
+
+            <!-- YOUTUBE BOX -->
+            <div>
+                <iframe id="home_section2_video" width="350" height="200" src="https://www.youtube.com/embed/QkPQ8_99tAc" title="WEMA - Luanje Pt. 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- SECCION 3 SEPARATOR  -->
+        <section class="boxSeparator">
+
+            <h2>LATEST TRACKS</h2> 
+
+            <div>
+                <span>
+                    <a href="html/releases.html">check out the rest</a>
+                </span>
+            </div>
+         </section>
+
+        <!-- SECCION 3: LATEST TRACKS  -->
+
+        <section class="gridDesign1" id="home_section3">
+
+                
+                    <a class="flexDesign2" href="">
+                            <img src="img/id3_dogma.jpg" alt="Track Image">
+                        <div>
+                            <h2>Dogma</h2>
+                        </div>            
+                    </a>
+
+               
+                    <a class="flexDesign2" href="">
+                            <img src="img/id1_theta.jpg" alt="Track Image">
+                        <div>
+                            <h2>Theta</h2>
+                        </div>            
+                    </a>
+                
+                
+                    <a class="flexDesign2" href="">
+                            <img src="img/id2_follow.jpg" alt="Track Image">
+                        <div>
+                            <h2>follow</h2>
+                        </div>            
+                    </a>
+                
+                
+                    <a class="flexDesign2" href="">
+                            <img src="img/id4_eterna.jpg" alt="Track Image">
+                        <div>
+                            <h2>ETERNA</h2>
+                        </div>            
+                    </a>
+                
+                
+                    <a class="flexDesign2" href="html/releases.html">
+                            <h2>...</h2>           
+                    </a>
+                
+        
+        </section>
+
+
+
+
+
+
+
+        <!-- SECCION 4 SEPARATOR  -->
+        <section class="boxSeparator">
+            <h2>Placeholder Playlist</h2> 
+         </section>
+
+        <!-- SECCION 4 SPOTIFY PLAYLIST-->
+
+        <section id="home_section4">
+
+                <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/2fQid6Rl16WmU8D88SomQi?utm_source=generator&theme=0" 
+                width="100%" height="380" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+        <footer>
+            <div>
+                <div>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                    <h4>Copyright 2022</h4>
+                </div>
+                <div>
+                    <p>Contact:</p>
+                    <p>normusic@gmail.com</p>
+                    <p>normusic.bandcamp.com</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

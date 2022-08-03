@@ -1,0 +1,932 @@
+
+
+
+/* ============================================ */
+/* =============       START     ============== */
+/* ============================================ */
+
+/* CSS Style Reset */
+*{margin:0;padding:0;}
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* ========      ESTILOS GLOBALES      ======== */
+/* ============================================ */
+/* ============================================ */
+
+
+
+/* BODY */
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size:16px;
+    background-image: url(../img/body_bk.jpg);
+    background-attachment: fixed;
+}
+
+
+/* ============================================ */
+/* HEADER Y NAV */
+/* ============================================ */
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:sticky;
+    top:0px;
+    width:100%;
+    background-color: rgb(8, 18, 26);
+    border-bottom: 3px solid rgb(12, 74, 90);
+}
+    header > div {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+        header > div > a {
+            width:fit-content;
+        }
+            header > div > a > img {
+                width: 230px;
+            }
+
+
+nav {
+    display:flex;
+
+    align-items: center;
+    width:65%;
+}
+    nav > ul {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items:center;
+    justify-content: space-evenly;
+
+    list-style: none;
+
+    width: 100%;
+    height: 100%;
+    }
+
+        nav > ul > li {
+            margin:9px;
+            text-align: center;
+        }
+
+
+/* ============================================ */
+/* MAIN */
+/* ============================================ */
+
+
+main{
+    display:flex;
+    margin:5px 0px;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+
+/* ============================================ */
+/* FOOTER */
+/* ============================================ */
+
+footer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    border-top: 3px solid rgb(0, 23, 25);
+    padding-top:5px;
+    background-color: rgb(0, 2, 1);
+}
+    footer > div{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        footer > div > div:first-child{
+            font-size:95%;
+        }
+        footer p{
+                text-transform:initial;
+        }
+
+
+
+
+/* FONTS */
+
+h1 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 300%;
+    line-height:90%;
+    text-transform: uppercase;
+    color: rgb(56, 210, 156);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 200%;
+    line-height:90%;
+    text-transform: uppercase;
+    color: rgb(56, 210, 156);
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    line-height:100%;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: rgb(56, 210, 156);
+}
+h4{
+    font-family: 'Anybody','Gill Sans MT', cursive;
+    font-weight: 300;
+    text-transform:uppercase;
+    color: rgb(109, 181, 170);
+}
+p {
+    font-family: 'Anybody','Gill Sans MT', cursive;
+    font-weight: 300;
+    font-size: 100%;
+/*     text-transform:uppercase; */
+    color: rgb(109, 181, 170);
+}
+strong {
+    font-family: 'Anybody','Gill Sans MT', cursive;
+    font-weight: 600;
+    font-size: 100%;
+    text-transform:uppercase;
+    color: rgb(222, 74, 0);
+}
+label {
+    font-family: 'Anybody','Gill Sans MT', cursive;
+    font-weight: 300;
+    font-size: 100%;
+    text-transform:uppercase;
+    color: rgb(109, 181, 170);
+}
+input , textarea{
+    background-color: rgb(2, 20, 19);
+    border-color: rgb(3, 55, 44);
+    border-style:solid;
+    color: rgb(128, 221, 198);
+
+}
+
+
+/* LINKS */
+
+a:any-link{
+    color: rgb(222, 74, 0);
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    font-size: 88%;
+    letter-spacing: 2px;
+/*     text-transform:uppercase; */
+    text-decoration: none;
+}
+a:hover{
+    color:rgb(255, 136, 77);
+}
+
+main span a{
+    background-color: rgba(0, 0, 0, 0.371);
+}
+
+
+
+
+
+
+/* ============================================ */
+/* BOX MODELING STYLES */
+/* ============================================ */
+
+
+.boxDesign1{
+    margin: 25px 0px;
+    background-color: rgb(12, 47, 53);
+    border-radius: 18px;
+}
+
+.boxSeparator{
+    display:flex;
+    margin:25px 0 0 0;
+    background-color: rgb(12, 47, 53);
+    border-radius: 18px;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* para info adaptable con texto e img */
+.flexDesign1{
+    display:flex;
+    padding: 2% 4%;
+}
+    .flexDesign1 > div {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .flexDesign1 > div > * {
+        margin: 3px 0;
+    }
+    .flexDesign1 > img{
+        width:auto;
+        align-self: center;
+    }
+
+
+
+
+/* contenedor GRID de latest tracks con foto, titulo */
+.gridDesign1{
+display: grid;
+grid-template-columns: 23% 23% 23% 23% 7%;
+grid-template-rows: 100%;
+grid-template-areas: "id1" "id2" "id3" "id4" "idmore";
+align-content: center;
+}
+
+/* mini box de una track con foto, titulo */
+.flexDesign2{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.393);
+    border: 2px solid rgb(56, 210, 156);
+    border-radius: 9px;
+    margin: 0px 5px;
+    padding: 9px;
+    font-size: 60%;
+}
+    .flexDesign2 h2{
+        text-align: center;
+    }
+    .flexDesign2 img{
+        width: 100%;
+        border-radius: 4px;
+        padding-bottom:20px;
+    }
+    .flexDesign2:hover{
+        border-color:rgb(222, 74, 0);     
+    }
+    .flexDesign2:hover h2 {
+        color: rgb(222, 74, 0);
+    }
+
+/* MINI BOX para cada album */
+    .flexDesign3{
+        display: flex; 
+        background-color: rgba(0, 0, 0, 0.800);
+        border: 2px solid rgb(25, 152, 107);
+        border-radius: 9px;
+        padding: 8px 18px 8px 10px;
+        width: 380px;
+        font-size: 80%;
+        margin: 10px;
+    }
+        .flexDesign3:hover {
+            border-color: rgb(47, 234, 168);
+            background-color: rgba(1, 21, 21, 0.601);
+        }
+        .flexDesign3 > img {
+            width: 200px;
+            height: auto;
+            border-radius: 4px;
+            padding-right:10px;
+            }
+        .flexDesign3 > div {
+            display:flex;
+
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: flex-start;
+        }
+            .flexDesign3 > div > * {
+                margin-bottom: 5px;
+            }
+    .flexDesign3 ol > li {
+        list-style:none;
+    }
+    .flexDesign3 a {
+        color: rgb(25, 152, 107);
+    }
+    .flexDesign3 a:hover {
+        color: rgb(222, 74, 0);
+    }
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* ACA EMPIEZAN LOS ESTILOS DE CADA PAGINA */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* INDEX- HOME */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+    /* HOME_SECTION1 - Latest News */
+    #home_section1 {
+        text-align: end;
+        }
+        #home_section1 > div{
+            align-items: flex-end;
+        }
+        #home_section1 p{
+            width:60%;
+        }
+        #home_section1 img{
+            width:200px;
+            margin-left: 3%;
+        }
+
+
+
+    /* HOME_SECTION2 : About me + Mini Video */
+    #home_section2{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+        /* About Me Box */
+        #home_section2 > section{
+            padding: 2%;
+            font-size:90%;
+            flex-direction: row-reverse;
+            width: 40%;
+            margin: 0;
+        }
+            #home_section2 > section > div{
+                text-align: start;
+                justify-content: center;  
+            }
+                #home_section2 > section > div > p {
+                    width:70%;
+                }
+
+            #home_section2 img {
+                width: 400px;
+                /* width: 15vw; */
+                margin: 0 7% 0 2%;
+            }
+
+        /* video box */
+        #home_section2_video{
+            border-radius: 18px;
+            align-self:center;
+        }
+
+
+
+
+
+    /* HOME SECTION 3: Latest Tracks */
+    /* boton more */
+    #home_section3 > a:last-child{
+        align-self: center;
+        height:max-content;
+    }
+
+
+    /* HOME SECTION 4: Spotify Playlist */
+    #home_section4{
+        padding: 1% 3%;
+        }
+
+/* ============================================ */
+/* ============================================ */
+/* INDEX FINISH */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* ABOUT ME */
+/* ============================================ */
+/* ============================================ */
+
+    /* ABOUTME_SECTION1 : About me */
+
+#aboutme_section1 {
+    text-align: start;
+    flex-direction: row-reverse;
+    }
+    #aboutme_section1 > div{
+        align-items: flex-start;
+    }
+    #aboutme_section1 p{
+        width:80%;
+        margin-top: 14px;
+        text-indent:4px;
+    }
+    #aboutme_section1 img{
+        
+        height:25vmin;
+        margin-right: 3%;
+    }
+
+/* ============================================ */
+/* ============================================ */
+/* ABOUT ME FINISH */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* RELEASES */
+/* ============================================ */
+/* ============================================ */
+
+
+/* RELEASES SECTION 1: Latest Tracks */
+
+
+
+/* RELEASES SECTION 2: Albums */
+
+#releases_section2{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "alb1" "alb2" "alb3" "alb4";
+    justify-items: center;
+    justify-content: space-around;
+}
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* RELEASES FINISH */
+/* ============================================ */
+/* ============================================ */    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* MEDIA */
+/* ============================================ */
+/* ============================================ */
+
+
+#media_section1{
+    margin: 25px 0px;
+    padding: 30px 0px;
+    background-color: rgba(0, 4, 5, 0.9);
+    border-radius: 4px;
+    display:grid;
+    grid-template-columns:32% 32% 32%;
+    justify-items: center;
+    justify-content: center;
+    gap: 40px 0px;
+}
+
+#media_section1 img{
+    width: 250px;
+}
+#media_section1 img:hover{
+    filter: brightness(115%);
+}
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* MEDIA FINISH */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* CONTACT */
+/* ============================================ */
+/* ============================================ */
+
+
+#contact_section1{
+    display:flex;
+    justify-content: center;
+}
+#contact_section1 > form > div{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    font-size: 140%;
+}
+
+/* ============================================ */
+/* ============================================ */
+/* CONTACT FINISH */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+
+/* ============================================ */
+/* Responsive : LARGE */
+/* ============================================ */
+@media only screen and (min-width:882px){
+
+
+
+    /* ============= atributos GLOBALES ============ */
+        header > div, main, footer > div {
+            width:52rem
+        }
+        main > section {
+            margin:30px 0px;
+        }
+    
+    
+    /* ========= atributos por PAGINA ========== */
+        #releases_section1{
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* Responsive : MEDIUM */
+/* ============================================ */
+
+
+@media only screen and (max-width:882px){
+
+
+
+/* ============= atributos GLOBALES ============ */
+    body{
+        font-size:0.88rem;
+    }
+    header > div, main, footer > div {
+        width:35rem
+    }
+
+    header > div {
+        /* flex-direction:column; */
+        justify-content: center;
+    }
+
+    main > section {
+        margin:20px 0px;
+    }
+
+
+    nav{
+        width: 100%;
+    }
+
+    h2{
+        font-size:150%;
+    }
+
+    .gridDesign1{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+
+
+
+
+
+/* ========= atributos por PAGINA ========= */
+    #home_section1 p{
+        width:80%;
+    }
+
+    #home_section2{
+        flex-direction: column;
+    }
+        #home_section2 iframe{
+            display:none;
+        }
+        #home_section2 > section{
+            width: 60%;
+            align-self: center;
+        }
+
+
+    #home_section3 > a:last-child{
+        display:none;
+    }
+
+    #releases_section2{
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        font-size:125%;
+    }
+    
+    #media_section1{
+        margin: 25px 0px;
+        padding: 20px 0px;
+        gap: 20px 0px;
+    }
+    #media_section1 img{
+        width: 170px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* Responsive : SMALL */
+/* ============================================ */
+
+
+
+@media only screen and (max-width:600px){
+
+
+
+
+
+/* ============= atributos GLOBALES ============ */    
+    body{
+        font-size:0.8rem;
+    }
+
+    header > div, main, footer > div {
+        width:90%;
+    }
+
+    main > section {
+        margin:20px 0px;
+    }
+    nav > ul > li {
+        margin:4px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .flexDesign2 h2{
+        font-size:2.5vw;
+        text-align: center;
+    }
+    .boxSeparator{
+        padding: 8px;
+    }
+
+
+
+
+
+/* ========= atributos por PAGINA ========== */
+
+    #home_section1 p{
+        width:100%;
+    }
+    
+    #home_section2 > section{
+        width: 96%;
+        align-self: center;
+    }
+    #releases_section2 > div{
+        width:80%;
+        font-size:2.8vw;
+    }
+    #releases_section2 img{
+        width: 35vw;
+        height:40vw;
+    }
+
+    #media_section1{
+        grid-template-columns:34% 34% 34%;
+        margin: 25px 0px;
+        padding: 2vw 2vw;
+        gap: 2vw 0vw;
+    }
+    #media_section1 img{
+        width: 27vw;
+    }
+}
+
+
+
+/* ========= tamaño de imagenes genericas ========== */
+@media only screen and (min-width:420px) and (max-width:600px){
+    #home_section1 img, #home_section2 img{
+        width: 30vw !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* Responsive : EXTRA SMALL */
+/* ============================================ */
+
+
+
+@media only screen and  (max-width:420px){
+
+
+
+
+
+/* ============= atributos GLOBALES ============ */
+    body{
+        font-size:3vw;
+    }
+    header img{
+        width:70vw !important;
+    }
+    h2{
+        font-size:150%;
+    }
+    h3{
+        font-size:80%;
+    }
+    footer > div{
+        flex-wrap: wrap;
+    }
+    footer > div > div{
+        margin:5px 0px;
+    }
+
+
+    .flexDesign2{
+        margin-bottom:10px;
+    }
+    .flexDesign2 h2{
+        font-size:5vw;
+    }
+
+    .gridDesign1{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        align-content:space-around;
+        justify-content: space-around;
+    }
+    .boxSeparator{
+        font-size:100%;
+    }
+
+
+
+
+
+
+/* ========= atributos por PAGINA ========== */
+
+    #home_section1 img, #home_section2 img{
+        width: 25vw !important;
+    }
+    #releases_section2 > div{
+        width:90%;
+        font-size:3.5vw;
+    }
+    #contact_section1 > form > div{
+        width:85vw;
+    }
+}
+
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
+/* ======FINISH RESPONSIVE===================== */
+/* ============================================ */
+/* ============================================ */

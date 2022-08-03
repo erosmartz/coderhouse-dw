@@ -56,7 +56,7 @@ header {
     width:100%;
     background-color: rgb(1, 9, 16);
     border-bottom: 1px solid rgb(0, 41, 40);
-    transition: 125ms ease-out;
+    transition: border-color 250ms ease;
 }
 
     header:hover{
@@ -214,20 +214,21 @@ input , textarea{
 
 /* LINKS */
 
-
-a:any-link{
-    color: rgb(222, 74, 0);
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700;
-    font-size: 88%;
-    letter-spacing: 2px;
-/*     text-transform:uppercase; */
-    text-decoration: none;
+a{
+    transition: color 250ms ease;
 }
-a:hover{
-    color:rgb(255, 136, 77);
-    transition: 250ms ease-out;
-}
+    a:any-link{
+        color: rgb(222, 74, 0);
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 700;
+        font-size: 88%;
+        letter-spacing: 2px;
+    /*     text-transform:uppercase; */
+        text-decoration: none;
+    }
+    a:hover{
+        color:rgb(255, 136, 77);
+    }
 
 main span a{
     background-color: rgba(0, 0, 0, 0.833);
@@ -274,7 +275,7 @@ main span a{
     background-size: 400% 400%;
     animation: animGradient1 9s ease infinite;
 
-    transition: 125ms ease-out;
+    transition: border-color 250ms ease;
 }
     .boxDesign1:hover{
         border-color: rgb(0, 54, 69)
@@ -297,7 +298,7 @@ main span a{
     justify-content: space-between;
     align-items: center;
 
-    transition: 125ms ease-out;
+    transition: border-color 250ms ease;
 }
     .boxSeparator:hover{
         border-color: rgb(0, 54, 69)
@@ -342,14 +343,14 @@ align-content: center;
     display: flex;
     align-items: center; 
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.655);
+    background-color: rgba(0, 0, 0, 0.185);
     border: 2px solid rgb(56, 210, 156);
     border-radius: 9px;
     margin: 0px 5px;
     padding: 9px;
     font-size: 60%;
 
-    transition: border-color 0.5s, background-color 0.5s;
+    transition: border-color 0.5s ease, background-color 0.5s ease;
 }
     .flexDesign2 h2{
         text-align: center;
@@ -363,6 +364,9 @@ align-content: center;
         border-color:rgb(222, 74, 0); 
         background-color: rgba(0, 0, 0, 0.973)
     }
+    .flexDesign2 h2{
+        transition:color 0.5s ease;
+    }
     .flexDesign2:hover h2 {
         color: rgb(222, 74, 0);
     }
@@ -370,14 +374,14 @@ align-content: center;
 /* MINI BOX para cada album */
     .flexDesign3{
         display: flex; 
-        background-color: rgba(0, 0, 0, 0.800);
+        background-color: rgba(0, 0, 0, 0.358);
         border: 2px solid rgb(25, 152, 107);
         border-radius: 9px;
         padding: 8px 18px 8px 10px;
         width: 380px;
         font-size: 80%;
         margin: 10px;
-        transition: border-color 0.5s, background-color 0.5s;
+        transition: border-color 0.5s ease, background-color 0.5s ease;
     }
         .flexDesign3:hover {
             border-color: rgb(47, 234, 168);
@@ -403,7 +407,7 @@ align-content: center;
         list-style:none;
     }
     .flexDesign3 a {
-        transition: color 0.2s;
+        transition: color 0.2s ease;
         color: rgb(25, 152, 107);
     }
     .flexDesign3 a:hover {

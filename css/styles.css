@@ -6,7 +6,24 @@
 /* ============================================ */
 
 /* CSS Style Reset */
-*{margin:0;padding:0;}
+*{margin:0 ;padding:0;}
+
+
+
+/* Pisando toda la basura global que Boostrap agrega */
+
+*, ::after, ::before {
+     box-sizing: content-box;
+}
+body *{
+    line-height:normal;
+    font-family: initial;
+    margin:0;
+    padding:0;
+}
+h4{
+    font-size:16px;
+}
 
 
 
@@ -16,6 +33,7 @@
 /* ========      ESTILOS GLOBALES      ======== */
 /* ============================================ */
 /* ============================================ */
+
 
 
 
@@ -253,11 +271,9 @@ main span a{
     margin: 25px 0px;
     border-radius: 18px;
     border: 1px solid rgba(0, 51, 47, 0.68);
-
     background: linear-gradient(270deg, #001717, #000509);
     background-size: 400% 400%;
     animation: animGradient1 9s ease infinite;
-
     transition: border-color 250ms ease;
 }
     .style1:hover{
@@ -293,9 +309,7 @@ main span a{
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo{
     display:flex;
-
     padding: 2% 4%;
-
 }
     .cardInfo > div {
         display:flex;
@@ -469,7 +483,6 @@ align-content: center;
 
             padding: 2%;
             margin: 0;
-
             font-size:90%;
             width: 40%;
 
@@ -754,7 +767,7 @@ align-content: center;
 
 
 /* ============= atributos GLOBALES ============ */
-    /* tamaño font */
+    /* tamaÃ±o font */
     body{
         font-size:0.88rem;
     }
@@ -779,7 +792,7 @@ align-content: center;
         width: 100%;
     }
     
-    /* tamaño titulos */
+    /* tamaÃ±o titulos */
     h2{
         font-size:150%;
     }
@@ -857,7 +870,7 @@ align-content: center;
 
 
 /* ============= atributos GLOBALES ============ */
-    /* tamaño del font */    
+    /* tamaÃ±o del font */    
     body{
         font-size:0.8rem;
     }
@@ -872,7 +885,7 @@ align-content: center;
         margin:20px 0px;
     }
 
-    /* tamaño del nav */
+    /* tamaÃ±o del nav */
     nav > ul > li {
         margin:4px 25px;
         font-size: 0.9rem;
@@ -905,7 +918,7 @@ align-content: center;
         align-self: center;
     }
 
-    /* ajustes de tamaño a la carta de albums */
+    /* ajustes de tamaÃ±o a la carta de albums */
     #releases_albumlist > div{
         width:80%;
         font-size:2.8vw;
@@ -915,7 +928,7 @@ align-content: center;
         height:40vw;
     }
 
-    /* ajustes de tamaño a la galeria */
+    /* ajustes de tamaÃ±o a la galeria */
     #media_gallery{
         grid-template-columns:34% 34% 34%;
         margin: 25px 0px;
@@ -929,7 +942,7 @@ align-content: center;
 
 
 
-/* ========= tamaño de imagenes genericas ========== */
+/* ========= tamaÃ±o de imagenes genericas ========== */
 @media only screen and (min-width:420px) and (max-width:600px){
     #home_news img, #home_aboutme img{
         width: 30vw !important;
@@ -959,7 +972,7 @@ align-content: center;
 
 
 /* ============= atributos GLOBALES ============ */
-    /* tamaño de font */
+    /* tamaÃ±o de font */
     body{
         font-size:3vw;
     }
@@ -1027,12 +1040,12 @@ align-content: center;
 
 
 /* ========= atributos por PAGINA ========== */
-    /* tamaño de imagenes */
+    /* tamaÃ±o de imagenes */
     #home_news img, #home_aboutme img{
         width: 25vw !important;
     }
 
-    /* ajustes al tamaño de la carta para albums */
+    /* ajustes al tamaÃ±o de la carta para albums */
     #releases_albumlist > div{
         width:90%;
         font-size:3.5vw;

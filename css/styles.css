@@ -6,8 +6,55 @@
 /* ============================================ */
 
 /* CSS Style Reset */
-*{margin:0;padding:0;}
+    *{margin:0 ;padding:0;}
 
+
+
+/* =================*/
+/* BOOTSTRAP STUFF */
+/* =================*/
+
+    /* Pisando toda la basura global que Boostrap agrega */
+
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
+        body *{
+            line-height:normal;
+            font-family: initial;
+            margin:0;
+            padding:0;
+        }
+        h4{
+            font-size:16px;
+        }
+
+
+
+    /* bootstrap changes */
+        .bg-dark {
+            --bs-bg-opacity: 0;
+            --bs-navbar-hover-color: rgba(255, 193, 134, 0.75);
+        }
+
+
+        /* boostrap changes */
+        .container-fluid{
+            flex-direction:row-reverse;
+            padding: 0;
+        }
+
+        .navbar-toggler{
+            color: rgb(0, 191, 169);
+            border: var(--bs-border-width) solid rgb(0, 183, 164);
+        }
+        .navbar-toggler-icon {
+            background-image: url(/img/navButton.png)
+        }
+
+/* =================*/
+/* BOOTSTRAP FINISH */
+/* =================*/
 
 
 
@@ -16,6 +63,7 @@
 /* ========      ESTILOS GLOBALES      ======== */
 /* ============================================ */
 /* ============================================ */
+
 
 
 
@@ -30,15 +78,6 @@ body {
     opacity: 1;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 6px ), repeating-linear-gradient( #00151555, #000505 );
     background-attachment: fixed;
-
-
-    /* animacion de fondo */
-    /* animation: animMainBk 7s ease infinite; */
-
-
-    
-    /* old bk image */
-    /* background-image: url(../img/body_bk.jpg); */
 
 }
 
@@ -76,7 +115,7 @@ header {
             }
 
 
-nav {
+/* nav {
     display:flex;
 
     align-items: center;
@@ -99,7 +138,7 @@ nav {
         nav > ul > li {
             margin:9px;
             text-align: center;
-        }
+        } */
 
 
 /* ============================================ */
@@ -144,7 +183,9 @@ footer {
 
 
 
+/* ============================================ */
 /* FONTS */
+/* ============================================ */
 
 h1 {
     font-family: 'Montserrat', sans-serif; 
@@ -186,7 +227,7 @@ p {
     font-family: 'Anybody','Gill Sans MT', cursive;
     font-weight: 300;
     font-size: 100%;
-/*     text-transform:uppercase; */
+/*  text-transform:uppercase; */
     color: rgb(109, 181, 170);
 }
 strong {
@@ -223,7 +264,7 @@ a{
         font-weight: 700;
         font-size: 88%;
         letter-spacing: 2px;
-    /*     text-transform:uppercase; */
+    /*  text-transform:uppercase; */
         text-decoration: none;
     }
     a:hover{
@@ -236,92 +277,79 @@ main span a{
 
 
 
+
+
+
 /* ============================================ */
 /* ANIMACIONES */
 /* ============================================ */
 
-/* animacion de box1 */
+/* animacion de style1 */
 @keyframes animGradient1 {
     0%{background-position:0% 50%}
     50%{background-position:100% 0%}
     100%{background-position:0% 50%}
 }
-/* animacion de fondo */
-/* @keyframes animMainBk {
-    0%{
-        background-color: #000000;
-    }
-    50%{
-        background-color: #000f0f;
-    }
-    100%{
-        background-color: #000000;
-    }
-} */
 
 
 /* ============================================ */
 /* BOX MODELING STYLES */
 /* ============================================ */
 
-/* estilo de caja basica copada */
-.boxDesign1{
+/* estilo 1 para contenedores: con gradient y borde interactivo */
+.style1{
     margin: 25px 0px;
-    /* background-color: rgb(12, 47, 53); */
     border-radius: 18px;
     border: 1px solid rgba(0, 51, 47, 0.68);
-
     background: linear-gradient(270deg, #001717, #000509);
     background-size: 400% 400%;
     animation: animGradient1 9s ease infinite;
-
     transition: border-color 250ms ease;
 }
-    .boxDesign1:hover{
+    .style1:hover{
         border-color: rgb(0, 54, 69)
     }
 
 
 
-/* Separador de Secciones! */
-.boxSeparator{
+/* separador de secciones: con titulo */
+.separator{
     display:flex;
-    margin:25px 0 0 0;
-    /* background-color: rgb(12, 47, 53); */
-    background: linear-gradient(270deg, #001717, #000509);
-    background-size: 400% 400%;
-    animation: animGradient1 9s ease infinite;
-
-    border: 1.5px solid rgba(0, 51, 47, 0.68);
-    border-radius: 18px;
-    padding: 1% 3%;
     justify-content: space-between;
     align-items: center;
 
+    padding: 1% 3%;
+    margin:25px 0 0 0;
+    border: 1.5px solid rgba(0, 51, 47, 0.68);
+    border-radius: 18px;
+
+    background: linear-gradient(270deg, #001717, #000509);
+    background-size: 400% 400%;
+    animation: animGradient1 9s ease infinite;
+
     transition: border-color 250ms ease;
 }
-    .boxSeparator:hover{
+    .separator:hover{
         border-color: rgb(0, 54, 69)
     }
 
 
 
 
-/* para info adaptable con texto e img */
-.flexDesign1{
+/* carta estilo 1 para info: con titulo, parrafo e imagen */
+.cardInfo{
     display:flex;
     padding: 2% 4%;
-
 }
-    .flexDesign1 > div {
+    .cardInfo > div {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .flexDesign1 > div > * {
+    .cardInfo > div > * {
         margin: 3px 0;
     }
-    .flexDesign1 > img{
+    .cardInfo > img{
         width:auto;
         align-self: center;
     }
@@ -329,92 +357,103 @@ main span a{
 
 
 
-/* contenedor GRID de latest tracks con foto, titulo */
-.gridDesign1{
+/* grilla contenedora para 4 cartas "cardTrack" */
+.gridTracks{
 display: grid;
 grid-template-columns: 23% 23% 23% 23% 7%;
 grid-template-rows: 100%;
 grid-template-areas: "id1" "id2" "id3" "id4" "idmore";
+
 align-content: center;
 }
 
-/* mini box de una track con foto, titulo */
-.flexDesign2{
+
+
+/* carta estilo 2, para tracks: con imagen y titulo */
+.cardTrack{
     display: flex;
     align-items: center; 
     flex-direction: column;
+
     background-color: rgba(0, 0, 0, 0.185);
     border: 2px solid rgb(56, 210, 156);
     border-radius: 9px;
     margin: 0px 5px;
     padding: 9px;
+    
     font-size: 60%;
 
     transition: border-color 0.5s ease, background-color 0.5s ease;
 }
-    .flexDesign2 h2{
+    .cardTrack h2{
         text-align: center;
     }
-    .flexDesign2 img{
+    .cardTrack img{
         width: 100%;
         border-radius: 4px;
         padding-bottom:20px;
     }
-    .flexDesign2:hover{
+    .cardTrack:hover{
         border-color:rgb(222, 74, 0); 
         background-color: rgba(0, 0, 0, 0.973)
     }
-    .flexDesign2 h2{
+    .cardTrack h2{
         transition:color 0.5s ease;
     }
-    .flexDesign2:hover h2 {
+    .cardTrack:hover h2 {
         color: rgb(222, 74, 0);
     }
 
-/* MINI BOX para cada album */
-    .flexDesign3{
+
+
+
+/* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
+    .cardAlbum{
         display: flex; 
+
+        font-size: 80%;
+
         background-color: rgba(0, 0, 0, 0.358);
         border: 2px solid rgb(25, 152, 107);
         border-radius: 9px;
+
         padding: 8px 18px 8px 10px;
-        width: 380px;
-        font-size: 80%;
         margin: 10px;
+
+        width: 380px;
+
         transition: border-color 0.5s ease, background-color 0.5s ease;
     }
-        .flexDesign3:hover {
+        .cardAlbum:hover {
             border-color: rgb(47, 234, 168);
             background-color: rgba(0, 0, 0, 0.975);
         }
-        .flexDesign3 > img {
+        .cardAlbum > img {
             width: 200px;
             height: auto;
+
             border-radius: 4px;
             padding-right:10px;
             }
-        .flexDesign3 > div {
+        .cardAlbum > div {
             display:flex;
-
             flex-direction: column;
             align-content: flex-start;
             justify-content: flex-start;
         }
-            .flexDesign3 > div > * {
+            .cardAlbum > div > * {
                 margin-bottom: 5px;
             }
-    .flexDesign3 ol > li {
+    .cardAlbum ol > li {
         list-style:none;
     }
-    .flexDesign3 a {
+    .cardAlbum a {
         transition: color 0.2s ease;
         color: rgb(25, 152, 107);
     }
-    .flexDesign3 a:hover {
+    .cardAlbum a:hover {
         color: rgb(222, 74, 0);
     }
-
-
 
 
 
@@ -434,10 +473,6 @@ align-content: center;
 
 
 
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* INDEX- HOME */
@@ -447,25 +482,25 @@ align-content: center;
 
 
 
-    /* HOME_SECTION1 - Latest News */
-    #home_section1 {
+    /* home_news - box para noticias, canciones nuevas, etc */
+    #home_news {
         text-align: end;
         }
-        #home_section1 > div{
+        #home_news > div{
             align-items: flex-end;
         }
-        #home_section1 p{
+        #home_news p{
             width:60%;
         }
-        #home_section1 img{
+        #home_news img{
             width:200px;
             margin-left: 3%;
         }
 
 
 
-    /* HOME_SECTION2 : About me + Mini Video */
-    #home_section2{
+    /* home_aboutme : mini aboutme + videito */
+    #home_aboutme{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
@@ -473,29 +508,31 @@ align-content: center;
 
 
         /* About Me Box */
-        #home_section2 > section{
-            padding: 2%;
-            font-size:90%;
+        #home_aboutme > section{
             flex-direction: row-reverse;
-            width: 40%;
+
+            padding: 2%;
             margin: 0;
+            font-size:90%;
+            width: 40%;
+
         }
-            #home_section2 > section > div{
+            #home_aboutme > section > div{
                 text-align: start;
                 justify-content: center;  
             }
-                #home_section2 > section > div > p {
+                #home_aboutme > section > div > p {
                     width:70%;
                 }
 
-            #home_section2 img {
+            #home_aboutme img {
                 width: 400px;
                 /* width: 15vw; */
                 margin: 0 7% 0 2%;
             }
 
         /* video box */
-        #home_section2_video{
+        #home_aboutme_video{
             border-radius: 18px;
             align-self:center;
         }
@@ -505,15 +542,15 @@ align-content: center;
 
 
     /* HOME SECTION 3: Latest Tracks */
-    /* boton more */
-    #home_section3 > a:last-child{
-        align-self: center;
-        height:max-content;
-    }
+        /* boton more */
+        #home_tracklist > a:last-child{
+            align-self: center;
+            height:max-content;
+        }
 
 
     /* HOME SECTION 4: Spotify Playlist */
-    #home_section4{
+    #home_spotify{
         padding: 1% 3%;
         }
 
@@ -541,21 +578,21 @@ align-content: center;
 /* ============================================ */
 /* ============================================ */
 
-    /* ABOUTME_SECTION1 : About me */
+    /* aboutme_info : info */
 
-#aboutme_section1 {
+#aboutme_info {
     text-align: start;
     flex-direction: row-reverse;
     }
-    #aboutme_section1 > div{
+    #aboutme_info > div{
         align-items: flex-start;
     }
-    #aboutme_section1 p{
+    #aboutme_info p{
         width:80%;
         margin-top: 14px;
         text-indent:4px;
     }
-    #aboutme_section1 img{
+    #aboutme_info img{
         
         height:25vmin;
         margin-right: 3%;
@@ -587,13 +624,11 @@ align-content: center;
 /* ============================================ */
 
 
-/* RELEASES SECTION 1: Latest Tracks */
-
 
 
 /* RELEASES SECTION 2: Albums */
 
-#releases_section2{
+#releases_albumlist{
     display:grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
@@ -631,21 +666,23 @@ align-content: center;
 /* ============================================ */
 
 
-#media_section1{
-    margin: 25px 0px;
-    padding: 30px 0px;
-    background-color: rgba(0, 4, 5, 0.9);
-    border-radius: 4px;
+#media_gallery{
     display:grid;
     grid-template-columns:32% 32% 32%;
     justify-items: center;
     justify-content: center;
+
     gap: 40px 0px;
+
+    margin: 25px 0px;
+    padding: 30px 0px;
+    background-color: rgba(0, 4, 5, 0.9);
+    border-radius: 4px; 
 }
 
-#media_section1 img{
-    width: 250px;
-}
+    #media_gallery img{
+        width: 250px;
+    }
 
 
 
@@ -675,17 +712,18 @@ align-content: center;
 /* ============================================ */
 
 
-#contact_section1{
+#contact_form{
     display:flex;
     justify-content: center;
 }
-#contact_section1 > form > div{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    font-size: 140%;
-}
+    #contact_form > form > div{
+        display: flex;
+        flex-direction: column;
+
+        margin: 20px;
+        width: 400px;
+        font-size: 140%;
+    }
 
 /* ============================================ */
 /* ============================================ */
@@ -711,13 +749,20 @@ align-content: center;
 
 
 
+/* BREAKPOINTS:   L,       MD,     SM  - ---- */
+/* BOOTSTRAP */
+/*              >992px ,  >768,   <576 */
 
 
+/* L: 
+MD: 
+SM: 
+ */
 
 /* ============================================ */
-/* Responsive : LARGE */
+/* Responsive : LARGE   >992   */
 /* ============================================ */
-@media only screen and (min-width:882px){
+@media only screen and (min-width:992px){
 
 
 
@@ -735,7 +780,7 @@ align-content: center;
     
     
     /* ========= atributos por PAGINA ========== */
-        #releases_section1{
+        #releases_tracklist{
             grid-template-columns: 25% 25% 25% 25%;
         }
     }
@@ -750,41 +795,46 @@ align-content: center;
 
 
 /* ============================================ */
-/* Responsive : MEDIUM */
+/* Responsive : MEDIUM  576 - 992  */
 /* ============================================ */
 
 
-@media only screen and (max-width:882px){
+@media only screen and (max-width:992px){
 
 
 
 /* ============= atributos GLOBALES ============ */
+    /* tamano font */
     body{
         font-size:0.88rem;
     }
+
+    /* ancho de la pagina */
     header > div, main, footer > div {
-        width:35rem
+        width:90%;
     }
-
+    header> div{
+        padding: 7px 0px;
+    }
+    /* header centrado */
     header > div {
-        /* flex-direction:column; */
-        justify-content: center;
+        justify-content: space-between;
     }
 
+    /* margen vertical para cada seccion */
     main > section {
         margin:20px 0px;
     }
 
-
-    nav{
-        width: 100%;
-    }
-
+    
+    /* tamano titulos */
     h2{
         font-size:150%;
     }
 
-    .gridDesign1{
+
+    /* el tracklist pasa a ser de 4 columnas */
+    .gridTracks{
         grid-template-columns: 25% 25% 25% 25%;
     }
 
@@ -792,42 +842,45 @@ align-content: center;
 
 
 
-
 /* ========= atributos por PAGINA ========= */
-    #home_section1 p{
+    /* ancho del parrafo */
+    #home_news p{
         width:80%;
     }
 
-    #home_section2{
+    /* ocultando el videito de la segunda seccion */
+    #home_aboutme{
         flex-direction: column;
     }
-        #home_section2 iframe{
+        #home_aboutme iframe{
             display:none;
         }
-        #home_section2 > section{
+        #home_aboutme > section{
             width: 60%;
             align-self: center;
         }
 
-
-    #home_section3 > a:last-child{
+    /* ocultando el iconcito [...] */
+    #home_tracklist > a:last-child{
         display:none;
     }
 
-    #releases_section2{
+    /* el albumlist pasa de horizontal a vertical */
+    #releases_albumlist{
         grid-template-columns: 100%;
         grid-template-rows: 25% 25% 25% 25%;
         font-size:125%;
     }
-    
-    #media_section1{
+
+    /* la galeria pasa a tener fotos mas grandes */
+    #media_gallery{
         margin: 25px 0px;
         padding: 20px 0px;
         gap: 20px 0px;
     }
-    #media_section1 img{
-        width: 170px;
-    }
+        #media_gallery img{
+            width: 170px;
+        }
 
 }
 
@@ -840,128 +893,51 @@ align-content: center;
 
 
 /* ============================================ */
-/* Responsive : SMALL */
+/* Responsive : SMALL <576 */
 /* ============================================ */
 
 
 
-@media only screen and (max-width:600px){
-
-
-
-
-
-/* ============= atributos GLOBALES ============ */    
-    body{
-        font-size:0.8rem;
-    }
-
-    header > div, main, footer > div {
-        width:90%;
-    }
-
-    main > section {
-        margin:20px 0px;
-    }
-    nav > ul > li {
-        margin:4px 25px;
-        font-size: 0.9rem;
-    }
-    
-    .flexDesign2 h2{
-        font-size:2.5vw;
-        text-align: center;
-    }
-    .boxSeparator{
-        padding: 8px;
-    }
-
-
-
-
-
-/* ========= atributos por PAGINA ========== */
-
-    #home_section1 p{
-        width:100%;
-    }
-    
-    #home_section2 > section{
-        width: 96%;
-        align-self: center;
-    }
-    #releases_section2 > div{
-        width:80%;
-        font-size:2.8vw;
-    }
-    #releases_section2 img{
-        width: 35vw;
-        height:40vw;
-    }
-
-    #media_section1{
-        grid-template-columns:34% 34% 34%;
-        margin: 25px 0px;
-        padding: 2vw 2vw;
-        gap: 2vw 0vw;
-    }
-    #media_section1 img{
-        width: 27vw;
-    }
-}
-
-
-
-/* ========= tamaño de imagenes genericas ========== */
-@media only screen and (min-width:420px) and (max-width:600px){
-    #home_section1 img, #home_section2 img{
-        width: 30vw !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================ */
-/* Responsive : EXTRA SMALL */
-/* ============================================ */
-
-
-
-@media only screen and  (max-width:420px){
+@media only screen and (max-width:576px){
 
 
 
 
 
 /* ============= atributos GLOBALES ============ */
+
+    /* tamano de font */
     body{
         font-size:3vw;
     }
+    
+        /* ancho de la pagina */
+        header > div, main, footer > div {
+            width:90%;
+        }
 
+        /* margen vertical de las secciones */
+        main > section {
+            margin:2vw 0px;
+        }
+    
 
-    header > div{
-        width:100%;
-    }
+    /* ajustes al header */
     header img{
-        width:70vw !important;
+        width:50vw !important;
         margin:7px 0px;
     }
 
-    nav{
-        width:90%;
+
+    /* ajustes al footer */
+    footer > div{
+        flex-wrap: wrap;
     }
-        nav > ul > li{
-            margin: 4px 10px;
+        footer > div > div{
+            margin:5px 0px;
         }
 
+    /* ajustes de h2 y h3 */
     h2{
         font-size:150%;
     }
@@ -969,29 +945,27 @@ align-content: center;
         font-size:80%;
     }
 
-    
-    footer > div{
-        flex-wrap: wrap;
-    }
-    footer > div > div{
-        margin:5px 0px;
-    }
 
 
-    .flexDesign2{
+
+    /* ajustes a la carta para tracks */
+    .cardTrack{
         margin-bottom:10px;
     }
-    .flexDesign2 h2{
+    .cardTrack h2{
         font-size:5vw;
     }
 
-    .gridDesign1{
+    /* ajustes a la grilla para tracks, pasan a ser 2 columnas */
+    .gridTracks{
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
         align-content:space-around;
         justify-content: space-around;
     }
-    .boxSeparator{
+
+    /* ajustes al separador de secciones */
+    .separator{
         font-size:100%;
         flex-wrap:wrap;
         padding-inline-start: 4%;
@@ -1002,16 +976,46 @@ align-content: center;
 
 
 
-/* ========= atributos por PAGINA ========== */
 
-    #home_section1 img, #home_section2 img{
+/* ========= atributos por PAGINA ========== */
+    /* ancho del parrafo */
+    #home_news p{
+        width:100%;
+    }
+    
+    /* ancho de la cartita aboutme */
+    #home_aboutme > section{
+        width: 96%;
+        align-self: center;
+    }
+
+    /* tamano de imagenes */
+    #home_news img, #home_aboutme img{
         width: 25vw !important;
     }
-    #releases_section2 > div{
+
+    /* ajustes de tamano a la carta de albums */
+    #releases_albumlist > div{
         width:90%;
         font-size:3.5vw;
     }
-    #contact_section1 > form > div{
+    #releases_albumlist img{
+        width: 35vw;
+        height:40vw;
+    }
+
+    /* ajustes de tamano a la galeria */
+    #media_gallery{
+        grid-template-columns:34% 34% 34%;
+        margin: 25px 0px;
+        padding: 2vw 2vw;
+        gap: 2vw 0vw;
+    }
+        #media_gallery img{
+            width: 27vw;
+        }
+
+    #contact_form > form > div{
         width:85vw;
     }
 }
@@ -1024,5 +1028,14 @@ align-content: center;
 /* ============================================ */
 /* ============================================ */
 /* ======FINISH RESPONSIVE===================== */
+/* ============================================ */
+/* ============================================ */
+
+
+
+
+
+/* ============================================ */
+/* ============================================ */
 /* ============================================ */
 /* ============================================ */

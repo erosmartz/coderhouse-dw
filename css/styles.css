@@ -6,25 +6,55 @@
 /* ============================================ */
 
 /* CSS Style Reset */
-*{margin:0 ;padding:0;}
+    *{margin:0 ;padding:0;}
 
 
 
-/* Pisando toda la basura global que Boostrap agrega */
+/* =================*/
+/* BOOTSTRAP STUFF */
+/* =================*/
 
-*, ::after, ::before {
-     box-sizing: content-box;
-}
-body *{
-    line-height:normal;
-    font-family: initial;
-    margin:0;
-    padding:0;
-}
-h4{
-    font-size:16px;
-}
+    /* Pisando toda la basura global que Boostrap agrega */
 
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
+        body *{
+            line-height:normal;
+            font-family: initial;
+            margin:0;
+            padding:0;
+        }
+        h4{
+            font-size:16px;
+        }
+
+
+
+    /* bootstrap changes */
+        .bg-dark {
+            --bs-bg-opacity: 0;
+            --bs-navbar-hover-color: rgba(255, 193, 134, 0.75);
+        }
+
+
+        /* boostrap changes */
+        .container-fluid{
+            flex-direction:row-reverse;
+            padding: 0;
+        }
+
+        .navbar-toggler{
+            color: rgb(0, 191, 169);
+            border: var(--bs-border-width) solid rgb(0, 183, 164);
+        }
+        .navbar-toggler-icon {
+            background-image: url(/img/navButton.png)
+        }
+
+/* =================*/
+/* BOOTSTRAP FINISH */
+/* =================*/
 
 
 
@@ -85,7 +115,7 @@ header {
             }
 
 
-nav {
+/* nav {
     display:flex;
 
     align-items: center;
@@ -108,7 +138,7 @@ nav {
         nav > ul > li {
             margin:9px;
             text-align: center;
-        }
+        } */
 
 
 /* ============================================ */
@@ -719,13 +749,20 @@ align-content: center;
 
 
 
+/* BREAKPOINTS:   L,       MD,     SM  - ---- */
+/* BOOTSTRAP */
+/*              >992px ,  >768,   <576 */
 
 
+/* L: 
+MD: 
+SM: 
+ */
 
 /* ============================================ */
-/* Responsive : LARGE */
+/* Responsive : LARGE   >992   */
 /* ============================================ */
-@media only screen and (min-width:882px){
+@media only screen and (min-width:992px){
 
 
 
@@ -758,28 +795,30 @@ align-content: center;
 
 
 /* ============================================ */
-/* Responsive : MEDIUM */
+/* Responsive : MEDIUM  576 - 992  */
 /* ============================================ */
 
 
-@media only screen and (max-width:882px){
+@media only screen and (max-width:992px){
 
 
 
 /* ============= atributos GLOBALES ============ */
-    /* tamaÃ±o font */
+    /* tamano font */
     body{
         font-size:0.88rem;
     }
 
     /* ancho de la pagina */
     header > div, main, footer > div {
-        width:35rem
+        width:90%;
     }
-
+    header> div{
+        padding: 7px 0px;
+    }
     /* header centrado */
     header > div {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     /* margen vertical para cada seccion */
@@ -787,12 +826,8 @@ align-content: center;
         margin:20px 0px;
     }
 
-    /* ancho nav */
-    nav{
-        width: 100%;
-    }
     
-    /* tamaÃ±o titulos */
+    /* tamano titulos */
     h2{
         font-size:150%;
     }
@@ -858,141 +893,49 @@ align-content: center;
 
 
 /* ============================================ */
-/* Responsive : SMALL */
+/* Responsive : SMALL <576 */
 /* ============================================ */
 
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:576px){
 
 
 
 
 
 /* ============= atributos GLOBALES ============ */
-    /* tamaÃ±o del font */    
-    body{
-        font-size:0.8rem;
-    }
 
-    /* ancho de la pagina */
-    header > div, main, footer > div {
-        width:90%;
-    }
-
-    /* margen vertical de las secciones */
-    main > section {
-        margin:20px 0px;
-    }
-
-    /* tamaÃ±o del nav */
-    nav > ul > li {
-        margin:4px 25px;
-        font-size: 0.9rem;
-    }
-
-    /* el titulo de la card para tracks */
-    .cardTrack h2{
-        font-size:2.5vw;
-        text-align: center;
-    }
-
-    /* padding mas grande para los separadores */
-    .separator{
-        padding: 8px;
-    }
-
-
-
-
-
-/* ========= atributos por PAGINA ========== */
-    /* ancho del parrafo */
-    #home_news p{
-        width:100%;
-    }
-    
-    /* ancho de la cartita aboutme */
-    #home_aboutme > section{
-        width: 96%;
-        align-self: center;
-    }
-
-    /* ajustes de tamaÃ±o a la carta de albums */
-    #releases_albumlist > div{
-        width:80%;
-        font-size:2.8vw;
-    }
-    #releases_albumlist img{
-        width: 35vw;
-        height:40vw;
-    }
-
-    /* ajustes de tamaÃ±o a la galeria */
-    #media_gallery{
-        grid-template-columns:34% 34% 34%;
-        margin: 25px 0px;
-        padding: 2vw 2vw;
-        gap: 2vw 0vw;
-    }
-        #media_gallery img{
-            width: 27vw;
-        }
-}
-
-
-
-/* ========= tamaÃ±o de imagenes genericas ========== */
-@media only screen and (min-width:420px) and (max-width:600px){
-    #home_news img, #home_aboutme img{
-        width: 30vw !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================ */
-/* Responsive : EXTRA SMALL */
-/* ============================================ */
-
-
-
-@media only screen and  (max-width:420px){
-
-
-
-
-
-/* ============= atributos GLOBALES ============ */
-    /* tamaÃ±o de font */
+    /* tamano de font */
     body{
         font-size:3vw;
     }
-
-    /* ancho del header */
-    header > div{
-        width:100%;
-    }
-    header img{
-        width:70vw !important;
-        margin:7px 0px;
-    }
-    /* el nav pasa a estar abajo de la imagen */
-    nav{
-        width:90%;
-    }
-        nav > ul > li{
-            margin: 4px 10px;
+    
+        /* ancho de la pagina */
+        header > div, main, footer > div {
+            width:90%;
         }
 
+        /* margen vertical de las secciones */
+        main > section {
+            margin:2vw 0px;
+        }
+    
+
+    /* ajustes al header */
+    header img{
+        width:50vw !important;
+        margin:7px 0px;
+    }
+
+
+    /* ajustes al footer */
+    footer > div{
+        flex-wrap: wrap;
+    }
+        footer > div > div{
+            margin:5px 0px;
+        }
 
     /* ajustes de h2 y h3 */
     h2{
@@ -1002,13 +945,7 @@ align-content: center;
         font-size:80%;
     }
 
-    /* ajustes al footer */
-    footer > div{
-        flex-wrap: wrap;
-    }
-        footer > div > div{
-            margin:5px 0px;
-        }
+
 
 
     /* ajustes a la carta para tracks */
@@ -1039,19 +976,45 @@ align-content: center;
 
 
 
+
 /* ========= atributos por PAGINA ========== */
-    /* tamaÃ±o de imagenes */
+    /* ancho del parrafo */
+    #home_news p{
+        width:100%;
+    }
+    
+    /* ancho de la cartita aboutme */
+    #home_aboutme > section{
+        width: 96%;
+        align-self: center;
+    }
+
+    /* tamano de imagenes */
     #home_news img, #home_aboutme img{
         width: 25vw !important;
     }
 
-    /* ajustes al tamaÃ±o de la carta para albums */
+    /* ajustes de tamano a la carta de albums */
     #releases_albumlist > div{
         width:90%;
         font-size:3.5vw;
     }
+    #releases_albumlist img{
+        width: 35vw;
+        height:40vw;
+    }
 
-    /* ajustes al form */
+    /* ajustes de tamano a la galeria */
+    #media_gallery{
+        grid-template-columns:34% 34% 34%;
+        margin: 25px 0px;
+        padding: 2vw 2vw;
+        gap: 2vw 0vw;
+    }
+        #media_gallery img{
+            width: 27vw;
+        }
+
     #contact_form > form > div{
         width:85vw;
     }

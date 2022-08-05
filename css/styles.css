@@ -51,6 +51,7 @@
         .navbar-toggler-icon {
             background-image: url(../img/navButton.png)
         }
+        
 
 /* =================*/
 /* BOOTSTRAP FINISH */
@@ -90,6 +91,7 @@ header {
     display:flex;
     align-items: center;
     justify-content: center;
+    position:-webkit-sticky;
     position:sticky;
     top:0px;
     width:100%;
@@ -108,6 +110,7 @@ header {
         justify-content: space-between;
     }
         header > div > a {
+            width:-moz-fit-content;
             width:fit-content;
         }
             header > div > a > img {
@@ -736,17 +739,9 @@ align-content: center;
 /* ============================================ */
 /* ============================================ */
 
-
-
-/* BREAKPOINTS:   L,       MD,     SM  - ---- */
-/* BOOTSTRAP */
-/*              >992px ,  >768,   <576 */
-
-
-/* L: 
-MD: 
-SM: 
- */
+/* large: 992 */
+/* medium: 762 */
+/* small: 576 */
 
 /* ============================================ */
 /* Responsive : LARGE   >992   */
@@ -826,7 +821,7 @@ SM:
     .gridTracks{
         grid-template-columns: 25% 25% 25% 25%;
     }
-
+    
 
 
 
@@ -885,7 +880,6 @@ SM:
         height:28vw;
     }
 }
-
 
 
 

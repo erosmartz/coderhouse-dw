@@ -1005,6 +1005,12 @@ SM:
     }
 
     /* ajustes de tamano a la galeria */
+
+    #media_carousel{
+        width:90%;
+        align-self: center;
+    }
+
     #media_gallery{
         grid-template-columns:80%;
         margin: 15px 0px;

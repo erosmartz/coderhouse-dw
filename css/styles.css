@@ -77,7 +77,7 @@ body {
     height:100vh;
     background-color: #000000;
     opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 6px ), repeating-linear-gradient( #00151555, #000505 );
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 6px ), repeating-linear-gradient( #001f1f55, #000505 );
     background-attachment: fixed;
 
 }

@@ -49,7 +49,7 @@
             border: var(--bs-border-width) solid rgb(0, 183, 164);
         }
         .navbar-toggler-icon {
-            background-image: url(/img/navButton.png)
+            background-image: url(../img/navButton.png)
         }
 
 /* =================*/
@@ -114,31 +114,6 @@ header {
                 width: 230px;
             }
 
-
-/* nav {
-    display:flex;
-
-    align-items: center;
-    width:65%;
-}
-    nav > ul {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    align-items:center;
-    justify-content: space-evenly;
-
-    list-style: none;
-
-    width: 100%;
-    height: 100%;
-    }
-
-        nav > ul > li {
-            margin:9px;
-            text-align: center;
-        } */
 
 
 /* ============================================ */
@@ -665,7 +640,10 @@ align-content: center;
 /* ============================================ */
 /* ============================================ */
 
-
+#media_carousel{
+    width:50%;
+    align-self: center;
+}
 #media_gallery{
     display:grid;
     grid-template-columns:32% 32% 32%;
@@ -723,6 +701,17 @@ align-content: center;
         margin: 20px;
         width: 400px;
         font-size: 140%;
+    }
+    #contact_form > form > div > input {
+        border-radius: 12px;
+    }
+    #contact_form > form > div:last-child > input {
+        align-self: center;
+        margin: 5px;
+        width:25%;
+        font-family: 'Anybody','Gill Sans MT', cursive;
+        text-transform: uppercase;
+        font-weight: 300;
     }
 
 /* ============================================ */
@@ -874,17 +863,28 @@ SM:
 
     /* la galeria pasa a tener fotos mas grandes */
     #media_gallery{
-        margin: 25px 0px;
-        padding: 20px 0px;
-        gap: 20px 0px;
+        grid-template-columns:48% 48%;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        gap: 15px 0px;
     }
         #media_gallery img{
-            width: 170px;
+            width: 40vw;
         }
 
 }
 
-
+@media only screen and (min-width:576px) and (max-width:992px){
+    /* ajustes de tamano a la carta de albums */
+    #releases_albumlist > div{
+        width:70%;
+        font-size:2.5vw;
+    }
+    #releases_albumlist img{
+        width: 28vw;
+        height:28vw;
+    }
+}
 
 
 
@@ -1006,13 +1006,13 @@ SM:
 
     /* ajustes de tamano a la galeria */
     #media_gallery{
-        grid-template-columns:34% 34% 34%;
-        margin: 25px 0px;
-        padding: 2vw 2vw;
-        gap: 2vw 0vw;
+        grid-template-columns:80%;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        gap: 15px 0px;
     }
         #media_gallery img{
-            width: 27vw;
+            width: 80vw;
         }
 
     #contact_form > form > div{

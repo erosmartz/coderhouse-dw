@@ -881,9 +881,13 @@ align-content: center;
     }
 }
 
-
-
-
+/* navbar orientacion para la derecha */
+@media only screen and (max-width:762px){
+    .navbar-nav{
+        margin-top:5px;
+        align-items:flex-end;
+    }
+}
 
 
 /* ============================================ */

@@ -1,1044 +1,701 @@
-
-
-
 /* ============================================ */
 /* =============       START     ============== */
 /* ============================================ */
-
 /* CSS Style Reset */
-    *{margin:0 ;padding:0;}
-
-
+* {
+  margin: 0;
+  padding: 0; }
 
 /* =================*/
 /* BOOTSTRAP STUFF */
 /* =================*/
+/* Pisando toda la basura global que Boostrap agrega */
+*, ::after, ::before {
+  box-sizing: content-box; }
 
-    /* Pisando toda la basura global que Boostrap agrega */
+body * {
+  line-height: normal;
+  font-family: initial;
+  margin: 0;
+  padding: 0; }
 
-        *, ::after, ::before {
-            box-sizing: content-box;
-        }
-        body *{
-            line-height:normal;
-            font-family: initial;
-            margin:0;
-            padding:0;
-        }
-        h4{
-            font-size:16px;
-        }
+h4 {
+  font-size: 16px; }
 
+/* bootstrap changes */
+.bg-dark {
+  --bs-bg-opacity: 0;
+  --bs-navbar-hover-color: rgba(255, 193, 134, 0.75); }
 
+/* boostrap changes */
+.container-fluid {
+  flex-direction: row-reverse;
+  padding: 0; }
 
-    /* bootstrap changes */
-        .bg-dark {
-            --bs-bg-opacity: 0;
-            --bs-navbar-hover-color: rgba(255, 193, 134, 0.75);
-        }
+.navbar-toggler {
+  color: #00bfa9;
+  border: var(--bs-border-width) solid #00b7a4; }
 
-
-        /* boostrap changes */
-        .container-fluid{
-            flex-direction:row-reverse;
-            padding: 0;
-        }
-
-        .navbar-toggler{
-            color: rgb(0, 191, 169);
-            border: var(--bs-border-width) solid rgb(0, 183, 164);
-        }
-        .navbar-toggler-icon {
-            background-image: url(../img/navButton.png)
-        }
-        
+.navbar-toggler-icon {
+  background-image: url(../img/navButton.png); }
 
 /* =================*/
 /* BOOTSTRAP FINISH */
 /* =================*/
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* ========      ESTILOS GLOBALES      ======== */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
 /* BODY */
 body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size:16px;
-    height:100vh;
-    background-color: #000000;
-    opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 6px ), repeating-linear-gradient( #001f1f55, #000505 );
-    background-attachment: fixed;
-
-}
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 1;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 6px), repeating-linear-gradient(#001f1f55, #000505);
+  background-attachment: fixed; }
 
 /* ============================================ */
 /* HEADER Y NAV */
 /* ============================================ */
-
 header {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    position:-webkit-sticky;
-    position:sticky;
-    top:0px;
-    width:100%;
-    background-color: rgb(1, 9, 16);
-    border-bottom: 1px solid rgb(0, 41, 40);
-    transition: border-color 250ms ease;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: #010910;
+  border-bottom: 1px solid #002928;
+  transition: border-color 250ms ease; }
 
-    header:hover{
-    border-color: rgb(0, 54, 69)
-    }
+header:hover {
+  border-color: #003645; }
 
-    header > div {
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-        header > div > a {
-            width:-moz-fit-content;
-            width:fit-content;
-        }
-            header > div > a > img {
-                width: 230px;
-            }
+header > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
+header > div > a {
+  width: -moz-fit-content;
+  width: fit-content; }
 
+header > div > a > img {
+  width: 230px; }
 
 /* ============================================ */
 /* MAIN */
 /* ============================================ */
-
-
-main{
-    display:flex;
-    margin:5px 0px;
-    flex-direction: column;
-}
-
+main {
+  display: flex;
+  margin: 5px 0px;
+  flex-direction: column; }
 
 /* ============================================ */
 /* FOOTER */
 /* ============================================ */
-
 footer {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    border-top: 3px solid rgb(0, 23, 25);
-    padding-top:5px;
-    background-color: rgb(0, 2, 1);
-    margin-top:auto;
-}
-    footer > div{
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 3px solid #001719;
+  padding-top: 5px;
+  background-color: #000201;
+  margin-top: auto; }
 
-        }
-        footer > div > div:first-child{
-            font-size:95%;
-        }
-        footer p{
-                text-transform:initial;
-        }
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
 
+footer > div > div:first-child {
+  font-size: 95%; }
 
-
+footer p {
+  text-transform: initial; }
 
 /* ============================================ */
 /* FONTS */
 /* ============================================ */
-
 h1 {
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 900;
-    letter-spacing: 4px;
-    font-size: 300%;
-    line-height:90%;
-    text-transform: uppercase;
-    color: rgb(56, 210, 156);
-}
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 300%;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: #38d29c; }
 
 h2 {
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 900;
-    letter-spacing: 4px;
-    font-size: 200%;
-    line-height:90%;
-    text-transform: uppercase;
-    color: rgb(56, 210, 156);
-}
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 200%;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: #38d29c; }
 
 h3 {
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 2px;
-    line-height:100%;
-    font-size: 100%;
-    text-transform: uppercase;
-    color: rgb(56, 210, 156);
-}
-h4{
-    font-family: 'Anybody','Gill Sans MT', cursive;
-    font-weight: 300;
-    text-transform:uppercase;
-    color: rgb(109, 181, 170);
-}
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 100%;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #38d29c; }
+
+h4 {
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #6db5aa; }
+
 p {
-    font-family: 'Anybody','Gill Sans MT', cursive;
-    font-weight: 300;
-    font-size: 100%;
-/*  text-transform:uppercase; */
-    color: rgb(109, 181, 170);
-}
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  font-weight: 300;
+  font-size: 100%;
+  /*  text-transform:uppercase; */
+  color: #6db5aa; }
+
 strong {
-    font-family: 'Anybody','Gill Sans MT', cursive;
-    font-weight: 600;
-    font-size: 100%;
-    text-transform:uppercase;
-    color: rgb(222, 74, 0);
-}
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  font-weight: 600;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #de4a00; }
+
 label {
-    font-family: 'Anybody','Gill Sans MT', cursive;
-    font-weight: 300;
-    font-size: 100%;
-    text-transform:uppercase;
-    color: rgb(109, 181, 170);
-}
-input , textarea{
-    background-color: rgb(2, 20, 19);
-    border-color: rgb(3, 55, 44);
-    border-style:solid;
-    color: rgb(128, 221, 198);
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  font-weight: 300;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa; }
 
-}
-
+input, textarea {
+  background-color: #021413;
+  border-color: #03372c;
+  border-style: solid;
+  color: #80ddc6; }
 
 /* LINKS */
+a {
+  transition: color 250ms ease; }
 
-a{
-    transition: color 250ms ease;
-}
-    a:any-link{
-        color: rgb(222, 74, 0);
-        font-family: 'Montserrat', sans-serif; 
-        font-weight: 700;
-        font-size: 88%;
-        letter-spacing: 2px;
-    /*  text-transform:uppercase; */
-        text-decoration: none;
-    }
-    a:hover{
-        color:rgb(255, 136, 77);
-    }
+a:any-link {
+  color: #de4a00;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 88%;
+  letter-spacing: 2px;
+  /*  text-transform:uppercase; */
+  text-decoration: none; }
 
-main span a{
-    background-color: rgba(0, 0, 0, 0.833);
-}
+a:hover {
+  color: #ff884d; }
 
-
-
-
-
+main span a {
+  background-color: rgba(0, 0, 0, 0.833); }
 
 /* ============================================ */
 /* ANIMACIONES */
 /* ============================================ */
-
 /* animacion de style1 */
 @keyframes animGradient1 {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 0%}
-    100%{background-position:0% 50%}
-}
-
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 0%; }
+  100% {
+    background-position: 0% 50%; } }
 
 /* ============================================ */
 /* BOX MODELING STYLES */
 /* ============================================ */
-
 /* estilo 1 para contenedores: con gradient y borde interactivo */
-.style1{
-    margin: 25px 0px;
-    border-radius: 18px;
-    border: 1px solid rgba(0, 51, 47, 0.68);
-    background: linear-gradient(270deg, #001717, #000509);
-    background-size: 400% 400%;
-    animation: animGradient1 9s ease infinite;
-    transition: border-color 250ms ease;
-}
-    .style1:hover{
-        border-color: rgb(0, 54, 69)
-    }
+.style1 {
+  margin: 25px 0px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 51, 47, 0.68);
+  background: linear-gradient(270deg, #001717, #000509);
+  background-size: 400% 400%;
+  animation: animGradient1 9s ease infinite;
+  transition: border-color 250ms ease; }
 
-
+.style1:hover {
+  border-color: #003645; }
 
 /* separador de secciones: con titulo */
-.separator{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 3%;
+  margin: 25px 0 0 0;
+  border: 1.5px solid rgba(0, 51, 47, 0.68);
+  border-radius: 18px;
+  background: linear-gradient(270deg, #001717, #000509);
+  background-size: 400% 400%;
+  animation: animGradient1 9s ease infinite;
+  transition: border-color 250ms ease; }
 
-    padding: 1% 3%;
-    margin:25px 0 0 0;
-    border: 1.5px solid rgba(0, 51, 47, 0.68);
-    border-radius: 18px;
-
-    background: linear-gradient(270deg, #001717, #000509);
-    background-size: 400% 400%;
-    animation: animGradient1 9s ease infinite;
-
-    transition: border-color 250ms ease;
-}
-    .separator:hover{
-        border-color: rgb(0, 54, 69)
-    }
-
-
-
+.separator:hover {
+  border-color: #003645; }
 
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
-.cardInfo{
-    display:flex;
-    padding: 2% 4%;
-}
-    .cardInfo > div {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .cardInfo > div > * {
-        margin: 3px 0;
-    }
-    .cardInfo > img{
-        width:auto;
-        align-self: center;
-    }
+.cardInfo {
+  display: flex;
+  padding: 2% 4%; }
 
+.cardInfo > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
+.cardInfo > div > * {
+  margin: 3px 0; }
 
+.cardInfo > img {
+  width: auto;
+  align-self: center; }
 
 /* grilla contenedora para 4 cartas "cardTrack" */
-.gridTracks{
-display: grid;
-grid-template-columns: 23% 23% 23% 23% 7%;
-grid-template-rows: 100%;
-grid-template-areas: "id1" "id2" "id3" "id4" "idmore";
-
-align-content: center;
-}
-
-
+.gridTracks {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23% 7%;
+  grid-template-rows: 100%;
+  grid-template-areas: "id1" "id2" "id3" "id4" "idmore";
+  align-content: center; }
 
 /* carta estilo 2, para tracks: con imagen y titulo */
-.cardTrack{
-    display: flex;
-    align-items: center; 
-    flex-direction: column;
+.cardTrack {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.185);
+  border: 2px solid #38d29c;
+  border-radius: 9px;
+  margin: 0px 5px;
+  padding: 9px;
+  font-size: 60%;
+  transition: border-color 0.5s ease, background-color 0.5s ease; }
 
-    background-color: rgba(0, 0, 0, 0.185);
-    border: 2px solid rgb(56, 210, 156);
-    border-radius: 9px;
-    margin: 0px 5px;
-    padding: 9px;
-    
-    font-size: 60%;
+.cardTrack h2 {
+  text-align: center; }
 
-    transition: border-color 0.5s ease, background-color 0.5s ease;
-}
-    .cardTrack h2{
-        text-align: center;
-    }
-    .cardTrack img{
-        width: 100%;
-        border-radius: 4px;
-        padding-bottom:20px;
-    }
-    .cardTrack:hover{
-        border-color:rgb(222, 74, 0); 
-        background-color: rgba(0, 0, 0, 0.973)
-    }
-    .cardTrack h2{
-        transition:color 0.5s ease;
-    }
-    .cardTrack:hover h2 {
-        color: rgb(222, 74, 0);
-    }
+.cardTrack img {
+  width: 100%;
+  border-radius: 4px;
+  padding-bottom: 20px; }
 
+.cardTrack:hover {
+  border-color: #de4a00;
+  background-color: rgba(0, 0, 0, 0.973); }
 
+.cardTrack h2 {
+  transition: color 0.5s ease; }
 
+.cardTrack:hover h2 {
+  color: #de4a00; }
 
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
-    .cardAlbum{
-        display: flex; 
+.cardAlbum {
+  display: flex;
+  font-size: 80%;
+  background-color: rgba(0, 0, 0, 0.358);
+  border: 2px solid #19986b;
+  border-radius: 9px;
+  padding: 8px 18px 8px 10px;
+  margin: 10px;
+  width: 380px;
+  transition: border-color 0.5s ease, background-color 0.5s ease; }
 
-        font-size: 80%;
+.cardAlbum:hover {
+  border-color: #2feaa8;
+  background-color: rgba(0, 0, 0, 0.975); }
 
-        background-color: rgba(0, 0, 0, 0.358);
-        border: 2px solid rgb(25, 152, 107);
-        border-radius: 9px;
+.cardAlbum > img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+  padding-right: 10px; }
 
-        padding: 8px 18px 8px 10px;
-        margin: 10px;
+.cardAlbum > div {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start; }
 
-        width: 380px;
+.cardAlbum > div > * {
+  margin-bottom: 5px; }
 
-        transition: border-color 0.5s ease, background-color 0.5s ease;
-    }
-        .cardAlbum:hover {
-            border-color: rgb(47, 234, 168);
-            background-color: rgba(0, 0, 0, 0.975);
-        }
-        .cardAlbum > img {
-            width: 200px;
-            height: auto;
+.cardAlbum ol > li {
+  list-style: none; }
 
-            border-radius: 4px;
-            padding-right:10px;
-            }
-        .cardAlbum > div {
-            display:flex;
-            flex-direction: column;
-            align-content: flex-start;
-            justify-content: flex-start;
-        }
-            .cardAlbum > div > * {
-                margin-bottom: 5px;
-            }
-    .cardAlbum ol > li {
-        list-style:none;
-    }
-    .cardAlbum a {
-        transition: color 0.2s ease;
-        color: rgb(25, 152, 107);
-    }
-    .cardAlbum a:hover {
-        color: rgb(222, 74, 0);
-    }
+.cardAlbum a {
+  transition: color 0.2s ease;
+  color: #19986b; }
 
-
-
-
-
-
-
-
+.cardAlbum a:hover {
+  color: #de4a00; }
 
 /* ============================================ */
 /* ============================================ */
 /* ACA EMPIEZAN LOS ESTILOS DE CADA PAGINA */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* INDEX- HOME */
 /* ============================================ */
 /* ============================================ */
+/* home_news - box para noticias, canciones nuevas, etc */
+#home_news {
+  text-align: end; }
 
+#home_news > div {
+  align-items: flex-end; }
 
+#home_news p {
+  width: 60%; }
 
+#home_news img {
+  width: 200px;
+  margin-left: 3%; }
 
-    /* home_news - box para noticias, canciones nuevas, etc */
-    #home_news {
-        text-align: end;
-        }
-        #home_news > div{
-            align-items: flex-end;
-        }
-        #home_news p{
-            width:60%;
-        }
-        #home_news img{
-            width:200px;
-            margin-left: 3%;
-        }
+/* home_aboutme : mini aboutme + videito */
+#home_aboutme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
+/* About Me Box */
+#home_aboutme > section {
+  flex-direction: row-reverse;
+  padding: 2%;
+  margin: 0;
+  font-size: 90%;
+  width: 40%; }
 
+#home_aboutme > section > div {
+  text-align: start;
+  justify-content: center; }
 
-    /* home_aboutme : mini aboutme + videito */
-    #home_aboutme{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+#home_aboutme > section > div > p {
+  width: 70%; }
 
+#home_aboutme img {
+  width: 400px;
+  /* width: 15vw; */
+  margin: 0 7% 0 2%; }
 
-        /* About Me Box */
-        #home_aboutme > section{
-            flex-direction: row-reverse;
+/* video box */
+#home_aboutme_video {
+  border-radius: 18px;
+  align-self: center; }
 
-            padding: 2%;
-            margin: 0;
-            font-size:90%;
-            width: 40%;
+/* HOME SECTION 3: Latest Tracks */
+/* boton more */
+#home_tracklist > a:last-child {
+  align-self: center;
+  height: max-content; }
 
-        }
-            #home_aboutme > section > div{
-                text-align: start;
-                justify-content: center;  
-            }
-                #home_aboutme > section > div > p {
-                    width:70%;
-                }
-
-            #home_aboutme img {
-                width: 400px;
-                /* width: 15vw; */
-                margin: 0 7% 0 2%;
-            }
-
-        /* video box */
-        #home_aboutme_video{
-            border-radius: 18px;
-            align-self:center;
-        }
-
-
-
-
-
-    /* HOME SECTION 3: Latest Tracks */
-        /* boton more */
-        #home_tracklist > a:last-child{
-            align-self: center;
-            height:max-content;
-        }
-
-
-    /* HOME SECTION 4: Spotify Playlist */
-    #home_spotify{
-        padding: 1% 3%;
-        }
+/* HOME SECTION 4: Spotify Playlist */
+#home_spotify {
+  padding: 1% 3%; }
 
 /* ============================================ */
 /* ============================================ */
 /* INDEX FINISH */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* ABOUT ME */
 /* ============================================ */
 /* ============================================ */
-
-    /* aboutme_info : info */
-
+/* aboutme_info : info */
 #aboutme_info {
-    text-align: start;
-    flex-direction: row-reverse;
-    }
-    #aboutme_info > div{
-        align-items: flex-start;
-    }
-    #aboutme_info p{
-        width:80%;
-        margin-top: 14px;
-        text-indent:4px;
-    }
-    #aboutme_info img{
-        
-        height:25vmin;
-        margin-right: 3%;
-    }
+  text-align: start;
+  flex-direction: row-reverse; }
+
+#aboutme_info > div {
+  align-items: flex-start; }
+
+#aboutme_info p {
+  width: 80%;
+  margin-top: 14px;
+  text-indent: 4px; }
+
+#aboutme_info img {
+  height: 25vmin;
+  margin-right: 3%; }
 
 /* ============================================ */
 /* ============================================ */
 /* ABOUT ME FINISH */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* RELEASES */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
 /* RELEASES SECTION 2: Albums */
-
-#releases_albumlist{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "alb1" "alb2" "alb3" "alb4";
-    justify-items: center;
-    justify-content: space-around;
-}
-
-
+#releases_albumlist {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "alb1" "alb2" "alb3" "alb4";
+  justify-items: center;
+  justify-content: space-around; }
 
 /* ============================================ */
 /* ============================================ */
 /* RELEASES FINISH */
 /* ============================================ */
-/* ============================================ */    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ============================================ */
 /* ============================================ */
 /* ============================================ */
 /* MEDIA */
 /* ============================================ */
 /* ============================================ */
+#media_carousel {
+  width: 50%;
+  align-self: center; }
 
-#media_carousel{
-    width:50%;
-    align-self: center;
-}
-#media_gallery{
-    display:grid;
-    grid-template-columns:32% 32% 32%;
-    justify-items: center;
-    justify-content: center;
+#media_gallery {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  justify-items: center;
+  justify-content: center;
+  gap: 40px 0px;
+  margin: 25px 0px;
+  padding: 30px 0px;
+  background-color: rgba(0, 4, 5, 0.9);
+  border-radius: 4px; }
 
-    gap: 40px 0px;
-
-    margin: 25px 0px;
-    padding: 30px 0px;
-    background-color: rgba(0, 4, 5, 0.9);
-    border-radius: 4px; 
-}
-
-    #media_gallery img{
-        width: 250px;
-    }
-
-
+#media_gallery img {
+  width: 250px; }
 
 /* ============================================ */
 /* ============================================ */
 /* MEDIA FINISH */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* CONTACT */
 /* ============================================ */
 /* ============================================ */
+#contact_form {
+  display: flex;
+  justify-content: center; }
 
+#contact_form > form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 400px;
+  font-size: 140%; }
 
-#contact_form{
-    display:flex;
-    justify-content: center;
-}
-    #contact_form > form > div{
-        display: flex;
-        flex-direction: column;
+#contact_form > form > div > input {
+  border-radius: 12px; }
 
-        margin: 20px;
-        width: 400px;
-        font-size: 140%;
-    }
-    #contact_form > form > div > input {
-        border-radius: 12px;
-    }
-    #contact_form > form > div:last-child > input {
-        align-self: center;
-        margin: 5px;
-        width:25%;
-        font-family: 'Anybody','Gill Sans MT', cursive;
-        text-transform: uppercase;
-        font-weight: 300;
-    }
+#contact_form > form > div:last-child > input {
+  align-self: center;
+  margin: 5px;
+  width: 25%;
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  text-transform: uppercase;
+  font-weight: 300; }
 
 /* ============================================ */
 /* ============================================ */
 /* CONTACT FINISH */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* RESPONSIVE DESIGN */
 /* ============================================ */
 /* ============================================ */
-
 /* large: 992 */
 /* medium: 762 */
 /* small: 576 */
-
 /* ============================================ */
 /* Responsive : LARGE   >992   */
 /* ============================================ */
-@media only screen and (min-width:992px){
-
-
-
-    /* ============= atributos GLOBALES ============ */
-        header > div{
-            padding-top:8px;
-            padding-bottom:8px;
-        }
-        header > div, main, footer > div {
-            width:52rem
-        }
-        main > section {
-            margin:30px 0px;
-        }
-    
-    
-    /* ========= atributos por PAGINA ========== */
-        #releases_tracklist{
-            grid-template-columns: 25% 25% 25% 25%;
-        }
-    }
-
-
-
-
-
-
-
-
-
+@media only screen and (min-width: 992px) {
+  /* ============= atributos GLOBALES ============ */
+  header > div {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  header > div, main, footer > div {
+    width: 52rem; }
+  main > section {
+    margin: 30px 0px; }
+  /* ========= atributos por PAGINA ========== */
+  #releases_tracklist {
+    grid-template-columns: 25% 25% 25% 25%; } }
 
 /* ============================================ */
 /* Responsive : MEDIUM  576 - 992  */
 /* ============================================ */
+@media only screen and (max-width: 992px) {
+  /* ============= atributos GLOBALES ============ */
+  /* tamano font */
+  body {
+    font-size: 0.88rem; }
+  /* ancho de la pagina */
+  header > div, main, footer > div {
+    width: 90%; }
+  header > div {
+    padding: 7px 0px; }
+  /* header centrado */
+  header > div {
+    justify-content: space-between; }
+  /* margen vertical para cada seccion */
+  main > section {
+    margin: 20px 0px; }
+  /* tamano titulos */
+  h2 {
+    font-size: 150%; }
+  /* el tracklist pasa a ser de 4 columnas */
+  .gridTracks {
+    grid-template-columns: 25% 25% 25% 25%; }
+  /* ========= atributos por PAGINA ========= */
+  /* ancho del parrafo */
+  #home_news p {
+    width: 80%; }
+  /* ocultando el videito de la segunda seccion */
+  #home_aboutme {
+    flex-direction: column; }
+  #home_aboutme iframe {
+    display: none; }
+  #home_aboutme > section {
+    width: 60%;
+    align-self: center; }
+  /* ocultando el iconcito [...] */
+  #home_tracklist > a:last-child {
+    display: none; }
+  /* el albumlist pasa de horizontal a vertical */
+  #releases_albumlist {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    font-size: 125%; }
+  /* la galeria pasa a tener fotos mas grandes */
+  #media_gallery {
+    grid-template-columns: 48% 48%;
+    margin: 15px 0px;
+    padding: 15px 0px;
+    gap: 15px 0px; }
+  #media_gallery img {
+    width: 40vw; } }
 
-
-@media only screen and (max-width:992px){
-
-
-
-/* ============= atributos GLOBALES ============ */
-    /* tamano font */
-    body{
-        font-size:0.88rem;
-    }
-
-    /* ancho de la pagina */
-    header > div, main, footer > div {
-        width:90%;
-    }
-    header> div{
-        padding: 7px 0px;
-    }
-    /* header centrado */
-    header > div {
-        justify-content: space-between;
-    }
-
-    /* margen vertical para cada seccion */
-    main > section {
-        margin:20px 0px;
-    }
-
-    
-    /* tamano titulos */
-    h2{
-        font-size:150%;
-    }
-
-
-    /* el tracklist pasa a ser de 4 columnas */
-    .gridTracks{
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-    
-
-
-
-
-/* ========= atributos por PAGINA ========= */
-    /* ancho del parrafo */
-    #home_news p{
-        width:80%;
-    }
-
-    /* ocultando el videito de la segunda seccion */
-    #home_aboutme{
-        flex-direction: column;
-    }
-        #home_aboutme iframe{
-            display:none;
-        }
-        #home_aboutme > section{
-            width: 60%;
-            align-self: center;
-        }
-
-    /* ocultando el iconcito [...] */
-    #home_tracklist > a:last-child{
-        display:none;
-    }
-
-    /* el albumlist pasa de horizontal a vertical */
-    #releases_albumlist{
-        grid-template-columns: 100%;
-        grid-template-rows: 25% 25% 25% 25%;
-        font-size:125%;
-    }
-
-    /* la galeria pasa a tener fotos mas grandes */
-    #media_gallery{
-        grid-template-columns:48% 48%;
-        margin: 15px 0px;
-        padding: 15px 0px;
-        gap: 15px 0px;
-    }
-        #media_gallery img{
-            width: 40vw;
-        }
-
-}
-
-@media only screen and (min-width:576px) and (max-width:992px){
-    /* ajustes de tamano a la carta de albums */
-    #releases_albumlist > div{
-        width:70%;
-        font-size:2.5vw;
-    }
-    #releases_albumlist img{
-        width: 28vw;
-        height:28vw;
-    }
-}
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  /* ajustes de tamano a la carta de albums */
+  #releases_albumlist > div {
+    width: 70%;
+    font-size: 2.5vw; }
+  #releases_albumlist img {
+    width: 28vw;
+    height: 28vw; } }
 
 /* navbar orientacion para la derecha */
-@media only screen and (max-width:762px){
-    .navbar-nav{
-        margin-top:5px;
-        align-items:flex-end;
-    }
-}
-
+@media only screen and (max-width: 762px) {
+  .navbar-nav {
+    margin-top: 5px;
+    align-items: flex-end; } }
 
 /* ============================================ */
 /* Responsive : SMALL <576 */
 /* ============================================ */
-
-
-
-@media only screen and (max-width:576px){
-
-
-
-
-
-/* ============= atributos GLOBALES ============ */
-
-    /* tamano de font */
-    body{
-        font-size:3vw;
-    }
-    
-        /* ancho de la pagina */
-        header > div, main, footer > div {
-            width:90%;
-        }
-
-        /* margen vertical de las secciones */
-        main > section {
-            margin:2vw 0px;
-        }
-    
-
-    /* ajustes al header */
-    header img{
-        width:50vw !important;
-        margin:7px 0px;
-    }
-
-
-    /* ajustes al footer */
-    footer > div{
-        flex-wrap: wrap;
-    }
-        footer > div > div{
-            margin:5px 0px;
-        }
-
-    /* ajustes de h2 y h3 */
-    h2{
-        font-size:150%;
-    }
-    h3{
-        font-size:80%;
-    }
-
-
-
-
-    /* ajustes a la carta para tracks */
-    .cardTrack{
-        margin-bottom:10px;
-    }
-    .cardTrack h2{
-        font-size:5vw;
-    }
-
-    /* ajustes a la grilla para tracks, pasan a ser 2 columnas */
-    .gridTracks{
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        align-content:space-around;
-        justify-content: space-around;
-    }
-
-    /* ajustes al separador de secciones */
-    .separator{
-        font-size:100%;
-        flex-wrap:wrap;
-        padding-inline-start: 4%;
-    }
-
-
-
-
-
-
-
-/* ========= atributos por PAGINA ========== */
-    /* ancho del parrafo */
-    #home_news p{
-        width:100%;
-    }
-    
-    /* ancho de la cartita aboutme */
-    #home_aboutme > section{
-        width: 96%;
-        align-self: center;
-    }
-
-    /* tamano de imagenes */
-    #home_news img, #home_aboutme img{
-        width: 25vw !important;
-    }
-
-    /* ajustes de tamano a la carta de albums */
-    #releases_albumlist > div{
-        width:90%;
-        font-size:3.5vw;
-    }
-    #releases_albumlist img{
-        width: 35vw;
-        height:40vw;
-    }
-
-    /* ajustes de tamano a la galeria */
-
-    #media_carousel{
-        width:90%;
-        align-self: center;
-    }
-
-    #media_gallery{
-        grid-template-columns:80%;
-        margin: 15px 0px;
-        padding: 15px 0px;
-        gap: 15px 0px;
-    }
-        #media_gallery img{
-            width: 80vw;
-        }
-
-    #contact_form > form > div{
-        width:85vw;
-    }
-}
-
-
-
-
-
+@media only screen and (max-width: 576px) {
+  /* ============= atributos GLOBALES ============ */
+  /* tamano de font */
+  body {
+    font-size: 3vw; }
+  /* ancho de la pagina */
+  header > div, main, footer > div {
+    width: 90%; }
+  /* margen vertical de las secciones */
+  main > section {
+    margin: 2vw 0px; }
+  /* ajustes al header */
+  header img {
+    width: 50vw !important;
+    margin: 7px 0px; }
+  /* ajustes al footer */
+  footer > div {
+    flex-wrap: wrap; }
+  footer > div > div {
+    margin: 5px 0px; }
+  /* ajustes de h2 y h3 */
+  h2 {
+    font-size: 150%; }
+  h3 {
+    font-size: 80%; }
+  /* ajustes a la carta para tracks */
+  .cardTrack {
+    margin-bottom: 10px; }
+  .cardTrack h2 {
+    font-size: 5vw; }
+  /* ajustes a la grilla para tracks, pasan a ser 2 columnas */
+  .gridTracks {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-content: space-around;
+    justify-content: space-around; }
+  /* ajustes al separador de secciones */
+  .separator {
+    font-size: 100%;
+    flex-wrap: wrap;
+    padding-inline-start: 4%; }
+  /* ========= atributos por PAGINA ========== */
+  /* ancho del parrafo */
+  #home_news p {
+    width: 100%; }
+  /* ancho de la cartita aboutme */
+  #home_aboutme > section {
+    width: 96%;
+    align-self: center; }
+  /* tamano de imagenes */
+  #home_news img, #home_aboutme img {
+    width: 25vw !important; }
+  /* ajustes de tamano a la carta de albums */
+  #releases_albumlist > div {
+    width: 90%;
+    font-size: 3.5vw; }
+  #releases_albumlist img {
+    width: 35vw;
+    height: 40vw; }
+  /* ajustes de tamano a la galeria */
+  #media_carousel {
+    width: 90%;
+    align-self: center; }
+  #media_gallery {
+    grid-template-columns: 80%;
+    margin: 15px 0px;
+    padding: 15px 0px;
+    gap: 15px 0px; }
+  #media_gallery img {
+    width: 80vw; }
+  #contact_form > form > div {
+    width: 85vw; } }
 
 /* ============================================ */
 /* ============================================ */
 /* ======FINISH RESPONSIVE===================== */
 /* ============================================ */
 /* ============================================ */
-
-
-
-
-
 /* ============================================ */
 /* ============================================ */
 /* ============================================ */

@@ -1,4 +1,9 @@
 
+@import "theme/colors";
+@import "theme/skin";
+@import "components/flow";
+@import "components/sections";
+/* todavia tengo que poner las variables y pasar los componentes */
 
 
 /* ============================================ */
@@ -7,7 +12,6 @@
 
 /* CSS Style Reset */
 *{margin:0 ;padding:0;}
-
 
 
 /* =================*/
@@ -98,25 +102,27 @@ header {
     background-color: rgb(1, 9, 16);
     border-bottom: 1px solid rgb(0, 41, 40);
     transition: border-color 250ms ease;
-}
 
-    header:hover{
+
+    &:hover {
     border-color: rgb(0, 54, 69)
     }
 
-    header > div {
+    div {
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
-        header > div > a {
+    
+        a {
             width:-moz-fit-content;
             width:fit-content;
-        }
-            header > div > a > img {
+        
+            img {
                 width: 230px;
             }
-
+        }
+    }
+}
 
 
 /* ============================================ */
@@ -144,20 +150,23 @@ footer {
     padding-top:5px;
     background-color: rgb(0, 2, 1);
     margin-top:auto;
-}
-    footer > div{
+
+    div {
             display:flex;
             align-items: center;
             justify-content: space-between;
 
-        }
-        footer > div > div:first-child{
+        
+        div:first-child{
             font-size:95%;
         }
-        footer p{
-                text-transform:initial;
-        }
+    }
+    
+    p{
+            text-transform:initial;
+    }
 
+}
 
 
 
@@ -235,19 +244,22 @@ input , textarea{
 
 a{
     transition: color 250ms ease;
-}
-    a:any-link{
+
+    &:any-link{
         color: rgb(222, 74, 0);
         font-family: 'Montserrat', sans-serif; 
         font-weight: 700;
         font-size: 88%;
         letter-spacing: 2px;
-    /*  text-transform:uppercase; */
         text-decoration: none;
     }
-    a:hover{
+
+    &:hover{
         color:rgb(255, 136, 77);
     }
+
+}
+
 
 main span a{
     background-color: rgba(0, 0, 0, 0.833);
@@ -283,11 +295,11 @@ main span a{
     background-size: 400% 400%;
     animation: animGradient1 9s ease infinite;
     transition: border-color 250ms ease;
-}
-    .style1:hover{
+
+    &:hover{
         border-color: rgb(0, 54, 69)
     }
-
+}
 
 
 /* separador de secciones: con titulo */
@@ -306,11 +318,12 @@ main span a{
     animation: animGradient1 9s ease infinite;
 
     transition: border-color 250ms ease;
-}
-    .separator:hover{
+
+    &:hover{
         border-color: rgb(0, 54, 69)
     }
 
+}
 
 
 
@@ -318,20 +331,22 @@ main span a{
 .cardInfo{
     display:flex;
     padding: 2% 4%;
-}
-    .cardInfo > div {
+
+    div {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    .cardInfo > div > * {
-        margin: 3px 0;
-    }
-    .cardInfo > img{
-        width:auto;
-        align-self: center;
-    }
+    
+        * {
+            margin: 3px 0;
+        }
+        img {
+            width:auto;
+            align-self: center;
+        }
 
+    }
+}
 
 
 
@@ -362,79 +377,82 @@ align-content: center;
     font-size: 60%;
 
     transition: border-color 0.5s ease, background-color 0.5s ease;
-}
-    .cardTrack h2{
+
+    h2{
         text-align: center;
+        transition:color 0.5s ease;
     }
-    .cardTrack img{
+    img{
         width: 100%;
         border-radius: 4px;
         padding-bottom:20px;
     }
-    .cardTrack:hover{
+    &:hover{
         border-color:rgb(222, 74, 0); 
         background-color: rgba(0, 0, 0, 0.973)
     }
-    .cardTrack h2{
-        transition:color 0.5s ease;
-    }
-    .cardTrack:hover h2 {
+    &:hover h2 {
         color: rgb(222, 74, 0);
     }
 
-
+}
 
 
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
-    .cardAlbum{
-        display: flex; 
+.cardAlbum{
+    display: flex; 
 
-        font-size: 80%;
+    font-size: 80%;
 
-        background-color: rgba(0, 0, 0, 0.358);
-        border: 2px solid rgb(25, 152, 107);
-        border-radius: 9px;
+    background-color: rgba(0, 0, 0, 0.358);
+    border: 2px solid rgb(25, 152, 107);
+    border-radius: 9px;
 
-        padding: 8px 18px 8px 10px;
-        margin: 10px;
+    padding: 8px 18px 8px 10px;
+    margin: 10px;
 
-        width: 380px;
+    width: 380px;
 
-        transition: border-color 0.5s ease, background-color 0.5s ease;
+    transition: border-color 0.5s ease, background-color 0.5s ease;
+
+    &:hover {
+        border-color: rgb(47, 234, 168);
+        background-color: rgba(0, 0, 0, 0.975);
     }
-        .cardAlbum:hover {
-            border-color: rgb(47, 234, 168);
-            background-color: rgba(0, 0, 0, 0.975);
-        }
-        .cardAlbum > img {
-            width: 200px;
-            height: auto;
 
-            border-radius: 4px;
-            padding-right:10px;
-            }
-        .cardAlbum > div {
-            display:flex;
-            flex-direction: column;
-            align-content: flex-start;
-            justify-content: flex-start;
+    img {
+        width: 200px;
+        height: auto;
+
+        border-radius: 4px;
+        padding-right:10px;
         }
-            .cardAlbum > div > * {
-                margin-bottom: 5px;
-            }
-    .cardAlbum ol > li {
+
+    div {
+        display:flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+   
+        * {
+            margin-bottom: 5px;
+        }
+    }
+
+    li {
         list-style:none;
     }
-    .cardAlbum a {
+
+    a {
         transition: color 0.2s ease;
         color: rgb(25, 152, 107);
     }
-    .cardAlbum a:hover {
+
+    a:hover {
         color: rgb(222, 74, 0);
     }
 
-
-
+}
 
 
 
@@ -463,18 +481,18 @@ align-content: center;
     /* home_news - box para noticias, canciones nuevas, etc */
     #home_news {
         text-align: end;
-        }
-        #home_news > div{
+        
+        div {
             align-items: flex-end;
         }
-        #home_news p{
+        p {
             width:60%;
         }
-        #home_news img{
+        img {
             width:200px;
             margin-left: 3%;
         }
-
+    }
 
 
     /* home_aboutme : mini aboutme + videito */
@@ -482,39 +500,37 @@ align-content: center;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
+    
 
         /* About Me Box */
-        #home_aboutme > section{
+        section{
             flex-direction: row-reverse;
-
             padding: 2%;
             margin: 0;
             font-size:90%;
             width: 40%;
 
-        }
-            #home_aboutme > section > div{
+            div {
                 text-align: start;
                 justify-content: center;  
-            }
-                #home_aboutme > section > div > p {
+
+                p {
                     width:70%;
                 }
-
-            #home_aboutme img {
-                width: 400px;
-                /* width: 15vw; */
-                margin: 0 7% 0 2%;
             }
+        }
+        img {
+            width: 400px;
+            /* width: 15vw; */
+            margin: 0 7% 0 2%;
+        }
 
         /* video box */
-        #home_aboutme_video{
+        &_video{
             border-radius: 18px;
             align-self:center;
         }
-
+    }
 
 
 
@@ -561,21 +577,21 @@ align-content: center;
 #aboutme_info {
     text-align: start;
     flex-direction: row-reverse;
-    }
-    #aboutme_info > div{
-        align-items: flex-start;
-    }
-    #aboutme_info p{
-        width:80%;
-        margin-top: 14px;
-        text-indent:4px;
-    }
-    #aboutme_info img{
-        
-        height:25vmin;
-        margin-right: 3%;
-    }
-
+    
+        div {
+            align-items: flex-start;
+        }
+        p {
+            width:80%;
+            margin-top: 14px;
+            text-indent:4px;
+        }
+        img {
+            
+            height:25vmin;
+            margin-right: 3%;
+        }
+}
 /* ============================================ */
 /* ============================================ */
 /* ABOUT ME FINISH */
@@ -659,12 +675,11 @@ align-content: center;
     padding: 30px 0px;
     background-color: rgba(0, 4, 5, 0.9);
     border-radius: 4px; 
+
+        img{
+            width: 250px;
+        }
 }
-
-    #media_gallery img{
-        width: 250px;
-    }
-
 
 
 /* ============================================ */

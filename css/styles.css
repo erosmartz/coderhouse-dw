@@ -1,3 +1,4 @@
+/* todavia tengo que poner las variables y pasar los componentes */
 /* ============================================ */
 /* =============       START     ============== */
 /* ============================================ */
@@ -73,21 +74,17 @@ header {
   background-color: #010910;
   border-bottom: 1px solid #002928;
   transition: border-color 250ms ease; }
-
-header:hover {
-  border-color: #003645; }
-
-header > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-header > div > a {
-  width: -moz-fit-content;
-  width: fit-content; }
-
-header > div > a > img {
-  width: 230px; }
+  header:hover {
+    border-color: #003645; }
+  header div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    header div a {
+      width: -moz-fit-content;
+      width: fit-content; }
+      header div a img {
+        width: 230px; }
 
 /* ============================================ */
 /* MAIN */
@@ -109,17 +106,14 @@ footer {
   padding-top: 5px;
   background-color: #000201;
   margin-top: auto; }
-
-footer > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-footer > div > div:first-child {
-  font-size: 95%; }
-
-footer p {
-  text-transform: initial; }
+  footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    footer div div:first-child {
+      font-size: 95%; }
+  footer p {
+    text-transform: initial; }
 
 /* ============================================ */
 /* FONTS */
@@ -188,18 +182,15 @@ input, textarea {
 /* LINKS */
 a {
   transition: color 250ms ease; }
-
-a:any-link {
-  color: #de4a00;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 88%;
-  letter-spacing: 2px;
-  /*  text-transform:uppercase; */
-  text-decoration: none; }
-
-a:hover {
-  color: #ff884d; }
+  a:any-link {
+    color: #de4a00;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 88%;
+    letter-spacing: 2px;
+    text-decoration: none; }
+  a:hover {
+    color: #ff884d; }
 
 main span a {
   background-color: rgba(0, 0, 0, 0.833); }
@@ -228,9 +219,8 @@ main span a {
   background-size: 400% 400%;
   animation: animGradient1 9s ease infinite;
   transition: border-color 250ms ease; }
-
-.style1:hover {
-  border-color: #003645; }
+  .style1:hover {
+    border-color: #003645; }
 
 /* separador de secciones: con titulo */
 .separator {
@@ -245,26 +235,22 @@ main span a {
   background-size: 400% 400%;
   animation: animGradient1 9s ease infinite;
   transition: border-color 250ms ease; }
-
-.separator:hover {
-  border-color: #003645; }
+  .separator:hover {
+    border-color: #003645; }
 
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo {
   display: flex;
   padding: 2% 4%; }
-
-.cardInfo > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.cardInfo > div > * {
-  margin: 3px 0; }
-
-.cardInfo > img {
-  width: auto;
-  align-self: center; }
+  .cardInfo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .cardInfo div * {
+      margin: 3px 0; }
+    .cardInfo div img {
+      width: auto;
+      align-self: center; }
 
 /* grilla contenedora para 4 cartas "cardTrack" */
 .gridTracks {
@@ -286,24 +272,18 @@ main span a {
   padding: 9px;
   font-size: 60%;
   transition: border-color 0.5s ease, background-color 0.5s ease; }
-
-.cardTrack h2 {
-  text-align: center; }
-
-.cardTrack img {
-  width: 100%;
-  border-radius: 4px;
-  padding-bottom: 20px; }
-
-.cardTrack:hover {
-  border-color: #de4a00;
-  background-color: rgba(0, 0, 0, 0.973); }
-
-.cardTrack h2 {
-  transition: color 0.5s ease; }
-
-.cardTrack:hover h2 {
-  color: #de4a00; }
+  .cardTrack h2 {
+    text-align: center;
+    transition: color 0.5s ease; }
+  .cardTrack img {
+    width: 100%;
+    border-radius: 4px;
+    padding-bottom: 20px; }
+  .cardTrack:hover {
+    border-color: #de4a00;
+    background-color: rgba(0, 0, 0, 0.973); }
+  .cardTrack:hover h2 {
+    color: #de4a00; }
 
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
 .cardAlbum {
@@ -316,35 +296,28 @@ main span a {
   margin: 10px;
   width: 380px;
   transition: border-color 0.5s ease, background-color 0.5s ease; }
-
-.cardAlbum:hover {
-  border-color: #2feaa8;
-  background-color: rgba(0, 0, 0, 0.975); }
-
-.cardAlbum > img {
-  width: 200px;
-  height: auto;
-  border-radius: 4px;
-  padding-right: 10px; }
-
-.cardAlbum > div {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  justify-content: flex-start; }
-
-.cardAlbum > div > * {
-  margin-bottom: 5px; }
-
-.cardAlbum ol > li {
-  list-style: none; }
-
-.cardAlbum a {
-  transition: color 0.2s ease;
-  color: #19986b; }
-
-.cardAlbum a:hover {
-  color: #de4a00; }
+  .cardAlbum:hover {
+    border-color: #2feaa8;
+    background-color: rgba(0, 0, 0, 0.975); }
+  .cardAlbum img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    padding-right: 10px; }
+  .cardAlbum div {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start; }
+    .cardAlbum div * {
+      margin-bottom: 5px; }
+  .cardAlbum li {
+    list-style: none; }
+  .cardAlbum a {
+    transition: color 0.2s ease;
+    color: #19986b; }
+  .cardAlbum a:hover {
+    color: #de4a00; }
 
 /* ============================================ */
 /* ============================================ */
@@ -359,47 +332,39 @@ main span a {
 /* home_news - box para noticias, canciones nuevas, etc */
 #home_news {
   text-align: end; }
-
-#home_news > div {
-  align-items: flex-end; }
-
-#home_news p {
-  width: 60%; }
-
-#home_news img {
-  width: 200px;
-  margin-left: 3%; }
+  #home_news div {
+    align-items: flex-end; }
+  #home_news p {
+    width: 60%; }
+  #home_news img {
+    width: 200px;
+    margin-left: 3%; }
 
 /* home_aboutme : mini aboutme + videito */
 #home_aboutme {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-
-/* About Me Box */
-#home_aboutme > section {
-  flex-direction: row-reverse;
-  padding: 2%;
-  margin: 0;
-  font-size: 90%;
-  width: 40%; }
-
-#home_aboutme > section > div {
-  text-align: start;
-  justify-content: center; }
-
-#home_aboutme > section > div > p {
-  width: 70%; }
-
-#home_aboutme img {
-  width: 400px;
-  /* width: 15vw; */
-  margin: 0 7% 0 2%; }
-
-/* video box */
-#home_aboutme_video {
-  border-radius: 18px;
-  align-self: center; }
+  justify-content: space-between;
+  /* About Me Box */
+  /* video box */ }
+  #home_aboutme section {
+    flex-direction: row-reverse;
+    padding: 2%;
+    margin: 0;
+    font-size: 90%;
+    width: 40%; }
+    #home_aboutme section div {
+      text-align: start;
+      justify-content: center; }
+      #home_aboutme section div p {
+        width: 70%; }
+  #home_aboutme img {
+    width: 400px;
+    /* width: 15vw; */
+    margin: 0 7% 0 2%; }
+  #home_aboutme_video {
+    border-radius: 18px;
+    align-self: center; }
 
 /* HOME SECTION 3: Latest Tracks */
 /* boton more */
@@ -425,18 +390,15 @@ main span a {
 #aboutme_info {
   text-align: start;
   flex-direction: row-reverse; }
-
-#aboutme_info > div {
-  align-items: flex-start; }
-
-#aboutme_info p {
-  width: 80%;
-  margin-top: 14px;
-  text-indent: 4px; }
-
-#aboutme_info img {
-  height: 25vmin;
-  margin-right: 3%; }
+  #aboutme_info div {
+    align-items: flex-start; }
+  #aboutme_info p {
+    width: 80%;
+    margin-top: 14px;
+    text-indent: 4px; }
+  #aboutme_info img {
+    height: 25vmin;
+    margin-right: 3%; }
 
 /* ============================================ */
 /* ============================================ */
@@ -481,9 +443,8 @@ main span a {
   padding: 30px 0px;
   background-color: rgba(0, 4, 5, 0.9);
   border-radius: 4px; }
-
-#media_gallery img {
-  width: 250px; }
+  #media_gallery img {
+    width: 250px; }
 
 /* ============================================ */
 /* ============================================ */

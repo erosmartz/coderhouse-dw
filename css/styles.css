@@ -1,16 +1,9 @@
-/* todavia tengo que poner las variables y pasar los componentes */
-/* ============================================ */
-/* =============       START     ============== */
-/* ============================================ */
 /* CSS Style Reset */
 * {
   margin: 0;
   padding: 0; }
 
-/* =================*/
-/* BOOTSTRAP STUFF */
-/* =================*/
-/* Pisando toda la basura global que Boostrap agrega */
+/* Bootstrap Reset */
 *, ::after, ::before {
   box-sizing: content-box; }
 
@@ -23,10 +16,15 @@ body * {
 h4 {
   font-size: 16px; }
 
+/* =========      COLORS     ========= */
+/* todavia tengo que poner las variables y pasar los componentes */
+/* ============================================ */
+/* =============       START     ============== */
+/* ============================================ */
 /* bootstrap changes */
 .bg-dark {
   --bs-bg-opacity: 0;
-  --bs-navbar-hover-color: rgba(255, 193, 134, 0.75); }
+  --bs-navbar-hover-color: $color_link_hover; }
 
 /* boostrap changes */
 .container-fluid {
@@ -35,7 +33,7 @@ h4 {
 
 .navbar-toggler {
   color: #00bfa9;
-  border: var(--bs-border-width) solid #00b7a4; }
+  border: var(--bs-border-width) solid #38d29c; }
 
 .navbar-toggler-icon {
   background-image: url(../img/navButton.png); }
@@ -72,7 +70,7 @@ header {
   top: 0px;
   width: 100%;
   background-color: #010910;
-  border-bottom: 1px solid #002928;
+  border-bottom: 1px solid rgba(0, 51, 47, 0.68);
   transition: border-color 250ms ease; }
   header:hover {
     border-color: #003645; }
@@ -102,7 +100,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-top: 3px solid #001719;
+  border-top: 3px solid rgba(0, 51, 47, 0.68);
   padding-top: 5px;
   background-color: #000201;
   margin-top: auto; }

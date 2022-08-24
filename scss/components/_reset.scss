@@ -1,0 +1,18 @@
+/* CSS Style Reset */
+*{margin:0 ;padding:0;}
+
+
+/* Bootstrap Reset */
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+body *{
+    line-height:normal;
+    font-family: initial;
+    margin:0;
+    padding:0;
+}
+h4{
+    font-size:16px;
+}

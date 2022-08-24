@@ -1,0 +1,20 @@
+    /* bootstrap changes */
+    .bg-dark {
+        --bs-bg-opacity: 0;
+        --bs-navbar-hover-color: rgb(214, 190, 178);
+    }
+
+
+    /* boostrap changes */
+    .container-fluid{
+        flex-direction:row-reverse;
+        padding: 0;
+    }
+
+    .navbar-toggler{
+        color: $color_main1;
+        border: var(--bs-border-width) solid $color_main1;
+    }
+    .navbar-toggler-icon {
+        background-image: url(../img/navButton.png);
+    }

@@ -1,0 +1,286 @@
+
+
+/* large: 992 */
+/* medium: 762 */
+/* small: 576 */
+
+/* ============================================ */
+/* Responsive : LARGE   >992   */
+/* ============================================ */
+@media only screen and (min-width:992px){
+
+
+
+    /* ============= atributos GLOBALES ============ */
+        header > div{
+            padding-top:8px;
+            padding-bottom:8px;
+        }
+        header > div, main, footer > div {
+            width:52rem
+        }
+        main > section {
+            margin:30px 0px;
+        }
+    
+    
+    /* ========= atributos por PAGINA ========== */
+        #releases_tracklist{
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+/* ============================================ */
+/* Responsive : MEDIUM  576 - 992  */
+/* ============================================ */
+
+
+@media only screen and (max-width:992px){
+
+
+
+/* ============= atributos GLOBALES ============ */
+    /* tamano font */
+    body{
+        font-size:0.88rem;
+    }
+
+    /* ancho de la pagina */
+    header > div, main, footer > div {
+        width:90%;
+    }
+    header> div{
+        padding: 7px 0px;
+    }
+    /* header centrado */
+    header > div {
+        justify-content: space-between;
+    }
+
+    /* margen vertical para cada seccion */
+    main > section {
+        margin:20px 0px;
+    }
+
+    
+    /* tamano titulos */
+    h2{
+        font-size:150%;
+    }
+
+
+    /* el tracklist pasa a ser de 4 columnas */
+    .gridTracks{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    
+
+
+
+
+/* ========= atributos por PAGINA ========= */
+    /* ancho del parrafo */
+    #home_news p{
+        width:80%;
+    }
+
+    /* ocultando el videito de la segunda seccion */
+    #home_aboutme{
+        flex-direction: column;
+    }
+        #home_aboutme iframe{
+            display:none;
+        }
+        #home_aboutme > section{
+            width: 60%;
+            align-self: center;
+        }
+
+    /* ocultando el iconcito [...] */
+    #home_tracklist > a:last-child{
+        display:none;
+    }
+
+    /* el albumlist pasa de horizontal a vertical */
+    #releases_albumlist{
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        font-size:125%;
+    }
+
+    /* la galeria pasa a tener fotos mas grandes */
+    #media_gallery{
+        grid-template-columns:48% 48%;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        gap: 15px 0px;
+    }
+        #media_gallery img{
+            width: 40vw;
+        }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:992px){
+    /* ajustes de tamano a la carta de albums */
+    #releases_albumlist > div{
+        width:70%;
+        font-size:2.5vw;
+    }
+    #releases_albumlist img{
+        width: 28vw;
+        height:28vw;
+    }
+}
+
+/* navbar orientacion para la derecha */
+@media only screen and (max-width:762px){
+    .navbar-nav{
+        margin-top:5px;
+        align-items:flex-end;
+    }
+}
+
+
+/* ============================================ */
+/* Responsive : SMALL <576 */
+/* ============================================ */
+
+
+
+@media only screen and (max-width:576px){
+
+
+
+
+
+/* ============= atributos GLOBALES ============ */
+
+    /* tamano de font */
+    body{
+        font-size:3vw;
+    }
+    
+        /* ancho de la pagina */
+        header > div, main, footer > div {
+            width:90%;
+        }
+
+        /* margen vertical de las secciones */
+        main > section {
+            margin:2vw 0px;
+        }
+    
+
+    /* ajustes al header */
+    header img{
+        width:50vw !important;
+        margin:7px 0px;
+    }
+
+
+    /* ajustes al footer */
+    footer > div{
+        flex-wrap: wrap;
+    }
+        footer > div > div{
+            margin:5px 0px;
+        }
+
+    /* ajustes de h2 y h3 */
+    h2{
+        font-size:150%;
+    }
+    h3{
+        font-size:80%;
+    }
+
+
+
+
+    /* ajustes a la carta para tracks */
+    .cardTrack{
+        margin-bottom:10px;
+    }
+    .cardTrack h2{
+        font-size:5vw;
+    }
+
+    /* ajustes a la grilla para tracks, pasan a ser 2 columnas */
+    .gridTracks{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        align-content:space-around;
+        justify-content: space-around;
+    }
+
+    /* ajustes al separador de secciones */
+    .separator{
+        font-size:100%;
+        flex-wrap:wrap;
+        padding-inline-start: 4%;
+    }
+
+
+
+
+
+
+
+/* ========= atributos por PAGINA ========== */
+    /* ancho del parrafo */
+    #home_news p{
+        width:100%;
+    }
+    
+    /* ancho de la cartita aboutme */
+    #home_aboutme > section{
+        width: 96%;
+        align-self: center;
+    }
+
+    /* tamano de imagenes */
+    #home_news img, #home_aboutme img{
+        width: 25vw !important;
+    }
+
+    /* ajustes de tamano a la carta de albums */
+    #releases_albumlist > div{
+        width:90%;
+        font-size:3.5vw;
+    }
+    #releases_albumlist img{
+        width: 35vw;
+        height:40vw;
+    }
+
+    /* ajustes de tamano a la galeria */
+
+    #media_carousel{
+        width:90%;
+        align-self: center;
+    }
+
+    #media_gallery{
+        grid-template-columns:80%;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        gap: 15px 0px;
+    }
+        #media_gallery img{
+            width: 80vw;
+        }
+
+    #contact_form > form > div{
+        width:85vw;
+    }
+}

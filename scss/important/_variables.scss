@@ -1,0 +1,13 @@
+
+
+/* =========      MIXINS     ========= */
+
+
+/* default example =  @include flex_values(nowrap,row,normal,normal); WDAJ */
+@mixin flex_values($wrap, $direction, $align , $justify){
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}

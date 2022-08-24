@@ -1,3 +1,4 @@
+/* reset y variables */
 /* CSS Style Reset */
 * {
   margin: 0;
@@ -16,15 +17,16 @@ body * {
 h4 {
   font-size: 16px; }
 
+/* Finish Reset */
+/* =========      MIXINS     ========= */
+/* default example =  @include flex_values(nowrap,row,normal,normal); WDAJ */
+/* variables de colores */
 /* =========      COLORS     ========= */
-/* todavia tengo que poner las variables y pasar los componentes */
-/* ============================================ */
-/* =============       START     ============== */
-/* ============================================ */
+/* settings de bootstrap y animaciones */
 /* bootstrap changes */
 .bg-dark {
   --bs-bg-opacity: 0;
-  --bs-navbar-hover-color: $color_link_hover; }
+  --bs-navbar-hover-color: rgb(214, 190, 178); }
 
 /* boostrap changes */
 .container-fluid {
@@ -32,25 +34,32 @@ h4 {
   padding: 0; }
 
 .navbar-toggler {
-  color: #00bfa9;
+  color: #38d29c;
   border: var(--bs-border-width) solid #38d29c; }
 
 .navbar-toggler-icon {
   background-image: url(../img/navButton.png); }
 
-/* =================*/
-/* BOOTSTRAP FINISH */
-/* =================*/
+/* animacion de style1 */
+@keyframes animGradient1 {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 0%; }
+  100% {
+    background-position: 0% 50%; } }
+
+/* componentes principales del body */
 /* ============================================ */
-/* ============================================ */
-/* ========      ESTILOS GLOBALES      ======== */
-/* ============================================ */
+/* =============       START     ============== */
 /* ============================================ */
 /* BODY */
 body {
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   flex-direction: column;
+  align-items: center;
+  justify-content: normal;
   font-size: 16px;
   height: 100vh;
   background-color: #000000;
@@ -63,6 +72,8 @@ body {
 /* ============================================ */
 header {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   position: -webkit-sticky;
@@ -77,6 +88,8 @@ header {
   header div {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: normal;
     justify-content: space-between; }
     header div a {
       width: -moz-fit-content;
@@ -89,14 +102,19 @@ header {
 /* ============================================ */
 main {
   display: flex;
-  margin: 5px 0px;
-  flex-direction: column; }
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  margin: 5px 0px; }
 
 /* ============================================ */
 /* FOOTER */
 /* ============================================ */
 footer {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -104,78 +122,61 @@ footer {
   padding-top: 5px;
   background-color: #000201;
   margin-top: auto; }
-  footer div {
+  footer > div {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between; }
-    footer div div:first-child {
+    footer > div div:first-child {
       font-size: 95%; }
   footer p {
     text-transform: initial; }
 
-/* ============================================ */
-/* FONTS */
-/* ============================================ */
-h1 {
+/* fonts */
+/* font 1: para headers */
+.font-big, h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  letter-spacing: 4px;
-  font-size: 300%;
-  line-height: 90%;
   text-transform: uppercase;
+  font-weight: 900;
+  line-height: 90%;
+  letter-spacing: 4px;
   color: #38d29c; }
+
+/* font 2: para parrafos y textos */
+.font-small, h4, p, strong, label {
+  font-family: 'Anybody','Gill Sans MT', cursive;
+  font-weight: 300;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa; }
+
+h1 {
+  font-size: 300%; }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  letter-spacing: 4px;
-  font-size: 200%;
-  line-height: 90%;
-  text-transform: uppercase;
-  color: #38d29c; }
+  font-size: 200%; }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-style: italic;
   letter-spacing: 2px;
   line-height: 100%;
   font-size: 100%;
-  text-transform: uppercase;
-  color: #38d29c; }
-
-h4 {
-  font-family: 'Anybody','Gill Sans MT', cursive;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #6db5aa; }
+  text-transform: uppercase; }
 
 p {
-  font-family: 'Anybody','Gill Sans MT', cursive;
-  font-weight: 300;
-  font-size: 100%;
-  /*  text-transform:uppercase; */
-  color: #6db5aa; }
+  text-transform: initial; }
 
 strong {
-  font-family: 'Anybody','Gill Sans MT', cursive;
   font-weight: 600;
-  font-size: 100%;
-  text-transform: uppercase;
   color: #de4a00; }
-
-label {
-  font-family: 'Anybody','Gill Sans MT', cursive;
-  font-weight: 300;
-  font-size: 100%;
-  text-transform: uppercase;
-  color: #6db5aa; }
 
 input, textarea {
   background-color: #021413;
-  border-color: #03372c;
+  border-color: rgba(0, 51, 47, 0.68);
   border-style: solid;
-  color: #80ddc6; }
+  color: #6db5aa; }
 
 /* LINKS */
 a {
@@ -191,20 +192,9 @@ a {
     color: #ff884d; }
 
 main span a {
-  background-color: rgba(0, 0, 0, 0.833); }
+  background-color: rgba(0, 0, 0, 0.185); }
 
-/* ============================================ */
-/* ANIMACIONES */
-/* ============================================ */
-/* animacion de style1 */
-@keyframes animGradient1 {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 0%; }
-  100% {
-    background-position: 0% 50%; } }
-
+/* demas modulos como box design, secciones de paginas y el responsive design */
 /* ============================================ */
 /* BOX MODELING STYLES */
 /* ============================================ */
@@ -223,8 +213,10 @@ main span a {
 /* separador de secciones: con titulo */
 .separator {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 1% 3%;
   margin: 25px 0 0 0;
   border: 1.5px solid rgba(0, 51, 47, 0.68);
@@ -239,10 +231,16 @@ main span a {
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: normal;
   padding: 2% 4%; }
   .cardInfo div {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
+    align-items: normal;
     justify-content: space-between; }
     .cardInfo div * {
       margin: 3px 0; }
@@ -261,8 +259,10 @@ main span a {
 /* carta estilo 2, para tracks: con imagen y titulo */
 .cardTrack {
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   flex-direction: column;
+  align-items: center;
+  justify-content: normal;
   background-color: rgba(0, 0, 0, 0.185);
   border: 2px solid #38d29c;
   border-radius: 9px;
@@ -286,6 +286,10 @@ main span a {
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
 .cardAlbum {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: normal;
   font-size: 80%;
   background-color: rgba(0, 0, 0, 0.358);
   border: 2px solid #19986b;
@@ -304,8 +308,9 @@ main span a {
     padding-right: 10px; }
   .cardAlbum div {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    align-content: flex-start;
+    align-items: flex-start;
     justify-content: flex-start; }
     .cardAlbum div * {
       margin-bottom: 5px; }
@@ -317,11 +322,6 @@ main span a {
   .cardAlbum a:hover {
     color: #de4a00; }
 
-/* ============================================ */
-/* ============================================ */
-/* ACA EMPIEZAN LOS ESTILOS DE CADA PAGINA */
-/* ============================================ */
-/* ============================================ */
 /* ============================================ */
 /* ============================================ */
 /* INDEX- HOME */
@@ -341,7 +341,9 @@ main span a {
 /* home_aboutme : mini aboutme + videito */
 #home_aboutme {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
+  align-items: normal;
   justify-content: space-between;
   /* About Me Box */
   /* video box */ }
@@ -456,11 +458,17 @@ main span a {
 /* ============================================ */
 #contact_form {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: normal;
   justify-content: center; }
 
 #contact_form > form > div {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
   margin: 20px;
   width: 400px;
   font-size: 140%; }
@@ -479,11 +487,6 @@ main span a {
 /* ============================================ */
 /* ============================================ */
 /* CONTACT FINISH */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */
-/* RESPONSIVE DESIGN */
 /* ============================================ */
 /* ============================================ */
 /* large: 992 */
@@ -649,13 +652,3 @@ main span a {
     width: 80vw; }
   #contact_form > form > div {
     width: 85vw; } }
-
-/* ============================================ */
-/* ============================================ */
-/* ======FINISH RESPONSIVE===================== */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */
-/* ============================================ */

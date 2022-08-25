@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset y variables */
 /* CSS Style Reset */
 * {
@@ -15,24 +16,144 @@ body * {
   padding: 0; }
 
 h4 {
-  font-size: 16px; }
+  font-size: 1rem; }
 
 /* Finish Reset */
-/* =========      MIXINS     ========= */
-/* default example =  @include flex_values(nowrap,row,normal,normal); WDAJ */
-/* variables de colores */
+/* ========================================*/
+/* =========     GENERALES   ============= */
+/* ========================================*/
+/* mixin de los 4 valores basicos de flex */
+/* default example =  @include flex_values(nowrap,row,normal,normal); */
+/* ========================================*/
+/* =========     DEL THEME   ============= */
+/* ========================================*/
+/* site background, full css, no texture */
+/* ========================================*/
+/* =========     DE FONTS  =============== */
+/* ========================================*/
+/* mixin para todas las fonts. Establecer: el tipo de font, el peso y el tamaño */
+/* estilo de font para titulos mayuscula, espaciada y con color principal */
+/* estilo de font para parrafos mayuscula con color alternativo */
+/* tema: colores y fonts */
 /* =========      COLORS     ========= */
-/* settings de bootstrap y animaciones */
-/* bootstrap changes */
-.bg-dark {
-  --bs-bg-opacity: 0;
-  --bs-navbar-hover-color: rgb(214, 190, 178); }
+/* contrast color */
+/* alt contrast color */
+/* alt 2 contrast color */
+/* dark color */
+/* alt dark color */
+/* extra dark color */
+/* black color  */
+/* alt black color  */
+/* hover black color  */
+/* link color */
+/* alt link color */
+/* link background color */
+/* =========      FONTS     ========= */
+/* ENCABEZADO */
+h1 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 300%;
+  text-transform: uppercase;
+  line-height: 90%;
+  letter-spacing: 4px;
+  color: #38d29c; }
 
-/* boostrap changes */
+/* ENCABEZADO 2 */
+h2 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 200%;
+  text-transform: uppercase;
+  line-height: 90%;
+  letter-spacing: 4px;
+  color: #38d29c; }
+
+/* ENCABEZADO 3 */
+h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 150%;
+  text-transform: uppercase;
+  line-height: 90%;
+  letter-spacing: 4px;
+  color: #38d29c;
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 100%; }
+
+/* ENCABEZADO 4 */
+h4 {
+  font-family: "Anybody";
+  font-weight: 300;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa; }
+
+/* PARRAFOS */
+p {
+  font-family: "Anybody";
+  font-weight: 300;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa;
+  text-transform: initial; }
+
+/* REMARKS */
+strong {
+  font-family: "Anybody";
+  font-weight: 600;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa;
+  color: #de4a00; }
+
+/* PARA LOS FORMS */
+label {
+  font-family: "Anybody";
+  font-weight: 300;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #6db5aa; }
+
+input, textarea {
+  background-color: #021413;
+  border-color: #002926;
+  border-style: solid;
+  color: #6db5aa; }
+
+/* LINKS */
+a {
+  transition: color 250ms ease; }
+  a:any-link {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 88%;
+    color: #de4a00;
+    letter-spacing: 2px;
+    text-decoration: none; }
+  a:hover {
+    color: #ff884d; }
+
+/* FONDO DE LOS LINKS */
+main span a {
+  background-color: rgba(0, 0, 0, 0.678); }
+
+/* settings de bootstrap y animaciones */
+/* ============================================ */
+/* Bootstrap changes */
+/* ============================================ */
+.bg-dark {
+  --bs-bg-opacity: 0; }
+
+nav > div > div a:hover {
+  color: #ff884d !important; }
+
 .container-fluid {
   flex-direction: row-reverse;
   padding: 0; }
 
+/* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
 .navbar-toggler {
   color: #38d29c;
   border: var(--bs-border-width) solid #38d29c; }
@@ -40,8 +161,10 @@ h4 {
 .navbar-toggler-icon {
   background-image: url(../img/navButton.png); }
 
-/* animacion de style1 */
-@keyframes animGradient1 {
+/* ============================================ */
+/* Animacion Gradient */
+/* ============================================ */
+@keyframes theme_gradient {
   0% {
     background-position: 0% 50%; }
   50% {
@@ -49,23 +172,25 @@ h4 {
   100% {
     background-position: 0% 50%; } }
 
-/* componentes principales del body */
 /* ============================================ */
-/* =============       START     ============== */
+/* Animacion Hover */
+/* ============================================ */
+/* componentes principales del body, box design, secciones de paginas y el responsive design */
 /* ============================================ */
 /* BODY */
+/* ============================================ */
 body {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
   justify-content: normal;
-  font-size: 16px;
-  height: 100vh;
   background-color: #000000;
   opacity: 1;
-  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 6px), repeating-linear-gradient(#001f1f55, #000505);
-  background-attachment: fixed; }
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 6px), repeating-linear-gradient(#001515, #000000);
+  background-attachment: fixed;
+  font-size: 1rem;
+  height: 100vh; }
 
 /* ============================================ */
 /* HEADER Y NAV */
@@ -80,21 +205,21 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
-  background-color: #010910;
-  border-bottom: 1px solid rgba(0, 51, 47, 0.68);
+  background-color: #000808;
+  border-bottom: 1px solid #002926;
   transition: border-color 250ms ease; }
   header:hover {
-    border-color: #003645; }
-  header div {
+    border-color: #004536; }
+  header > div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: normal;
     justify-content: space-between; }
-    header div a {
+    header > div a {
       width: -moz-fit-content;
       width: fit-content; }
-      header div a img {
+      header > div a img {
         width: 230px; }
 
 /* ============================================ */
@@ -108,6 +233,10 @@ main {
   justify-content: normal;
   margin: 5px 0px; }
 
+main img {
+  height: fit-content;
+  align-self: center; }
+
 /* ============================================ */
 /* FOOTER */
 /* ============================================ */
@@ -118,9 +247,9 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-top: 3px solid rgba(0, 51, 47, 0.68);
+  border-top: 2px solid #002926;
   padding-top: 5px;
-  background-color: #000201;
+  background-color: #000808;
   margin-top: auto; }
   footer > div {
     display: flex;
@@ -133,68 +262,6 @@ footer {
   footer p {
     text-transform: initial; }
 
-/* fonts */
-/* font 1: para headers */
-.font-big, h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 900;
-  line-height: 90%;
-  letter-spacing: 4px;
-  color: #38d29c; }
-
-/* font 2: para parrafos y textos */
-.font-small, h4, p, strong, label {
-  font-family: 'Anybody','Gill Sans MT', cursive;
-  font-weight: 300;
-  font-size: 100%;
-  text-transform: uppercase;
-  color: #6db5aa; }
-
-h1 {
-  font-size: 300%; }
-
-h2 {
-  font-size: 200%; }
-
-h3 {
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 2px;
-  line-height: 100%;
-  font-size: 100%;
-  text-transform: uppercase; }
-
-p {
-  text-transform: initial; }
-
-strong {
-  font-weight: 600;
-  color: #de4a00; }
-
-input, textarea {
-  background-color: #021413;
-  border-color: rgba(0, 51, 47, 0.68);
-  border-style: solid;
-  color: #6db5aa; }
-
-/* LINKS */
-a {
-  transition: color 250ms ease; }
-  a:any-link {
-    color: #de4a00;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 88%;
-    letter-spacing: 2px;
-    text-decoration: none; }
-  a:hover {
-    color: #ff884d; }
-
-main span a {
-  background-color: rgba(0, 0, 0, 0.185); }
-
-/* demas modulos como box design, secciones de paginas y el responsive design */
 /* ============================================ */
 /* BOX MODELING STYLES */
 /* ============================================ */
@@ -202,13 +269,13 @@ main span a {
 .style1 {
   margin: 25px 0px;
   border-radius: 18px;
-  border: 1px solid rgba(0, 51, 47, 0.68);
-  background: linear-gradient(270deg, #001717, #000509);
+  border: 1px solid #002926;
+  background: linear-gradient(270deg, #001515, #000808);
   background-size: 400% 400%;
-  animation: animGradient1 9s ease infinite;
+  animation: theme_gradient 9s ease infinite;
   transition: border-color 250ms ease; }
   .style1:hover {
-    border-color: #003645; }
+    border-color: #004536; }
 
 /* separador de secciones: con titulo */
 .separator {
@@ -219,14 +286,14 @@ main span a {
   justify-content: space-between;
   padding: 1% 3%;
   margin: 25px 0 0 0;
-  border: 1.5px solid rgba(0, 51, 47, 0.68);
+  border: 1.5px solid #002926;
   border-radius: 18px;
-  background: linear-gradient(270deg, #001717, #000509);
+  background: linear-gradient(270deg, #001515, #000808);
   background-size: 400% 400%;
-  animation: animGradient1 9s ease infinite;
+  animation: theme_gradient 9s ease infinite;
   transition: border-color 250ms ease; }
   .separator:hover {
-    border-color: #003645; }
+    border-color: #004536; }
 
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo {
@@ -234,17 +301,17 @@ main span a {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: normal;
-  justify-content: normal;
+  justify-content: flex-end;
   padding: 2% 4%; }
-  .cardInfo div {
+  .cardInfo > div {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: normal;
     justify-content: space-between; }
-    .cardInfo div * {
+    .cardInfo > div * {
       margin: 3px 0; }
-    .cardInfo div img {
+    .cardInfo > div img {
       width: auto;
       align-self: center; }
 
@@ -263,7 +330,7 @@ main span a {
   flex-direction: column;
   align-items: center;
   justify-content: normal;
-  background-color: rgba(0, 0, 0, 0.185);
+  background-color: rgba(0, 0, 0, 0.352);
   border: 2px solid #38d29c;
   border-radius: 9px;
   margin: 0px 5px;
@@ -279,7 +346,7 @@ main span a {
     padding-bottom: 20px; }
   .cardTrack:hover {
     border-color: #de4a00;
-    background-color: rgba(0, 0, 0, 0.973); }
+    background-color: rgba(0, 0, 0, 0.792); }
   .cardTrack:hover h2 {
     color: #de4a00; }
 
@@ -291,16 +358,16 @@ main span a {
   align-items: normal;
   justify-content: normal;
   font-size: 80%;
-  background-color: rgba(0, 0, 0, 0.358);
-  border: 2px solid #19986b;
+  background-color: rgba(0, 0, 0, 0.352);
+  border: 2px solid #0a6746;
   border-radius: 9px;
   padding: 8px 18px 8px 10px;
   margin: 10px;
   width: 380px;
   transition: border-color 0.5s ease, background-color 0.5s ease; }
   .cardAlbum:hover {
-    border-color: #2feaa8;
-    background-color: rgba(0, 0, 0, 0.975); }
+    border-color: #38d29c;
+    background-color: rgba(0, 0, 0, 0.792); }
   .cardAlbum img {
     width: 200px;
     height: auto;
@@ -318,7 +385,7 @@ main span a {
     list-style: none; }
   .cardAlbum a {
     transition: color 0.2s ease;
-    color: #19986b; }
+    color: #0a6746; }
   .cardAlbum a:hover {
     color: #de4a00; }
 
@@ -343,7 +410,7 @@ main span a {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  align-items: normal;
+  align-items: center;
   justify-content: space-between;
   /* About Me Box */
   /* video box */ }
@@ -511,6 +578,10 @@ main span a {
 /* ============================================ */
 /* Responsive : MEDIUM  576 - 992  */
 /* ============================================ */
+@media only screen and (min-width: 762px) and (max-width: 992px) {
+  main {
+    font-size: calc(0.88rem + 0.3vw); } }
+
 @media only screen and (max-width: 992px) {
   /* ============= atributos GLOBALES ============ */
   /* tamano font */

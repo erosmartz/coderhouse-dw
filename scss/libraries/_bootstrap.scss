@@ -1,19 +1,25 @@
-    /* bootstrap changes */
+
+
+/* ============================================ */
+/* Bootstrap changes */
+/* ============================================ */
     .bg-dark {
         --bs-bg-opacity: 0;
-        --bs-navbar-hover-color: rgb(214, 190, 178);
+    }
+    nav > div > div a:hover {
+        color:$color_link_hover !important;
     }
 
-
-    /* boostrap changes */
     .container-fluid{
         flex-direction:row-reverse;
         padding: 0;
     }
 
+
+    /* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
     .navbar-toggler{
-        color: $color_main1;
-        border: var(--bs-border-width) solid $color_main1;
+        color: $color_contrast;
+        border: var(--bs-border-width) solid $color_contrast;
     }
     .navbar-toggler-icon {
         background-image: url(../img/navButton.png);

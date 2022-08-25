@@ -26,7 +26,7 @@
 
     /* home_aboutme : mini aboutme + videito */
     #home_aboutme{
-        @include flex_values(nowrap,row,normal,space-between);
+        @include flex_values(nowrap,row,center,space-between);
     
 
         /* About Me Box */

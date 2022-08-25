@@ -2,20 +2,16 @@
 @import "important/reset";
 @import "important/variables";
 
-/* variables de colores */
+/* tema: colores y fonts */
 @import "theme/colors";
+@import "theme/fonts";
 
 /* settings de bootstrap y animaciones */
 @import "libraries/bootstrap";
 @import "libraries/animations";
 
-/* componentes principales del body */
+/* componentes principales del body, box design, secciones de paginas y el responsive design */
 @import "components/body";
-
-/* fonts */
-@import "theme/fonts";
-
-/* demas modulos como box design, secciones de paginas y el responsive design */
 @import "components/modules";
 @import "components/sections";
 @import "components/responsive";

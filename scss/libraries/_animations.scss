@@ -1,6 +1,34 @@
-/* animacion de style1 */
-@keyframes animGradient1 {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 0%}
-    100%{background-position:0% 50%}
+
+
+/* ============================================ */
+/* Animacion Gradient */
+/* ============================================ */
+
+    @keyframes theme_gradient {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 0%}
+        100%{background-position:0% 50%}
+    }
+
+@mixin anim_gradient{
+    background: linear-gradient(270deg, $color_dark_alt, $color_extradark);
+    background-size: 400% 400%;
+    animation: theme_gradient 9s ease infinite;
+}
+
+
+
+
+
+
+/* ============================================ */
+/* Animacion Hover */
+/* ============================================ */
+
+@mixin anim_hover{
+    transition: border-color 250ms ease;
+
+    &:hover{
+        border-color: $color_dark_hover;
+    }
 }

@@ -1,74 +1,65 @@
 
 
 
-/* font 1: para headers */
-.font-big {
-    font-family: 'Montserrat', sans-serif; 
-    text-transform: uppercase;
-    font-weight: 900;
-    line-height:90%;
-    letter-spacing: 4px;
-    color: $color_main1;
-}
-/* font 2: para parrafos y textos */
-.font-small {
-    font-family: 'Anybody','Gill Sans MT', cursive;
-    font-weight: 300;
-    font-size: 100%;
-    text-transform:uppercase;
-    color: $color_main2;
+
+
+/* =========      FONTS     ========= */
+
+/* ENCABEZADO */
+h1 {
+    @include font('Montserrat', 900 , 300%);
+    @include font-big;
 }
 
+/* ENCABEZADO 2 */
+h2 {
+    @include font('Montserrat', 900 , 200%);
+    @include font-big;
+}
 
+/* ENCABEZADO 3 */
+h3 {
+    @include font('Montserrat', 700 , 150%);
+    @include font-big;
 
+    font-style: italic;
+    letter-spacing: 2px;
+    line-height:100%;
+}
 
-
-    h1 {
-        @extend .font-big;
-
-        font-size: 300%;
-    }
-
-    h2 {
-        @extend .font-big;
-
-        font-size: 200%;
-    }
-
-    h3 {
-        @extend .font-big;
-
-        font-weight: 700;
-        font-style: italic;
-        letter-spacing: 2px;
-        line-height:100%;
-        font-size: 100%;
-        text-transform: uppercase;
-    }
-
-
+/* ENCABEZADO 4 */
 h4{
-    @extend .font-small;
+    @include font('Anybody', 300 , 100%);
+    @include font-small;
 }
+
+/* PARRAFOS */
 p {
-    @extend .font-small;
+    @include font('Anybody', 300 , 100%);
+    @include font-small;
 
     text-transform:initial;
 }
-strong {
-    @extend .font-small;
 
-    font-weight: 600;
+
+/* REMARKS */
+strong {
+    @include font('Anybody', 600 , 100%);
+    @include font-small;
+
     color: $color_link;
 }
+
+/* PARA LOS FORMS */
 label {
-    @extend .font-small;
+    @include font('Anybody', 300 , 100%);
+    @include font-small;
 }
 input , textarea{
     background-color: rgb(2, 20, 19);
-    border-color: $color_main3;
+    border-color: $color_dark;
     border-style:solid;
-    color: $color_main2;
+    color: $color_contrast_alt;
 
 }
 
@@ -79,10 +70,10 @@ a{
     transition: color 250ms ease;
 
     &:any-link{
+        @include font('Montserrat', 700 , 88%); 
+
         color: $color_link;
-        font-family: 'Montserrat', sans-serif; 
-        font-weight: 700;
-        font-size: 88%;
+
         letter-spacing: 2px;
         text-decoration: none;
     }
@@ -90,10 +81,9 @@ a{
     &:hover{
         color:$color_link_hover;
     }
-
 }
 
-
-main span a{
-    background-color: $color_black;
-}
+    /* FONDO DE LOS LINKS */
+    main span a{
+        background-color: $color_link_bg;
+    }

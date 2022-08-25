@@ -6,37 +6,26 @@
 .style1{
     margin: 25px 0px;
     border-radius: 18px;
-    border: 1px solid rgba(0, 51, 47, 0.68);
-    background: linear-gradient(270deg, #001717, #000509);
-    background-size: 400% 400%;
-    animation: animGradient1 9s ease infinite;
-    transition: border-color 250ms ease;
+    border: 1px solid $color_dark;
 
-    &:hover{
-        border-color: rgb(0, 54, 69)
-    }
+    @include anim_gradient;
+    @include anim_hover;
 }
 
 
 /* separador de secciones: con titulo */
 .separator{
     @include flex_values(nowrap,row,center,space-between);
-
+    
 
     padding: 1% 3%;
     margin:25px 0 0 0;
-    border: 1.5px solid rgba(0, 51, 47, 0.68);
+    border: 1.5px solid $color_dark;
     border-radius: 18px;
 
-    background: linear-gradient(270deg, #001717, #000509);
-    background-size: 400% 400%;
-    animation: animGradient1 9s ease infinite;
-
-    transition: border-color 250ms ease;
-
-    &:hover{
-        border-color: rgb(0, 54, 69)
-    }
+    @include anim_gradient;
+    @include anim_hover;
+ 
 
 }
 
@@ -44,11 +33,11 @@
 
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo{
-    @include flex_values(nowrap,row,normal,normal);
+    @include flex_values(nowrap,row,normal,flex-end);
 
     padding: 2% 4%;
 
-    div {
+    > div {
         @include flex_values(nowrap,column,normal,space-between);
 
     
@@ -82,8 +71,8 @@ align-content: center;
     @include flex_values(nowrap,column,center,normal);
 
 
-    background-color: rgba(0, 0, 0, 0.185);
-    border: 2px solid rgb(56, 210, 156);
+    background-color: $color_black_alt;
+    border: 2px solid $color_contrast;
     border-radius: 9px;
     margin: 0px 5px;
     padding: 9px;
@@ -102,11 +91,11 @@ align-content: center;
         padding-bottom:20px;
     }
     &:hover{
-        border-color:rgb(222, 74, 0); 
-        background-color: rgba(0, 0, 0, 0.973)
+        border-color:$color_link; 
+        background-color: $color_black_hover;
     }
     &:hover h2 {
-        color: rgb(222, 74, 0);
+        color: $color_link;
     }
 
 }
@@ -119,8 +108,8 @@ align-content: center;
 
     font-size: 80%;
 
-    background-color: rgba(0, 0, 0, 0.358);
-    border: 2px solid rgb(25, 152, 107);
+    background-color: $color_black_alt;
+    border: 2px solid $color_contrast_alt2;
     border-radius: 9px;
 
     padding: 8px 18px 8px 10px;
@@ -130,10 +119,12 @@ align-content: center;
 
     transition: border-color 0.5s ease, background-color 0.5s ease;
 
+
     &:hover {
-        border-color: rgb(47, 234, 168);
-        background-color: rgba(0, 0, 0, 0.975);
+        border-color: $color_contrast;
+        background-color: $color_black_hover;
     }
+    
 
     img {
         width: 200px;
@@ -158,11 +149,11 @@ align-content: center;
 
     a {
         transition: color 0.2s ease;
-        color: rgb(25, 152, 107);
+        color: $color_contrast_alt2;
     }
 
     a:hover {
-        color: rgb(222, 74, 0);
+        color: $color_link;
     }
 
 }

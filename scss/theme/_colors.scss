@@ -1,13 +1,19 @@
 /* =========      COLORS     ========= */
 
-$color_main1 : rgb(56, 210, 156);
+$color_contrast : rgb(56, 210, 156);        /* contrast color */
+$color_contrast_alt : rgb(109, 181, 170);   /* alt contrast color */
+$color_contrast_alt2: rgb(10, 103, 70);    /* alt 2 contrast color */
 
-$color_main2 : rgb(109, 181, 170);
+$color_dark : rgb(0, 41, 38);
+$color_dark_alt : rgb(0, 21, 21);           /* dark color */
+$color_dark_hover : rgb(0, 69, 54);         /* alt dark color */
 
-$color_main3 : rgba(0, 51, 47, 0.68);
-$color_main3_hover : rgb(0, 54, 69);
+$color_extradark : rgb(0, 8, 8);            /* extra dark color */
 
-$color_black:rgba(0, 0, 0, 0.185);
+$color_black: #000000;                       /* black color  */
+$color_black_alt:rgba(0, 0, 0, 0.352);       /* alt black color  */
+$color_black_hover:rgba(0, 0, 0, 0.792);      /* hover black color  */
 
-$color_link : rgb(222, 74, 0);
-$color_link_hover: rgb(255, 136, 77);
+$color_link : rgb(222, 74, 0);               /* link color */
+$color_link_hover: rgb(255, 136, 77);        /* alt link color */
+$color_link_bg : rgba(0, 0, 0, 0.678)     /* link background color */

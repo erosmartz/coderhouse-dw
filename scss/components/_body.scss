@@ -1,18 +1,14 @@
-/* ============================================ */
-/* =============       START     ============== */
-/* ============================================ */
 
 
+/* ============================================ */
 /* BODY */
+/* ============================================ */
 body {
     @include flex_values(nowrap,column,center,normal);
+    @include theme_background;
 
-    font-size:16px;
+    font-size:1rem;
     height:100vh;
-    background-color: #000000;
-    opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 6px ), repeating-linear-gradient( #001f1f55, #000505 );
-    background-attachment: fixed;
 
 }
 
@@ -28,16 +24,13 @@ header {
     position:sticky;
     top:0px;
     width:100%;
-    background-color: rgb(1, 9, 16);
-    border-bottom: 1px solid $color_main3;
-    transition: border-color 250ms ease;
+    background-color: $color_extradark;
+    border-bottom: 1px solid $color_dark;
+    
+    @include anim_hover;
 
 
-    &:hover {
-    border-color: rgb(0, 54, 69)
-    }
-
-    div {
+    > div {
         @include flex_values(wrap,row,normal,space-between);  
         
         a {
@@ -61,6 +54,10 @@ main{
     @include flex_values(nowrap,column,normal,normal); 
     margin:5px 0px;
 }
+main img{
+    height: fit-content;
+    align-self: center;
+}
 
 
 /* ============================================ */
@@ -71,9 +68,9 @@ footer {
     @include flex_values(nowrap,row,center,center);
 
     width:100%;
-    border-top: 3px solid $color_main3;
+    border-top: 2px solid $color_dark;
     padding-top:5px;
-    background-color: rgb(0, 2, 1);
+    background-color: $color_extradark;
     margin-top:auto;
 
     > div {

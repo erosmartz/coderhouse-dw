@@ -53,7 +53,7 @@ h4 {
 h1 {
   font-family: "Montserrat";
   font-weight: 900;
-  font-size: 300%;
+  font-size: 220%;
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
@@ -63,7 +63,7 @@ h1 {
 h2 {
   font-family: "Montserrat";
   font-weight: 900;
-  font-size: 200%;
+  font-size: 190%;
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
@@ -73,13 +73,12 @@ h2 {
 h3 {
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 150%;
+  font-size: 180%;
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
   color: #38d29c;
-  font-style: italic;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 100%; }
 
 /* ENCABEZADO 4 */
@@ -117,7 +116,7 @@ label {
   color: #6db5aa; }
 
 input, textarea {
-  background-color: #021413;
+  background-color: #001515;
   border-color: #002926;
   border-style: solid;
   color: #6db5aa; }
@@ -426,8 +425,8 @@ footer {
       #home_aboutme section div p {
         width: 90%; }
   #home_aboutme img {
-    width: 100px;
-    margin: 0 7% 0 2%; }
+    width: 135px;
+    margin: 0 3% 0 2%; }
   #home_aboutme_video {
     border-radius: 18px;
     align-self: center; }
@@ -461,8 +460,7 @@ footer {
     align-items: flex-start; }
   #aboutme_info p {
     width: 80%;
-    margin-top: 14px;
-    text-indent: 4px; }
+    margin-top: 14px; }
   #aboutme_info img {
     height: 300px;
     margin-right: 3%; }
@@ -551,6 +549,10 @@ footer {
   text-transform: uppercase;
   font-weight: 300; }
 
+#contact_form textarea {
+  border-radius: 12px;
+  border-width: 2px; }
+
 /* ============================================ */
 /* ============================================ */
 /* CONTACT FINISH */
@@ -624,6 +626,10 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: 25% 25% 25% 25%;
     font-size: 125%; }
+  /* ajustes de tamano a la galeria */
+  #media_carousel {
+    width: 90%;
+    align-self: center; }
   /* la galeria pasa a tener fotos mas grandes */
   #media_gallery {
     grid-template-columns: 48% 48%;
@@ -701,18 +707,10 @@ footer {
   /* ========= atributos por PAGINA ========== */
   #home_news {
     /* ancho del parrafo */ }
-    #home_news > div > div:last-child {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      align-items: normal;
-      justify-content: normal; }
-    #home_news span {
-      font-size: 95%;
-      margin: 0 5px;
-      align-self: center; }
-    #home_news span:last-child {
-      margin-right: 0; }
+    #home_news > div > div span:nth-child(3) {
+      display: none; }
+    #home_news > div > div span:nth-child(5) {
+      display: none; }
     #home_news p {
       width: 100%; }
   /* ancho de la cartita aboutme */
@@ -749,12 +747,15 @@ footer {
   #media_carousel {
     width: 90%;
     align-self: center; }
-  #media_gallery {
-    grid-template-columns: 80%;
-    margin: 15px 0px;
-    padding: 15px 0px;
-    gap: 15px 0px; }
-  #media_gallery img {
-    width: 80vw; }
+  /* galeria de 1 sola columna, me gusta que SM tenga 2 */
+  /*  #media_gallery{
+        grid-template-columns:80%;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        gap: 15px 0px;
+    }
+        #media_gallery img{
+            width: 80vw;
+        } */
   #contact_form > form > div {
     width: 85vw; } }

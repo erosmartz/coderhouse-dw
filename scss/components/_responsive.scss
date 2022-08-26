@@ -124,6 +124,15 @@
         font-size:125%;
     }
 
+
+    
+    /* ajustes de tamano a la galeria */
+
+    #media_carousel{
+        width:90%;
+        align-self: center;
+    }
+
     /* la galeria pasa a tener fotos mas grandes */
     #media_gallery{
         grid-template-columns:48% 48%;
@@ -265,11 +274,14 @@
 /* ========= atributos por PAGINA ========== */
     
     #home_news {
-        >div > div:last-child{
-            @include flex_values(nowrap,row,normal,normal);
+        >div > div { 
+            span:nth-child(3){
+                display:none;
+            }
+            span:nth-child(5){
+                display:none;
+            }
         }
-        span{font-size:95%;margin:0 5px;align-self: center;}
-        span:last-child{margin-right:0;}
 
         /* ancho del parrafo */
         p {
@@ -321,6 +333,7 @@
         height:40vw;
     }
 
+
     /* ajustes de tamano a la galeria */
 
     #media_carousel{
@@ -328,7 +341,10 @@
         align-self: center;
     }
 
-    #media_gallery{
+    
+    /* galeria de 1 sola columna, me gusta que SM tenga 2 */
+
+    /*  #media_gallery{
         grid-template-columns:80%;
         margin: 15px 0px;
         padding: 15px 0px;
@@ -336,7 +352,9 @@
     }
         #media_gallery img{
             width: 80vw;
-        }
+        } */
+
+    
 
     #contact_form > form > div{
         width:85vw;

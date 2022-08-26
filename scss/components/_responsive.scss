@@ -25,9 +25,10 @@
     
     
     /* ========= atributos por PAGINA ========== */
-        #releases_tracklist{
-            grid-template-columns: 25% 25% 25% 25%;
-        }
+
+    #releases_tracklist{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
     }
 
 
@@ -153,12 +154,25 @@
     }
 }
 
-/* navbar orientacion para la derecha */
+
 @media only screen and (max-width:762px){
+
+    /* navbar orientacion para la derecha */
     .navbar-nav{
         margin-top:5px;
         align-items:flex-end;
     }
+
+    #aboutme_info {
+        p{
+            width:100%;
+        }
+
+        img{
+            width:35vw;
+            height:auto;
+        }
+}
 }
 
 
@@ -238,6 +252,7 @@
     .separator{
         font-size:100%;
         flex-wrap:wrap;
+        margin-bottom:5px;
         padding-inline-start: 4%;
     }
 
@@ -248,11 +263,19 @@
 
 
 /* ========= atributos por PAGINA ========== */
-    /* ancho del parrafo */
-    #home_news p{
-        width:100%;
-    }
     
+    #home_news {
+        >div > div:last-child{
+            @include flex_values(nowrap,row,normal,normal);
+        }
+        span{font-size:95%;margin:0 5px;align-self: center;}
+        span:last-child{margin-right:0;}
+
+        /* ancho del parrafo */
+        p {
+            width:100%;
+        }
+    }
     /* ancho de la cartita aboutme */
     #home_aboutme > section{
         width: 96%;
@@ -263,6 +286,30 @@
     #home_news img, #home_aboutme img{
         width: 25vw !important;
     }
+
+    /* aboutme pasa a ser vertical */
+    #aboutme_info {
+        text-align: center;
+        flex-direction: column-reverse;
+        max-width:320px;
+        
+            div {
+                align-items: center;
+                margin-top: 7px;
+            }
+            p {
+                width:80%;
+                margin-top: 7px;
+                text-indent:4px;
+            }
+            img {
+                
+                width:90%;
+                height:auto;
+                margin:3% 2%;
+            }
+    }
+
 
     /* ajustes de tamano a la carta de albums */
     #releases_albumlist > div{

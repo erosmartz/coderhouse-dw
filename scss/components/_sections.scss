@@ -18,7 +18,7 @@
             width:60%;
         }
         img {
-            width:200px;
+            width:215px;
             margin-left: 3%;
         }
     }
@@ -39,16 +39,15 @@
 
             div {
                 text-align: start;
-                justify-content: center;  
+                justify-content: center;
 
                 p {
-                    width:70%;
+                    width:90%;
                 }
             }
         }
         img {
-            width: 400px;
-            /* width: 15vw; */
+            width: 100px;
             margin: 0 7% 0 2%;
         }
 
@@ -104,6 +103,7 @@
 #aboutme_info {
     text-align: start;
     flex-direction: row-reverse;
+    align-self:center;
     
         div {
             align-items: flex-start;
@@ -115,7 +115,7 @@
         }
         img {
             
-            height:25vmin;
+            height:300px;
             margin-right: 3%;
         }
 }

@@ -402,7 +402,7 @@ footer {
   #home_news p {
     width: 60%; }
   #home_news img {
-    width: 200px;
+    width: 215px;
     margin-left: 3%; }
 
 /* home_aboutme : mini aboutme + videito */
@@ -424,10 +424,9 @@ footer {
       text-align: start;
       justify-content: center; }
       #home_aboutme section div p {
-        width: 70%; }
+        width: 90%; }
   #home_aboutme img {
-    width: 400px;
-    /* width: 15vw; */
+    width: 100px;
     margin: 0 7% 0 2%; }
   #home_aboutme_video {
     border-radius: 18px;
@@ -456,7 +455,8 @@ footer {
 /* aboutme_info : info */
 #aboutme_info {
   text-align: start;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  align-self: center; }
   #aboutme_info div {
     align-items: flex-start; }
   #aboutme_info p {
@@ -464,7 +464,7 @@ footer {
     margin-top: 14px;
     text-indent: 4px; }
   #aboutme_info img {
-    height: 25vmin;
+    height: 300px;
     margin-right: 3%; }
 
 /* ============================================ */
@@ -642,11 +642,16 @@ footer {
     width: 28vw;
     height: 28vw; } }
 
-/* navbar orientacion para la derecha */
 @media only screen and (max-width: 762px) {
+  /* navbar orientacion para la derecha */
   .navbar-nav {
     margin-top: 5px;
-    align-items: flex-end; } }
+    align-items: flex-end; }
+  #aboutme_info p {
+    width: 100%; }
+  #aboutme_info img {
+    width: 35vw;
+    height: auto; } }
 
 /* ============================================ */
 /* Responsive : SMALL <576 */
@@ -691,11 +696,25 @@ footer {
   .separator {
     font-size: 100%;
     flex-wrap: wrap;
+    margin-bottom: 5px;
     padding-inline-start: 4%; }
   /* ========= atributos por PAGINA ========== */
-  /* ancho del parrafo */
-  #home_news p {
-    width: 100%; }
+  #home_news {
+    /* ancho del parrafo */ }
+    #home_news > div > div:last-child {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: normal;
+      justify-content: normal; }
+    #home_news span {
+      font-size: 95%;
+      margin: 0 5px;
+      align-self: center; }
+    #home_news span:last-child {
+      margin-right: 0; }
+    #home_news p {
+      width: 100%; }
   /* ancho de la cartita aboutme */
   #home_aboutme > section {
     width: 96%;
@@ -703,6 +722,22 @@ footer {
   /* tamano de imagenes */
   #home_news img, #home_aboutme img {
     width: 25vw !important; }
+  /* aboutme pasa a ser vertical */
+  #aboutme_info {
+    text-align: center;
+    flex-direction: column-reverse;
+    max-width: 320px; }
+    #aboutme_info div {
+      align-items: center;
+      margin-top: 7px; }
+    #aboutme_info p {
+      width: 80%;
+      margin-top: 7px;
+      text-indent: 4px; }
+    #aboutme_info img {
+      width: 90%;
+      height: auto;
+      margin: 3% 2%; }
   /* ajustes de tamano a la carta de albums */
   #releases_albumlist > div {
     width: 90%;

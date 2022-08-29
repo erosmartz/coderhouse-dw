@@ -9,9 +9,7 @@ body {
 
     font-size:1rem;
     height:100vh;
-
 }
-
 
 /* ============================================ */
 /* HEADER Y NAV */
@@ -24,8 +22,8 @@ header {
     position:sticky;
     top:0px;
     width:100%;
-    background-color: $color_extradark;
-    border-bottom: 1px solid $color_dark;
+    background-color: var(--color_extradark);
+    border-bottom: 1px solid var(--color_dark);
     
     @include anim_hover;
 
@@ -68,9 +66,9 @@ footer {
     @include flex_values(nowrap,row,center,center);
 
     width:100%;
-    border-top: 2px solid $color_dark;
+    border-top: 2px solid var(--color_dark);
     padding-top:5px;
-    background-color: $color_extradark;
+    background-color: var(--color_extradark);
     margin-top:auto;
 
     > div {

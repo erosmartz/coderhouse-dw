@@ -7,7 +7,7 @@
         --bs-bg-opacity: 0;
     }
     nav > div > div a:hover {
-        color:$color_link_hover !important;
+        color:var(--color_link_hover) !important;
     }
 
     .container-fluid{
@@ -18,8 +18,8 @@
 
     /* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
     .navbar-toggler{
-        color: $color_contrast;
-        border: var(--bs-border-width) solid $color_contrast;
+        color: var(--color_contrast);
+        border: var(--bs-border-width) solid var(--color_contrast);
     }
     .navbar-toggler-icon {
         background-image: url(../img/navButton.png);

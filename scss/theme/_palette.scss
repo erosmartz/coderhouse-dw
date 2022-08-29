@@ -1,19 +1,57 @@
-/* =========      COLORS     ========= */
+:root{
+    /* =========      COLORS     ========= */
+    /* TUVE QUE USAR VARIABLES CSS PORQUE LAS DE SCSS SON ESTATICAS PARA JS */
+    --colorA : rgb(56, 210, 156);
+    --colorB: rgb(109, 181, 170);
+    --colorC: rgb(10, 103, 70);
+    --colorD : rgb(0, 41, 38);
+    --colorE: rgb(0, 21, 21); 
+    --colorF: rgb(0, 69, 54); 
+    --colorG: rgb(0, 8, 8); 
+    --colorH: #000000; 
+    --colorI:rgba(0, 0, 0, 0.352);
+    --colorJ:rgba(0, 0, 0, 0.792); 
+    --colorK : rgb(222, 74, 0);
+    --colorL: rgb(255, 136, 77); 
+    --colorM: rgba(0, 0, 0, 0.678); 
 
-$color_contrast : rgb(56, 210, 156);        /* contrast color */
-$color_contrast_alt : rgb(109, 181, 170);   /* alt contrast color */
-$color_contrast_alt2: rgb(10, 103, 70);    /* alt 2 contrast color */
+    --color_contrast : var(--colorA);        /* contrast color */
+    --color_contrast_alt : var(--colorB);   /* alt contrast color */
+    --color_contrast_alt2: var(--colorC);    /* alt 2 contrast color */
 
-$color_dark : rgb(0, 41, 38);
-$color_dark_alt : rgb(0, 21, 21);           /* dark color */
-$color_dark_hover : rgb(0, 69, 54);         /* alt dark color */
+    --color_dark : var(--colorD);
+    --color_dark_alt : var(--colorE);           /* dark color */
+    --color_dark_hover : var(--colorF);         /* alt dark color */
 
-$color_extradark : rgb(0, 8, 8);            /* extra dark color */
+    --color_extradark : var(--colorG);            /* extra dark color */
 
-$color_black: #000000;                       /* black color  */
-$color_black_alt:rgba(0, 0, 0, 0.352);       /* alt black color  */
-$color_black_hover:rgba(0, 0, 0, 0.792);      /* hover black color  */
+    --color_black: var(--colorH);                       /* black color  */
+    --color_black_alt: var(--colorI);       /* alt black color  */
+    --color_black_hover: var(--colorJ);      /* hover black color  */
 
-$color_link : rgb(222, 74, 0);               /* link color */
-$color_link_hover: rgb(255, 136, 77);        /* alt link color */
-$color_link_bg : rgba(0, 0, 0, 0.678);     /* link background color */
+    --color_link : var(--colorK);               /* link color */
+    --color_link_hover: var(--colorL);        /* alt link color */
+    --color_link_bg : var(--colorM);     /* link background color */
+}
+
+
+    
+[data-theme="light"] {
+    --color_contrast : var(--colorF);        /* contrast color */
+    --color_contrast_alt : var(--colorE);   /* alt contrast color */
+    --color_contrast_alt2: var(--colorD);    /* alt 2 contrast color */
+
+    --color_dark : var(--colorA);
+    --color_dark_alt : var(--colorB);           /* dark color */
+    --color_dark_hover : var(--colorC);         /* alt dark color */
+
+    --color_extradark : var(--colorA);            /* extra dark color */
+
+    --color_black: var(--colorC);                       /* black color  */
+    --color_black_alt: var(--colorB);       /* alt black color  */
+    --color_black_hover: var(--colorA);      /* hover black color  */
+
+    --color_link : var(--colorM);               /* link color */
+    --color_link_hover: var(--colorL);        /* alt link color */
+    --color_link_bg : var(--colorK);     /* link background color */
+}

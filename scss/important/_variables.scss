@@ -26,9 +26,9 @@
 
 /* site background, full css, no texture */
 @mixin theme_background{
-    background-color: $color_black;
+    background-color: var(--color_black);
     opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, $color_black 6px ), repeating-linear-gradient( $color_dark_alt, $color_black );
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color_black) 6px ), repeating-linear-gradient( var(--color_dark_alt), var(--color_black) );
     background-attachment: fixed;
 }
 
@@ -55,12 +55,12 @@
     text-transform: uppercase;
     line-height:90%;
     letter-spacing: 4px;
-    color: $color_contrast;
+    color: var(--color_contrast);
 }
 
 
 /* estilo de font para parrafos mayuscula con color alternativo */
 @mixin font-small{
     text-transform:uppercase;
-    color: $color_contrast_alt;
+    color: var(--color_contrast_alt);
 }

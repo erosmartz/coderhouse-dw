@@ -35,32 +35,73 @@ h4 {
 /* estilo de font para titulos mayuscula, espaciada y con color principal */
 /* estilo de font para parrafos mayuscula con color alternativo */
 /* tema: colores y fonts */
-/* =========      COLORS     ========= */
-/* contrast color */
-/* alt contrast color */
-/* alt 2 contrast color */
-/* dark color */
-/* alt dark color */
-/* extra dark color */
-/* black color  */
-/* alt black color  */
-/* hover black color  */
-/* link color */
-/* alt link color */
-/* link background color */
-/* =========   ALTERNATIVE   COLORS     ========= */
-[data-theme="light"] {
+:root {
+  /* =========      COLORS     ========= */
+  /* TUVE QUE USAR VARIABLES CSS PORQUE LAS DE SCSS SON ESTATICAS PARA JS */
+  --colorA: rgb(56, 210, 156);
+  --colorB: rgb(109, 181, 170);
+  --colorC: rgb(10, 103, 70);
+  --colorD: rgb(0, 41, 38);
+  --colorE: rgb(0, 21, 21);
+  --colorF: rgb(0, 69, 54);
+  --colorG: rgb(0, 8, 8);
+  --colorH: #000000;
+  --colorI:rgba(0, 0, 0, 0.352);
+  --colorJ:rgba(0, 0, 0, 0.792);
+  --colorK: rgb(222, 74, 0);
+  --colorL: rgb(255, 136, 77);
+  --colorM: rgba(0, 0, 0, 0.678);
+  --color_contrast: var(--colorA);
   /* contrast color */
+  --color_contrast_alt: var(--colorB);
   /* alt contrast color */
+  --color_contrast_alt2: var(--colorC);
   /* alt 2 contrast color */
+  --color_dark: var(--colorD);
+  --color_dark_alt: var(--colorE);
   /* dark color */
+  --color_dark_hover: var(--colorF);
   /* alt dark color */
+  --color_extradark: var(--colorG);
   /* extra dark color */
+  --color_black: var(--colorH);
   /* black color  */
+  --color_black_alt: var(--colorI);
   /* alt black color  */
+  --color_black_hover: var(--colorJ);
   /* hover black color  */
+  --color_link: var(--colorK);
   /* link color */
+  --color_link_hover: var(--colorL);
   /* alt link color */
+  --color_link_bg: var(--colorM);
+  /* link background color */ }
+
+[data-theme="light"] {
+  --color_contrast: var(--colorF);
+  /* contrast color */
+  --color_contrast_alt: var(--colorE);
+  /* alt contrast color */
+  --color_contrast_alt2: var(--colorD);
+  /* alt 2 contrast color */
+  --color_dark: var(--colorA);
+  --color_dark_alt: var(--colorB);
+  /* dark color */
+  --color_dark_hover: var(--colorC);
+  /* alt dark color */
+  --color_extradark: var(--colorA);
+  /* extra dark color */
+  --color_black: var(--colorC);
+  /* black color  */
+  --color_black_alt: var(--colorB);
+  /* alt black color  */
+  --color_black_hover: var(--colorA);
+  /* hover black color  */
+  --color_link: var(--colorM);
+  /* link color */
+  --color_link_hover: var(--colorL);
+  /* alt link color */
+  --color_link_bg: var(--colorK);
   /* link background color */ }
 
 /* =========      FONTS     ========= */
@@ -72,7 +113,7 @@ h1 {
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
-  color: #38d29c; }
+  color: var(--color_contrast); }
 
 /* ENCABEZADO 2 */
 h2 {
@@ -82,7 +123,7 @@ h2 {
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
-  color: #38d29c; }
+  color: var(--color_contrast); }
 
 /* ENCABEZADO 3 */
 h3 {
@@ -92,7 +133,7 @@ h3 {
   text-transform: uppercase;
   line-height: 90%;
   letter-spacing: 4px;
-  color: #38d29c;
+  color: var(--color_contrast);
   letter-spacing: 1px;
   line-height: 100%; }
 
@@ -102,7 +143,7 @@ h4 {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: #6db5aa; }
+  color: var(--color_contrast_alt); }
 
 /* PARRAFOS */
 p {
@@ -110,7 +151,7 @@ p {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: #6db5aa;
+  color: var(--color_contrast_alt);
   text-transform: initial; }
 
 /* REMARKS */
@@ -119,8 +160,8 @@ strong {
   font-weight: 600;
   font-size: 100%;
   text-transform: uppercase;
-  color: #6db5aa;
-  color: #de4a00; }
+  color: var(--color_contrast_alt);
+  color: var(--color_link); }
 
 /* PARA LOS FORMS */
 label {
@@ -128,13 +169,13 @@ label {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: #6db5aa; }
+  color: var(--color_contrast_alt); }
 
 input, textarea {
-  background-color: #001515;
-  border-color: #002926;
+  background-color: var(--color_dark_alt);
+  border-color: var(--color_dark);
   border-style: solid;
-  color: #6db5aa; }
+  color: var(--color_contrast_alt); }
 
 /* LINKS */
 a {
@@ -143,15 +184,15 @@ a {
     font-family: "Montserrat";
     font-weight: 700;
     font-size: 88%;
-    color: #de4a00;
+    color: var(--color_link);
     letter-spacing: 2px;
     text-decoration: none; }
   a:hover {
-    color: #ff884d; }
+    color: var(--color_link_hover); }
 
 /* FONDO DE LOS LINKS */
 main span a {
-  background-color: rgba(0, 0, 0, 0.678); }
+  background-color: var(--color_link_bg); }
 
 /* settings de bootstrap y animaciones */
 /* ============================================ */
@@ -161,7 +202,7 @@ main span a {
   --bs-bg-opacity: 0; }
 
 nav > div > div a:hover {
-  color: #ff884d !important; }
+  color: var(--color_link_hover) !important; }
 
 .container-fluid {
   flex-direction: row-reverse;
@@ -169,8 +210,8 @@ nav > div > div a:hover {
 
 /* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
 .navbar-toggler {
-  color: #38d29c;
-  border: var(--bs-border-width) solid #38d29c; }
+  color: var(--color_contrast);
+  border: var(--bs-border-width) solid var(--color_contrast); }
 
 .navbar-toggler-icon {
   background-image: url(../img/navButton.png); }
@@ -199,9 +240,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: normal;
-  background-color: #000000;
+  background-color: var(--color_black);
   opacity: 1;
-  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 6px), repeating-linear-gradient(#001515, #000000);
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--color_black) 6px), repeating-linear-gradient(var(--color_dark_alt), var(--color_black));
   background-attachment: fixed;
   font-size: 1rem;
   height: 100vh; }
@@ -219,11 +260,11 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
-  background-color: #000808;
-  border-bottom: 1px solid #002926;
+  background-color: var(--color_extradark);
+  border-bottom: 1px solid var(--color_dark);
   transition: border-color 250ms ease; }
   header:hover {
-    border-color: #004536; }
+    border-color: var(--color_dark_hover); }
   header > div {
     display: flex;
     flex-wrap: wrap;
@@ -261,9 +302,9 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-top: 2px solid #002926;
+  border-top: 2px solid var(--color_dark);
   padding-top: 5px;
-  background-color: #000808;
+  background-color: var(--color_extradark);
   margin-top: auto; }
   footer > div {
     display: flex;
@@ -283,13 +324,13 @@ footer {
 .style1 {
   margin: 25px 0px;
   border-radius: 18px;
-  border: 1px solid #002926;
-  background: linear-gradient(270deg, #001515, #000808);
+  border: 1px solid var(--color_dark);
+  background: linear-gradient(270deg, var(--color_dark_alt), var(--color_extradark));
   background-size: 400% 400%;
   animation: theme_gradient 9s ease infinite;
   transition: border-color 250ms ease; }
   .style1:hover {
-    border-color: #004536; }
+    border-color: var(--color_dark_hover); }
 
 /* separador de secciones: con titulo */
 .separator {
@@ -300,14 +341,14 @@ footer {
   justify-content: space-between;
   padding: 1% 3%;
   margin: 25px 0 0 0;
-  border: 1.5px solid #002926;
+  border: 1.5px solid var(--color_dark);
   border-radius: 18px;
-  background: linear-gradient(270deg, #001515, #000808);
+  background: linear-gradient(270deg, var(--color_dark_alt), var(--color_extradark));
   background-size: 400% 400%;
   animation: theme_gradient 9s ease infinite;
   transition: border-color 250ms ease; }
   .separator:hover {
-    border-color: #004536; }
+    border-color: var(--color_dark_hover); }
 
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
 .cardInfo {
@@ -344,8 +385,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: normal;
-  background-color: rgba(0, 0, 0, 0.352);
-  border: 2px solid #38d29c;
+  background-color: var(--color_black_alt);
+  border: 2px solid var(--color_contrast);
   border-radius: 9px;
   margin: 0px 5px;
   padding: 9px;
@@ -359,10 +400,10 @@ footer {
     border-radius: 4px;
     padding-bottom: 20px; }
   .cardTrack:hover {
-    border-color: #de4a00;
-    background-color: rgba(0, 0, 0, 0.792); }
+    border-color: var(--color_link);
+    background-color: var(--color_black_hover); }
   .cardTrack:hover h2 {
-    color: #de4a00; }
+    color: var(--color_link); }
 
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
 .cardAlbum {
@@ -372,16 +413,16 @@ footer {
   align-items: normal;
   justify-content: normal;
   font-size: 80%;
-  background-color: rgba(0, 0, 0, 0.352);
-  border: 2px solid #0a6746;
+  background-color: var(--color_black_alt);
+  border: 2px solid var(--color_contrast_alt2);
   border-radius: 9px;
   padding: 8px 18px 8px 10px;
   margin: 10px;
   width: 380px;
   transition: border-color 0.5s ease, background-color 0.5s ease; }
   .cardAlbum:hover {
-    border-color: #38d29c;
-    background-color: rgba(0, 0, 0, 0.792); }
+    border-color: var(--color_contrast);
+    background-color: var(--color_black_hover); }
   .cardAlbum img {
     width: 200px;
     height: auto;
@@ -399,9 +440,9 @@ footer {
     list-style: none; }
   .cardAlbum a {
     transition: color 0.2s ease;
-    color: #0a6746; }
+    color: var(--color_contrast_alt2); }
   .cardAlbum a:hover {
-    color: #de4a00; }
+    color: var(--color_link); }
 
 /* Dark Mode Switch */
 .theme-switch-wrapper {
@@ -418,7 +459,7 @@ footer {
   display: none; }
 
 .slider {
-  background-color: #002926;
+  background-color: var(--color_dark);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -428,7 +469,7 @@ footer {
   transition: .4s; }
 
 .slider:before {
-  background-color: #000808;
+  background-color: var(--color_extradark);
   bottom: 4px;
   content: "";
   height: 26px;
@@ -438,7 +479,7 @@ footer {
   width: 26px; }
 
 input:checked + .slider {
-  background-color: #38d29c; }
+  background-color: var(--color_contrast); }
 
 input:checked + .slider:before {
   transform: translateX(26px); }

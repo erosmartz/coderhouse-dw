@@ -1,25 +1,48 @@
+/* =========      COLORS     ========= */
+
+
+    $color_contrast : rgb(56, 210, 156);        /* contrast color */
+    $color_contrast_alt : rgb(109, 181, 170);   /* alt contrast color */
+    $color_contrast_alt2: rgb(10, 103, 70);    /* alt 2 contrast color */
+
+    $color_dark : rgb(0, 41, 38);
+    $color_dark_alt : rgb(0, 21, 21);           /* dark color */
+    $color_dark_hover : rgb(0, 69, 54);         /* alt dark color */
+
+    $color_extradark : rgb(0, 8, 8);            /* extra dark color */
+
+    $color_black: #000000;                       /* black color  */
+    $color_black_alt:rgba(0, 0, 0, 0.352);       /* alt black color  */
+    $color_black_hover:rgba(0, 0, 0, 0.792);      /* hover black color  */
+
+    $color_link : rgb(222, 74, 0);               /* link color */
+    $color_link_hover: rgb(255, 136, 77);        /* alt link color */
+    $color_link_bg : rgba(0, 0, 0, 0.678);     /* link background color */
+
+
+
 /* =========   ALTERNATIVE   COLORS     ========= */
 
-[data-theme="alt"]  {
+[data-theme="light"]  {
 
-$color_contrast : rgb(56, 210, 156);        /* contrast color */
-$color_contrast_alt : rgb(109, 181, 170);   /* alt contrast color */
-$color_contrast_alt2: rgb(10, 103, 70);    /* alt 2 contrast color */
-
-$color_dark : rgb(0, 41, 38);
-$color_dark_alt : rgb(0, 21, 21);           /* dark color */
-$color_dark_hover : rgb(0, 69, 54);         /* alt dark color */
-
-$color_extradark : rgb(0, 8, 8);            /* extra dark color */
-
-$color_black: #000000;                       /* black color  */
-$color_black_alt:rgba(0, 0, 0, 0.352);       /* alt black color  */
-$color_black_hover:rgba(0, 0, 0, 0.792);      /* hover black color  */
-
-$color_link : rgb(222, 74, 0);               /* link color */
-$color_link_hover: rgb(255, 136, 77);        /* alt link color */
-$color_link_bg : rgba(0, 0, 0, 0.678)     /* link background color */
-
-}
+    $color_contrast : rgb(1, 30, 20);        /* contrast color */
+    $color_contrast_alt : rgb(13, 31, 28);   /* alt contrast color */
+    $color_contrast_alt2: rgb(17, 49, 37);    /* alt 2 contrast color */
+    
+    $color_dark : rgb(146, 183, 180);
+    $color_dark_alt : rgb(0, 186, 186);           /* dark color */
+    $color_dark_hover : rgb(192, 253, 240);         /* alt dark color */
+    
+    $color_extradark : rgb(217, 232, 232);            /* extra dark color */
+    
+    $color_black: #a0b8af;                       /* black color  */
+    $color_black_alt:rgba(132, 221, 229, 0.352);       /* alt black color  */
+    $color_black_hover:rgba(0, 255, 229, 0.792);      /* hover black color  */
+    
+    $color_link : rgb(68, 23, 0);               /* link color */
+    $color_link_hover: rgb(17, 6, 0);        /* alt link color */
+    $color_link_bg : rgba(14, 4, 0, 0.678)     /* link background color */
+    
+    }
 
 

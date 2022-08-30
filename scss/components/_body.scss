@@ -18,7 +18,6 @@ body {
 header {
     @include flex_values(nowrap,row,center,center);
     
-    position:-webkit-sticky;
     position:sticky;
     top:0px;
     width:100%;
@@ -32,7 +31,6 @@ header {
         @include flex_values(wrap,row,normal,space-between);  
         
         a {
-            width:-moz-fit-content;
             width:fit-content;
         
             img {

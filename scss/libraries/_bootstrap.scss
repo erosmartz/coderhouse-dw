@@ -23,4 +23,5 @@
     }
     .navbar-toggler-icon {
         background-image: url(../img/navButton.png);
+        filter: var(--brightnessvalue);
     }

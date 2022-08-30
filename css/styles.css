@@ -38,71 +38,62 @@ h4 {
 :root {
   /* =========      COLORS     ========= */
   /* TUVE QUE USAR VARIABLES CSS PORQUE LAS DE SCSS SON ESTATICAS PARA JS */
-  --colorA: rgb(56, 210, 156);
-  --colorB: rgb(109, 181, 170);
-  --colorC: rgb(10, 103, 70);
-  --colorD: rgb(0, 41, 38);
-  --colorE: rgb(0, 21, 21);
-  --colorF: rgb(0, 69, 54);
-  --colorG: rgb(0, 8, 8);
-  --colorH: #000000;
-  --colorI:rgba(0, 0, 0, 0.352);
-  --colorJ:rgba(0, 0, 0, 0.792);
-  --colorK: rgb(222, 74, 0);
-  --colorL: rgb(255, 136, 77);
-  --colorM: rgba(0, 0, 0, 0.678);
-  --color_contrast: var(--colorA);
+  --color_contrast: rgb(56, 210, 156);
   /* contrast color */
-  --color_contrast_alt: var(--colorB);
+  --color_contrast_alt: rgb(109, 181, 170);
   /* alt contrast color */
-  --color_contrast_alt2: var(--colorC);
+  --color_contrast_alt2: rgb(10, 103, 70);
   /* alt 2 contrast color */
-  --color_dark: var(--colorD);
-  --color_dark_alt: var(--colorE);
+  --color_dark: rgb(0, 41, 38);
+  --color_dark_alt: rgb(0, 21, 21);
   /* dark color */
-  --color_dark_hover: var(--colorF);
+  --color_dark_hover: rgb(0, 69, 54);
   /* alt dark color */
-  --color_extradark: var(--colorG);
+  --color_extradark: rgb(0, 8, 8);
   /* extra dark color */
-  --color_black: var(--colorH);
+  --color_black: #000000;
   /* black color  */
-  --color_black_alt: var(--colorI);
+  --color_black_alt: rgba(0, 0, 0, 0.352);
   /* alt black color  */
-  --color_black_hover: var(--colorJ);
+  --color_black_hover: rgba(0, 0, 0, 0.792);
   /* hover black color  */
-  --color_link: var(--colorK);
+  --color_link: rgb(222, 74, 0);
   /* link color */
-  --color_link_hover: var(--colorL);
+  --color_link_hover: rgb(255, 136, 77);
   /* alt link color */
-  --color_link_bg: var(--colorM);
-  /* link background color */ }
+  --color_link_bg: rgba(0, 0, 0, 0.678);
+  /* link background color */
+  --invertvalue: invert(0%);
+  --brightnessvalue: brightness(100%); }
 
 [data-theme="light"] {
-  --color_contrast: var(--colorF);
+  --color_contrast: rgb(0, 11, 13);
   /* contrast color */
-  --color_contrast_alt: var(--colorE);
+  --color_contrast_alt: rgb(19, 19, 19);
   /* alt contrast color */
-  --color_contrast_alt2: var(--colorD);
+  --color_contrast_alt2: rgb(9, 14, 12);
   /* alt 2 contrast color */
-  --color_dark: var(--colorA);
-  --color_dark_alt: var(--colorB);
+  --color_dark: rgb(0, 17, 19);
+  --color_dark_alt: rgba(230, 230, 230, 0.283);
   /* dark color */
-  --color_dark_hover: var(--colorC);
+  --color_dark_hover: rgb(0, 202, 158);
   /* alt dark color */
-  --color_extradark: var(--colorA);
+  --color_extradark: rgb(221, 230, 230);
   /* extra dark color */
-  --color_black: var(--colorC);
+  --color_black: #ffffff;
   /* black color  */
-  --color_black_alt: var(--colorB);
+  --color_black_alt: rgba(234, 245, 245, 0.352);
   /* alt black color  */
-  --color_black_hover: var(--colorA);
+  --color_black_hover: rgba(238, 255, 255, 0.792);
   /* hover black color  */
-  --color_link: var(--colorM);
+  --color_link: rgb(0, 145, 120);
   /* link color */
-  --color_link_hover: var(--colorL);
+  --color_link_hover: rgb(0, 14, 10);
   /* alt link color */
-  --color_link_bg: var(--colorK);
-  /* link background color */ }
+  --color_link_bg: rgba(23, 23, 23, 0.043);
+  /* link background color */
+  --invertvalue: invert(100%);
+  --brightnessvalue: brightness(35%); }
 
 /* =========      FONTS     ========= */
 /* ENCABEZADO */
@@ -214,7 +205,8 @@ nav > div > div a:hover {
   border: var(--bs-border-width) solid var(--color_contrast); }
 
 .navbar-toggler-icon {
-  background-image: url(../img/navButton.png); }
+  background-image: url(../img/navButton.png);
+  filter: var(--brightnessvalue); }
 
 /* ============================================ */
 /* Animacion Gradient */
@@ -275,7 +267,8 @@ header {
       width: -moz-fit-content;
       width: fit-content; }
       header > div a img {
-        width: 230px; }
+        width: 230px;
+        filter: var(--invertvalue); }
 
 /* ============================================ */
 /* MAIN */

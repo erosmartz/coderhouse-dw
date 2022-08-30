@@ -40,6 +40,10 @@ header {
                 filter: var(--invertvalue);
             }
         }
+
+        > div {
+            @include flex_values(wrap,row,center,space-between);
+        }
     }
 }
 

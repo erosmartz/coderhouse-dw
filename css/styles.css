@@ -711,6 +711,9 @@ input:checked + .slider:before {
   /* el tracklist pasa a ser de 4 columnas */
   .gridTracks {
     grid-template-columns: 25% 25% 25% 25%; }
+  /*     .theme-switch-wrapper{
+        @if .collapse:not(.show) !=
+    } */
   /* ========= atributos por PAGINA ========= */
   /* ancho del parrafo */
   #home_news p {

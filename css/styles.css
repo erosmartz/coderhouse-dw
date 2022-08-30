@@ -205,7 +205,7 @@ nav > div > div a:hover {
   border: var(--bs-border-width) solid var(--color_contrast); }
 
 .navbar-toggler-icon {
-  background-image: url(../img/navButton.png);
+  background-image: url(../img/header/navButton.png);
   filter: var(--brightnessvalue); }
 
 /* ============================================ */
@@ -444,9 +444,9 @@ footer {
 
 .theme-switch {
   display: inline-block;
-  height: 34px;
+  height: 16px;
   position: relative;
-  width: 60px; }
+  width: 35px; }
 
 .theme-switch input {
   display: none; }
@@ -465,17 +465,17 @@ footer {
   background-color: var(--color_extradark);
   bottom: 4px;
   content: "";
-  height: 26px;
-  left: 4px;
+  height: 8px;
+  left: 5px;
   position: absolute;
   transition: .4s;
-  width: 26px; }
+  width: 8px; }
 
 input:checked + .slider {
   background-color: var(--color_contrast); }
 
 input:checked + .slider:before {
-  transform: translateX(26px); }
+  transform: translateX(16px); }
 
 .slider.round {
   border-radius: 34px; }
@@ -590,8 +590,11 @@ input:checked + .slider:before {
 /* ============================================ */
 /* ============================================ */
 #media_carousel {
-  width: 50%;
+  width: 92%;
   align-self: center; }
+  #media_carousel img {
+    height: 300px;
+    object-fit: cover; }
 
 #media_gallery {
   display: grid;
@@ -725,6 +728,9 @@ input:checked + .slider:before {
   #media_carousel {
     width: 90%;
     align-self: center; }
+    #media_carousel img {
+      height: 35vw;
+      object-fit: cover; }
   /* la galeria pasa a tener fotos mas grandes */
   #media_gallery {
     grid-template-columns: 48% 48%;
@@ -733,6 +739,10 @@ input:checked + .slider:before {
     gap: 15px 0px; }
   #media_gallery img {
     width: 40vw; } }
+
+@media only screen and (min-width: 768px) and (max-width: 798px) {
+  header nav a {
+    padding: 4px !important; } }
 
 @media only screen and (min-width: 576px) and (max-width: 992px) {
   /* ajustes de tamano a la carta de albums */

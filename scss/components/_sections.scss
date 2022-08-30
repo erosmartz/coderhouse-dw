@@ -186,8 +186,10 @@
 /* ============================================ */
 
 #media_carousel{
-    width:50%;
+    width:92%;
+    
     align-self: center;
+    img {height:300px;object-fit: cover;}
 }
 #media_gallery{
     display:grid;

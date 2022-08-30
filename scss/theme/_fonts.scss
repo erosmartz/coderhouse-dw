@@ -46,7 +46,7 @@ strong {
     @include font('Anybody', 600 , 100%);
     @include font-small;
 
-    color: $color_link;
+    color: var(--color_link);
 }
 
 /* PARA LOS FORMS */
@@ -55,10 +55,10 @@ label {
     @include font-small;
 }
 input , textarea{
-    background-color: $color_dark_alt;
-    border-color: $color_dark;
+    background-color: var(--color_dark_alt);
+    border-color: var(--color_dark);
     border-style:solid;
-    color: $color_contrast_alt;
+    color: var(--color_contrast_alt);
 
 }
 
@@ -71,18 +71,18 @@ a{
     &:any-link{
         @include font('Montserrat', 700 , 88%); 
 
-        color: $color_link;
+        color: var(--color_link);
 
         letter-spacing: 2px;
         text-decoration: none;
     }
 
     &:hover{
-        color:$color_link_hover;
+        color:var(--color_link_hover);
     }
 }
 
     /* FONDO DE LOS LINKS */
     main span a{
-        background-color: $color_link_bg;
+        background-color: var(--color_link_bg);
     }

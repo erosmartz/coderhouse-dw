@@ -38,33 +38,44 @@
         <div>
             <!-- main logo -->
             <a href="index.html">
-                <img src="img/header_logo.png" alt="Site Logo">
+                <img src="img/header/header_logo.png" alt="Site Logo">
             </a>
 
 
-            <!-- navigation bar -->
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div><!-- Checkbox y Nav button -->
 
-                <div class="container-fluid">
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                            <a class="nav-link" href="html/aboutme.html">ABOUT ME</a>
-                            <a class="nav-link" href="html/releases.html">RELEASES</a>
-                            <a class="nav-link" href="html/media.html">MEDIA</a>
-                            <a class="nav-link" href="html/contact.html">CONTACT</a>
-                        </div>
-                    </div>
-
-
+                <!-- dark mode checkbox -->
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                </label>
                 </div>
-              </nav>
-              <!-- navigation bar finish -->
+
+                <!-- navigation bar -->
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+                    <div class="container-fluid">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                                <a class="nav-link" href="html/aboutme.html">ABOUT ME</a>
+                                <a class="nav-link" href="html/releases.html">RELEASES</a>
+                                <a class="nav-link" href="html/media.html">MEDIA</a>
+                                <a class="nav-link" href="html/contact.html">CONTACT</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+            </div>
 
 
         </div>
@@ -106,7 +117,7 @@
             </div>
 
             <!-- IMAGEN -->
-            <img src="img/id3_dogma.jpg" alt="Track Image" >
+            <img src="img/music/tracks/id3_dogma.jpg" alt="Track Image" >
 
         </section>
 
@@ -184,7 +195,7 @@
 
                 
                     <a class="cardTrack" href="">
-                            <img src="img/id3_dogma.jpg" alt="Track Image">
+                            <img src="img/music/tracks/id3_dogma.jpg" alt="Track Image">
                         <div>
                             <h2>Dogma</h2>
                         </div>            
@@ -192,7 +203,7 @@
 
                
                     <a class="cardTrack" href="">
-                            <img src="img/id1_theta.jpg" alt="Track Image">
+                            <img src="img/music/tracks/id1_theta.jpg" alt="Track Image">
                         <div>
                             <h2>Theta</h2>
                         </div>            
@@ -200,7 +211,7 @@
                 
                 
                     <a class="cardTrack" href="">
-                            <img src="img/id2_follow.jpg" alt="Track Image">
+                            <img src="img/music/tracks/id2_follow.jpg" alt="Track Image">
                         <div>
                             <h2>follow</h2>
                         </div>            
@@ -208,7 +219,7 @@
                 
                 
                     <a class="cardTrack" href="">
-                            <img src="img/id4_eterna.jpg" alt="Track Image">
+                            <img src="img/music/tracks/id4_eterna.jpg" alt="Track Image">
                         <div>
                             <h2>ETERNA</h2>
                         </div>            
@@ -275,5 +286,8 @@
 
         <!-- BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+        <!-- DARK MODE BUTTON -->
+        <script src="js/darkmode_button.js"></script>
 </body>
 </html>

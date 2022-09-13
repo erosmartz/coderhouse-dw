@@ -1,34 +1,37 @@
-
-
 /* ============================================ */
 /* Animacion Gradient */
 /* ============================================ */
 
-    @keyframes theme_gradient {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 0%}
-        100%{background-position:0% 50%}
+@keyframes theme_gradient {
+    0% {
+        background-position: 0% 50%;
     }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
-@mixin anim_gradient{
-    background: linear-gradient(270deg, var(--color_dark_alt), var(--color_extradark_alt));
+@mixin anim_gradient {
+    background: linear-gradient(
+        270deg,
+        var(--color_dark_alt),
+        var(--color_extradark_alt)
+    );
     background-size: 400% 400%;
     animation: theme_gradient 9s ease infinite;
 }
-
-
-
-
-
 
 /* ============================================ */
 /* Animacion Hover */
 /* ============================================ */
 
-@mixin anim_hover{
+@mixin anim_hover {
     transition: border-color 250ms ease;
 
-    &:hover{
+    &:hover {
         border-color: var(--color_dark_hover);
     }
 }

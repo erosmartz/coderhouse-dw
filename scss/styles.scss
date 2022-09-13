@@ -1,24 +1,17 @@
 /* reset y variables */
-@import "important/reset";
-@import "important/variables";
+@import 'important/reset';
+@import 'important/variables';
 
 /* tema: colores y fonts */
-@import "theme/palette";
-@import "theme/fonts";
+@import 'theme/palette';
+@import 'theme/fonts';
 
 /* settings de bootstrap y animaciones */
-@import "libraries/bootstrap";
-@import "libraries/animations";
+@import 'libraries/bootstrap';
+@import 'libraries/animations';
 
 /* componentes principales del body, box design, secciones de paginas y el responsive design */
-@import "components/body";
-@import "components/modules";
-@import "components/sections";
-@import "components/responsive";
-
-
-
-
-
-
-
+@import 'components/body';
+@import 'components/modules';
+@import 'components/sections';
+@import 'components/responsive';

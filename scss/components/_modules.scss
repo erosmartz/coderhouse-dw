@@ -3,7 +3,7 @@
 /* ============================================ */
 
 /* estilo 1 para contenedores: con gradient y borde interactivo */
-.style1{
+.style1 {
     margin: 1.5625rem 0rem;
     border-radius: 1.125rem;
     border: 0.0938rem solid var(--color_dark);
@@ -12,99 +12,83 @@
     @include anim_hover;
 }
 
-
 /* separador de secciones: con titulo */
-.separator{
-    @include flex_values(nowrap,row,center,space-between);
-    
+.separator {
+    @include flex_values(nowrap, row, center, space-between);
 
     padding: 1% 3%;
-    margin:1.5625rem 0 0 0;
+    margin: 1.5625rem 0 0 0;
     border: 0.0938rem solid var(--color_dark);
     border-radius: 1.125rem;
 
     @include anim_gradient;
     @include anim_hover;
- 
-
 }
 
-
-
 /* carta estilo 1 para info: con titulo, parrafo e imagen */
-.cardInfo{
-    @include flex_values(nowrap,row,normal,flex-end);
+.cardInfo {
+    @include flex_values(nowrap, row, normal, flex-end);
 
     padding: 2% 4%;
 
     > div {
-        @include flex_values(nowrap,column,normal,space-between);
+        @include flex_values(nowrap, column, normal, space-between);
 
-    
         * {
             margin: 0.1875rem 0;
         }
         img {
-            width:auto;
+            width: auto;
             align-self: center;
         }
-
     }
 }
 
-
-
 /* grilla contenedora para 4 cartas "cardTrack" */
-.gridTracks{
-display: grid;
-grid-template-columns: 23% 23% 23% 23% 7%;
-grid-template-rows: 100%;
-grid-template-areas: "id1" "id2" "id3" "id4" "idmore";
+.gridTracks {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23% 7%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'id1' 'id2' 'id3' 'id4' 'idmore';
 
-align-content: center;
+    align-content: center;
 }
 
-
-
 /* carta estilo 2, para tracks: con imagen y titulo */
-.cardTrack{
-    @include flex_values(nowrap,column,center,normal);
-
+.cardTrack {
+    @include flex_values(nowrap, column, center, normal);
 
     background-color: var(--color_black_alt);
     border: 0.125rem solid var(--color_contrast);
     border-radius: 0.5625rem;
     margin: 0rem 0.3125rem;
     padding: 0.5625rem;
-    
+
     font-size: 60%;
 
     transition: border-color 0.5s ease, background-color 0.5s ease;
 
-    h2{
+    h2 {
         text-align: center;
-        transition:color 0.5s ease;
+        transition: color 0.5s ease;
     }
-    img{
+    img {
         width: 100%;
         border-radius: 0.25rem;
-        padding-bottom:1.25rem;
+        padding-bottom: 1.25rem;
     }
-    &:hover{
-        border-color:var(--color_link); 
+    &:hover {
+        border-color: var(--color_link);
         background-color: var(--color_black_hover);
     }
     &:hover h2 {
         color: var(--color_link);
     }
-
 }
 
-
 /* carta estilo 3, para albums: con imagen, nombre de album y tracklist */
-.cardAlbum{
-    @include flex_values(nowrap,row,normal,normal);
-
+.cardAlbum {
+    @include flex_values(nowrap, row, normal, normal);
 
     font-size: 80%;
 
@@ -119,32 +103,29 @@ align-content: center;
 
     transition: border-color 0.5s ease, background-color 0.5s ease;
 
-
     &:hover {
         border-color: var(--color_contrast);
         background-color: var(--color_black_hover);
     }
-    
 
     img {
         width: 12.5rem;
         height: auto;
 
         border-radius: 0.25rem;
-        padding-right:0.625rem;
-        }
+        padding-right: 0.625rem;
+    }
 
     div {
-        @include flex_values(nowrap,column,flex-start,flex-start);
+        @include flex_values(nowrap, column, flex-start, flex-start);
 
-   
         * {
             margin-bottom: 0.3125rem;
         }
     }
 
     li {
-        list-style:none;
+        list-style: none;
     }
 
     a {
@@ -155,30 +136,27 @@ align-content: center;
     a:hover {
         color: var(--color_link);
     }
-
 }
-
-
 
 /* Dark Mode Switch */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .theme-switch {
+    margin-left: auto;
+    margin-right: auto;
+}
+.theme-switch {
     display: inline-block;
     position: relative;
     height: 1rem;
     width: 2.1875rem;
-  }
-  
-  .theme-switch input {
-    display:none;
-  }
-  
-  .slider {
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
     background-color: var(--color_slider1);
     bottom: 0;
     cursor: pointer;
@@ -186,32 +164,32 @@ align-content: center;
     position: absolute;
     right: 0;
     top: 0;
-    transition: .4s;
-  }
-  
-  .slider:before {
+    transition: 0.4s;
+}
+
+.slider:before {
     background-color: var(--color_slider2);
     bottom: 0.25rem;
-    content: "";
+    content: '';
     height: 0.5rem;
     left: 0.3125rem;
     position: absolute;
-    transition: .4s;
+    transition: 0.4s;
     width: 0.5rem;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked + .slider {
     background-color: var(--color_slider3);
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked + .slider:before {
     transform: translateX(1rem);
-  }
-  
-  .slider.round {
+}
+
+.slider.round {
     border-radius: 2.125rem;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}

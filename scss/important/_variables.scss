@@ -1,13 +1,10 @@
-
-
 /* ========================================*/
 /* =========     GENERALES   ============= */
 /* ========================================*/
 
-
 /* mixin de los 4 valores basicos de flex */
 /* default example =  @include flex_values(nowrap,row,normal,normal); */
-@mixin flex_values($wrap, $direction, $align , $justify){
+@mixin flex_values($wrap, $direction, $align, $justify) {
     display: flex;
     flex-wrap: $wrap;
     flex-direction: $direction;
@@ -15,49 +12,44 @@
     justify-content: $justify;
 }
 
-
-
-
-
-
 /* ========================================*/
 /* =========     DEL THEME   ============= */
 /* ========================================*/
 
 /* site background, full css, no texture */
-@mixin theme_background{
+@mixin theme_background {
     background-color: var(--color_black);
     opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color_black) 0.375rem ), repeating-linear-gradient( var(--color_dark_alt), var(--color_black) );
+    background-image: repeating-radial-gradient(
+            circle at 0 0,
+            transparent 0,
+            var(--color_black) 0.375rem
+        ),
+        repeating-linear-gradient(var(--color_dark_alt), var(--color_black));
     background-attachment: fixed;
 }
-
-
-
 
 /* ========================================*/
 /* =========     DE FONTS  =============== */
 /* ========================================*/
 
 /* mixin para todas las fonts. Establecer: el tipo de font, el peso y el tamaño */
-@mixin font ($family,$weight,$size){
+@mixin font($family, $weight, $size) {
     font-family: $family;
     font-weight: $weight;
     font-size: $size;
 }
 
-
 /* estilo de font para titulos mayuscula, espaciada y con color principal */
-@mixin font-big{
+@mixin font-big {
     text-transform: uppercase;
-    line-height:90%;
+    line-height: 90%;
     letter-spacing: 0.25rem;
     color: var(--color_contrast);
 }
 
-
 /* estilo de font para parrafos mayuscula con color alternativo */
-@mixin font-small{
-    text-transform:uppercase;
+@mixin font-small {
+    text-transform: uppercase;
     color: var(--color_contrast_alt);
 }

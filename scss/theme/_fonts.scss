@@ -1,49 +1,43 @@
-
-
-
-
-
 /* =========      FONTS     ========= */
 
 /* ENCABEZADO */
 h1 {
-    @include font('Montserrat', 900 , 220%);
+    @include font('Montserrat', 900, 220%);
     @include font-big;
 }
 
 /* ENCABEZADO 2 */
 h2 {
-    @include font('Montserrat', 900 , 190%);
+    @include font('Montserrat', 900, 190%);
     @include font-big;
 }
 
 /* ENCABEZADO 3 */
 h3 {
-    @include font('Montserrat', 700 , 180%);
+    @include font('Montserrat', 700, 180%);
     @include font-big;
-    
+
     letter-spacing: 0.0625rem;
-    line-height:100%;
+    line-height: 100%;
 }
 
 /* ENCABEZADO 4 */
-h4{
-    @include font('Anybody', 300 , 100%);
+h4 {
+    @include font('Anybody', 300, 100%);
     @include font-small;
 }
 
 /* PARRAFOS */
 p {
-    @include font('Anybody', 300 , 100%);
+    @include font('Anybody', 300, 100%);
     @include font-small;
 
-    text-transform:initial;
+    text-transform: initial;
 }
-
 
 /* REMARKS */
 strong {
-    @include font('Anybody', 600 , 100%);
+    @include font('Anybody', 600, 100%);
     @include font-small;
 
     color: var(--color_link);
@@ -51,25 +45,24 @@ strong {
 
 /* PARA LOS FORMS */
 label {
-    @include font('Anybody', 300 , 100%);
+    @include font('Anybody', 300, 100%);
     @include font-small;
 }
-input , textarea{
+input,
+textarea {
     background-color: var(--color_dark_alt);
     border-color: var(--color_dark);
-    border-style:solid;
+    border-style: solid;
     color: var(--color_contrast_alt);
-
 }
-
 
 /* LINKS */
 
-a{
+a {
     transition: color 250ms ease;
 
-    &:any-link{
-        @include font('Montserrat', 700 , 88%); 
+    &:any-link {
+        @include font('Montserrat', 700, 88%);
 
         color: var(--color_link);
 
@@ -77,12 +70,12 @@ a{
         text-decoration: none;
     }
 
-    &:hover{
-        color:var(--color_link_hover);
+    &:hover {
+        color: var(--color_link_hover);
     }
 }
 
-    /* FONDO DE LOS LINKS */
-    main span a{
-        background-color: var(--color_link_bg);
-    }
+/* FONDO DE LOS LINKS */
+main span a {
+    background-color: var(--color_link_bg);
+}

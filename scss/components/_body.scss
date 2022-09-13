@@ -17,7 +17,7 @@ header {
     @include flex_values(nowrap, row, center, center);
 
     position: sticky;
-    top: 0rem;
+    top: 0px;
     width: 100%;
     background-color: var(--color_extradark);
     border-bottom: 0.0625rem solid var(--color_dark);
@@ -71,7 +71,7 @@ footer {
 
     width: 100%;
     border-top: 0.125rem solid var(--color_dark);
-    padding-top: 0.3125rem;
+    padding-top: 5px;
     background-color: var(--color_extradark);
     margin-top: auto;
 

@@ -18,7 +18,7 @@
             width:60%;
         }
         img {
-            width:215px;
+            width:13.4375rem;
             margin-left: 3%;
         }
     }
@@ -47,13 +47,13 @@
             }
         }
         img {
-            width: 135px;
+            width: 8.4375rem;
             margin: 0 3% 0 2%;
         }
 
         /* video box */
         &_video{
-            border-radius: 18px;
+            border-radius: 1.125rem;
             align-self:center;
         }
     }
@@ -110,11 +110,11 @@
         }
         p {
             width:80%;
-            margin-top: 14px;
+            margin-top: 0.875rem;
         }
         img {
             
-            height:300px;
+            height:18.75rem;
             margin-right: 3%;
         }
 }
@@ -189,7 +189,7 @@
     width:92%;
     
     align-self: center;
-    img {height:300px;object-fit: cover;}
+    img {height:18.75rem;object-fit: cover;}
 }
 #media_gallery{
     display:grid;
@@ -197,15 +197,15 @@
     justify-items: center;
     justify-content: center;
 
-    gap: 40px 0px;
+    gap: 2.5rem 0rem;
 
-    margin: 25px 0px;
-    padding: 30px 0px;
+    margin: 1.5625rem 0rem;
+    padding: 1.875rem 0rem;
     background-color: rgba(0, 4, 5, 0.9);
-    border-radius: 4px; 
+    border-radius: 0.25rem; 
 
         img{
-            width: 250px;
+            width: 15.625rem;
         }
 }
 
@@ -242,24 +242,24 @@
         @include flex_values(nowrap,column,normal,normal);
 
 
-        margin: 20px;
-        width: 400px;
+        margin: 1.25rem;
+        width: 25rem;
         font-size: 140%;
     }
     #contact_form > form > div > input {
-        border-radius: 12px;
+        border-radius: 0.75rem;
     }
     #contact_form > form > div:last-child > input {
         align-self: center;
-        margin: 5px;
+        margin: 0.3125rem;
         width:25%;
         font-family: 'Anybody','Gill Sans MT', cursive;
         text-transform: uppercase;
         font-weight: 300;
     }
     #contact_form textarea {
-        border-radius: 12px;
-        border-width: 2px;
+        border-radius: 0.75rem;
+        border-width: 0.125rem;
     }
 
 /* ============================================ */

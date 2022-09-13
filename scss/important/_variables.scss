@@ -28,7 +28,7 @@
 @mixin theme_background{
     background-color: var(--color_black);
     opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color_black) 6px ), repeating-linear-gradient( var(--color_dark_alt), var(--color_black) );
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color_black) 0.375rem ), repeating-linear-gradient( var(--color_dark_alt), var(--color_black) );
     background-attachment: fixed;
 }
 
@@ -51,7 +51,7 @@
 @mixin font-big{
     text-transform: uppercase;
     line-height:90%;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
     color: var(--color_contrast);
 }
 

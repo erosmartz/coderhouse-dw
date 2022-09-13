@@ -22,7 +22,7 @@ h3 {
     @include font('Montserrat', 700 , 180%);
     @include font-big;
     
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     line-height:100%;
 }
 
@@ -73,7 +73,7 @@ a{
 
         color: var(--color_link);
 
-        letter-spacing: 2px;
+        letter-spacing: 0.125rem;
         text-decoration: none;
     }
 

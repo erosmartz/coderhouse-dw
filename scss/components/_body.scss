@@ -19,10 +19,10 @@ header {
     @include flex_values(nowrap,row,center,center);
     
     position:sticky;
-    top:0px;
+    top:0rem;
     width:100%;
     background-color: var(--color_extradark);
-    border-bottom: 1px solid var(--color_dark);
+    border-bottom: 0.0625rem solid var(--color_dark);
     
     @include anim_hover;
 
@@ -34,7 +34,7 @@ header {
             width:fit-content;
         
             img {
-                width: 230px;
+                width: 14.375rem;
                 filter: var(--invertvalue);
             }
         }
@@ -53,7 +53,7 @@ header {
 
 main{
     @include flex_values(nowrap,column,normal,normal); 
-    margin:5px 0px;
+    margin:0.3125rem 0rem;
 }
 main img{
     height: fit-content;
@@ -69,8 +69,8 @@ footer {
     @include flex_values(nowrap,row,center,center);
 
     width:100%;
-    border-top: 2px solid var(--color_dark);
-    padding-top:5px;
+    border-top: 0.125rem solid var(--color_dark);
+    padding-top:0.3125rem;
     background-color: var(--color_extradark);
     margin-top:auto;
 

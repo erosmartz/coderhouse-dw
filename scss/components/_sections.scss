@@ -37,6 +37,7 @@
             font-size:90%;
             width: 40%;
 
+
             div {
                 text-align: start;
                 justify-content: center;
@@ -206,6 +207,14 @@
 
         img{
             width: 15.625rem;
+            
+            filter:brightness(95%) saturate(40%);
+
+            transition: filter 0.5s ease;
+
+            &:hover {
+                filter:brightness(125%) saturate(100%);
+            }
         }
 }
 

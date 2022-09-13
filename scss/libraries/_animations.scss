@@ -11,7 +11,7 @@
     }
 
 @mixin anim_gradient{
-    background: linear-gradient(270deg, var(--color_dark_alt), var(--color_extradark));
+    background: linear-gradient(270deg, var(--color_dark_alt), var(--color_extradark_alt));
     background-size: 400% 400%;
     animation: theme_gradient 9s ease infinite;
 }

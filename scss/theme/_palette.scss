@@ -4,24 +4,29 @@
 
     --color_contrast : rgb(56, 210, 156);        /* contrast color */
     --color_contrast_alt : rgb(109, 181, 170);   /* alt contrast color */
-    --color_contrast_alt2: rgb(10, 103, 70);    /* alt 2 contrast color */
+    --color_contrast_alt2: rgb(6, 107, 72);    /* alt 2 contrast color */
 
-    --color_dark : rgb(0, 41, 38);
-    --color_dark_alt : rgb(0, 21, 21);           /* dark color */
-    --color_dark_hover : rgb(0, 69, 54);         /* alt dark color */
+    --color_dark : rgb(0, 52, 49);
+    --color_dark_alt : rgb(0, 27, 27);           /* dark color */
+    --color_dark_hover : rgb(0, 94, 74);         /* alt dark color */
 
-    --color_extradark : rgb(0, 8, 8);            /* extra dark color */
+    --color_extradark : rgb(0, 17, 17);            /* extra dark color */
+    --color_extradark_alt : rgb(0, 17, 17);        /* alt extra dark color */
 
     --color_black: #000000;                       /* black color  */
-    --color_black_alt: rgba(0, 0, 0, 0.352);       /* alt black color  */
+    --color_black_alt: rgba(0, 11, 10, 0.352);       /* alt black color  */
     --color_black_hover: rgba(0, 0, 0, 0.792);      /* hover black color  */
 
     --color_link : rgb(222, 74, 0);               /* link color */
     --color_link_hover: rgb(255, 136, 77);        /* alt link color */
     --color_link_bg : rgba(0, 0, 0, 0.678);     /* link background color */
-    --invertvalue: invert(0%);
-    --brightnessvalue: brightness(100%);     
-    
+
+    --color_slider1 : rgb(0, 86, 78);       /* slider circle color */
+    --color_slider2 : rgb(0, 17, 17);       /* slider bk1 color */
+    --color_slider3 : rgb(56, 210, 156);    /* slider bk2 color */
+
+    --contrastvalue: contrast(135%);        /* header logo filters */
+    --brightnessvalue: brightness(100%);      /* header logo filters */
 }
 
 
@@ -31,19 +36,25 @@
     --color_contrast_alt : rgb(19, 19, 19);   /* alt contrast color */
     --color_contrast_alt2: rgb(9, 14, 12);    /* alt 2 contrast color */
 
-    --color_dark : rgb(0, 17, 19);
-    --color_dark_alt : rgba(230, 230, 230, 0.283);           /* dark color */
-    --color_dark_hover : rgb(0, 202, 158);         /* alt dark color */
+    --color_dark : rgb(0, 0, 0);
+    --color_dark_alt : rgba(255, 255, 255, 0.693);           /* dark color */
+    --color_dark_hover : rgb(0, 103, 82);         /* alt dark color */
 
-    --color_extradark : rgb(221, 230, 230);            /* extra dark color */
+    --color_extradark : rgb(0, 10, 14);            /* extra dark color */
+    --color_extradark_alt : rgba(127, 213, 226, 0.148);            /* alt extra dark color */
 
-    --color_black: #ffffff;                       /* black color  */
+    --color_black: #cecece;                       /* black color  */
     --color_black_alt: rgba(234, 245, 245, 0.352);       /* alt black color  */
-    --color_black_hover: rgba(238, 255, 255, 0.792);      /* hover black color  */
+    --color_black_hover: rgba(201, 252, 244, 0.792);      /* hover black color  */
 
-    --color_link : rgb(0, 145, 120);               /* link color */
-    --color_link_hover: rgb(0, 14, 10);        /* alt link color */
-    --color_link_bg : rgba(23, 23, 23, 0.043);     /* link background color */
-    --invertvalue: invert(100%);
-    --brightnessvalue: brightness(35%);  
+    --color_link : rgb(0, 160, 133);               /* link color */
+    --color_link_hover: rgb(0, 228, 164);        /* alt link color */
+    --color_link_bg : rgba(4, 4, 4, 0.043);     /* link background color */
+
+    --color_slider1 : rgb(0, 32, 31);       /* slider circle color */
+    --color_slider2 : rgb(0, 17, 17);       /* slider bk1 color */
+    --color_slider3 : rgb(26, 147, 135);    /* slider bk2 color */
+
+    --contrastvalue: contrast(75%);         /* header logo filters */
+    --brightnessvalue: brightness(35%);     /* header logo filters */
 }

@@ -28,19 +28,27 @@ header {
 
 
     > div {
-        @include flex_values(wrap,row,normal,space-between);  
+        @include flex_values(nowrap,row,normal,space-between);  
         
         a {
             width:fit-content;
         
             img {
                 width: 14.375rem;
-                filter: var(--invertvalue);
+                filter: var(--brightnessvalue);
+
+                transition: filter 1s ease;
+
+                &:hover{
+                    filter: var(--contrastvalue);
+                }
             }
         }
 
-        > div {
-            @include flex_values(wrap,row,center,space-between);
+
+        > div{
+            align-content: center;
+            margin-top:1.1875rem;
         }
     }
 }

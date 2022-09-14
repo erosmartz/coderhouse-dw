@@ -47,7 +47,7 @@ h4 {
   --color_contrast_alt2: rgb(6, 107, 72);
   /* alt 2 contrast color */
   --color_dark: rgb(0, 52, 49);
-  --color_dark_alt: rgb(0, 27, 27);
+  --color_dark_alt: rgb(0, 33, 33);
   /* dark color */
   --color_dark_hover: rgb(0, 94, 74);
   /* alt dark color */
@@ -71,12 +71,14 @@ h4 {
   /* slider circle color */
   --color_slider2: rgb(0, 17, 17);
   /* slider bk1 color */
-  --color_slider3: rgb(56, 210, 156);
+  --color_slider3: rgb(56, 210, 141);
   /* slider bk2 color */
   --contrastvalue: contrast(135%);
   /* header logo filters */
   --brightnessvalue: brightness(100%);
-  /* header logo filters */ }
+  /* header logo filters */
+  --brightnessvalue: brightness(100%);
+  /* nav filter */ }
 
 [data-theme="light"] {
   --color_contrast: rgb(0, 11, 13);
@@ -110,12 +112,14 @@ h4 {
   /* slider circle color */
   --color_slider2: rgb(0, 17, 17);
   /* slider bk1 color */
-  --color_slider3: rgb(26, 147, 135);
+  --color_slider3: rgb(9, 188, 140);
   /* slider bk2 color */
   --contrastvalue: contrast(75%);
   /* header logo filters */
   --brightnessvalue: brightness(35%);
-  /* header logo filters */ }
+  /* header logo filters */
+  --brightnessvalue: brightness(100%);
+  /* nav filter */ }
 
 /* =========      FONTS     ========= */
 /* ENCABEZADO */
@@ -224,12 +228,12 @@ nav > div > div a:hover {
 
 /* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
 .navbar-toggler {
-  color: var(--color_contrast);
-  border: var(--bs-border-width) solid var(--color_contrast); }
+  color: var(--color_slider3);
+  border: var(--bs-border-width) solid var(--color_slider3); }
 
 .navbar-toggler-icon {
   background-image: url(../img/header/navButton.png);
-  filter: var(--brightnessvalue); }
+  filter: var(--brightnessvalue2); }
 
 /* ============================================ */
 /* Animacion Gradient */
@@ -638,6 +642,7 @@ input:checked + .slider:before {
   border-radius: 0.25rem; }
   #media_gallery img {
     width: 15.625rem;
+    height: fit-content;
     filter: brightness(95%) saturate(40%);
     transition: filter 0.5s ease; }
     #media_gallery img:hover {
@@ -887,7 +892,7 @@ input:checked + .slider:before {
       text-indent: 0.25rem; }
     #aboutme_info img {
       width: 90%;
-      height: auto;
+      height: fit-content;
       margin: 3% 2%; }
   /* ajustes de tamano a la carta de albums */
   #releases_albumlist > div {

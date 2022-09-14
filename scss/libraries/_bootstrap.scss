@@ -15,10 +15,10 @@ nav > div > div a:hover {
 
 /* MOD DE LA NAVBAR, CON IMAGEN Y DIFERENTES COLORES */
 .navbar-toggler {
-    color: var(--color_contrast);
-    border: var(--bs-border-width) solid var(--color_contrast);
+    color: var(--color_slider3);
+    border: var(--bs-border-width) solid var(--color_slider3);
 }
 .navbar-toggler-icon {
     background-image: url(../img/header/navButton.png);
-    filter: var(--brightnessvalue);
+    filter: var(--brightnessvalue2);
 }

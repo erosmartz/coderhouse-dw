@@ -160,7 +160,7 @@ h4 {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_contrast_alt); }
+  color: var(--color_slider3); }
 
 /* PARRAFOS */
 p {
@@ -168,7 +168,7 @@ p {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_contrast_alt);
+  color: var(--color_slider3);
   text-transform: initial; }
 
 /* REMARKS */
@@ -177,7 +177,7 @@ strong {
   font-weight: 600;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_contrast_alt);
+  color: var(--color_slider3);
   color: var(--color_link); }
 
 /* PARA LOS FORMS */
@@ -186,7 +186,7 @@ label {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_contrast_alt); }
+  color: var(--color_slider3); }
 
 input,
 textarea {
@@ -642,7 +642,7 @@ input:checked + .slider:before {
   border-radius: 0.25rem; }
   #media_gallery img {
     width: 15.625rem;
-    height: fit-content;
+    height: 15.625rem;
     filter: brightness(95%) saturate(40%);
     transition: filter 0.5s ease; }
     #media_gallery img:hover {
@@ -779,8 +779,9 @@ input:checked + .slider:before {
     margin: 0.9375rem 0rem;
     padding: 0.9375rem 0rem;
     gap: 0.9375rem 0rem; }
-  #media_gallery img {
-    width: 40vw; } }
+    #media_gallery img {
+      width: 40vw;
+      height: 40vw; } }
 
 @media only screen and (min-width: 768px) and (max-width: 798px) {
   header nav a {
@@ -807,7 +808,7 @@ input:checked + .slider:before {
     width: 100%; }
   #aboutme_info img {
     width: 35vw;
-    height: auto; } }
+    height: 35vw; } }
 
 /* ============================================ */
 /* Responsive : SMALL <576 */
@@ -891,8 +892,8 @@ input:checked + .slider:before {
       margin-top: 0.4375rem;
       text-indent: 0.25rem; }
     #aboutme_info img {
-      width: 90%;
-      height: fit-content;
+      width: 85vw;
+      height: 85vw;
       margin: 3% 2%; }
   /* ajustes de tamano a la carta de albums */
   #releases_albumlist > div {

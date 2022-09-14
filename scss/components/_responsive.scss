@@ -194,15 +194,14 @@
 
     /* ajustes al header */
     header > div {
-        justify-content: space-between;
         > div {
-            margin-top: 5vw;
-            margin-left: 1.5rem;
+            margin-top: calc(inherit * 0.5);
+            margin-left: 3%;
         }
     }
     main > img {
         width: 35vw;
-        height:auto;
+        height: auto;
         margin: 0.4375rem 0rem;
     }
 
@@ -302,6 +301,7 @@
     #releases_albumlist > div {
         width: 90%;
         font-size: 3.5vw;
+
     }
     #releases_albumlist img {
         width: 40vw;
@@ -315,19 +315,21 @@
         align-self: center;
     }
 
-    /* galeria de 1 sola columna, me gusta que SM tenga 2 */
 
-    /*  #media_gallery{
-        grid-template-columns:80%;
-        margin: 0.9375rem 0rem;
-        padding: 0.9375rem 0rem;
-        gap: 0.9375rem 0rem;
-    }
-        #media_gallery img{
-            width: 80vw;
-        } */
 
     #contact_form > form > div {
         width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header > div > a {
+        
+        margin-top:10px;
+    
+        img {
+            
+            width: 45vw;
+        }
     }
 }

@@ -51,5 +51,5 @@
 /* estilo de font para parrafos mayuscula con color alternativo */
 @mixin font-small {
     text-transform: uppercase;
-    color: var(--color_slider3);
+    color: var(--color_contrast);
 }

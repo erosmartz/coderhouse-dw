@@ -25,6 +25,7 @@ h3 {
 h4 {
     @include font('Anybody', 300, 100%);
     @include font-small;
+    color: var(--color_slider3);
 }
 
 /* PARRAFOS */

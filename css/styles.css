@@ -71,7 +71,7 @@ h4 {
   /* slider circle color */
   --color_slider2: rgb(0, 17, 17);
   /* slider bk1 color */
-  --color_slider3: rgb(56, 210, 141);
+  --color_slider3: rgb(150, 228, 207);
   /* slider bk2 color */
   --contrastvalue: contrast(135%);
   /* header logo filters */
@@ -160,6 +160,7 @@ h4 {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
+  color: var(--color_contrast);
   color: var(--color_slider3); }
 
 /* PARRAFOS */
@@ -168,7 +169,7 @@ p {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_slider3);
+  color: var(--color_contrast);
   text-transform: initial; }
 
 /* REMARKS */
@@ -177,7 +178,7 @@ strong {
   font-weight: 600;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_slider3);
+  color: var(--color_contrast);
   color: var(--color_link); }
 
 /* PARA LOS FORMS */
@@ -186,7 +187,7 @@ label {
   font-weight: 300;
   font-size: 100%;
   text-transform: uppercase;
-  color: var(--color_slider3); }
+  color: var(--color_contrast); }
 
 input,
 textarea {
@@ -339,7 +340,8 @@ footer {
     footer > div div:first-child {
       font-size: 95%; }
   footer p {
-    text-transform: initial; }
+    text-transform: initial;
+    color: var(--color_slider3); }
 
 /* ============================================ */
 /* BOX MODELING STYLES */
@@ -629,6 +631,9 @@ input:checked + .slider:before {
   #media_carousel img {
     height: 18.75rem;
     object-fit: cover; }
+  #media_carousel > div > div:nth-child(2) {
+    border: 3px solid black;
+    border-radius: 8px; }
 
 #media_gallery {
   display: grid;
